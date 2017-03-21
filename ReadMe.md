@@ -426,5 +426,21 @@ counterbalanced: 순서는 달랐다.
 
 Apple이 HCI 혁신 연구를 잘 가져와서 상업화 했다.
 
-쭉쭉 프로그램들 나옴
+### Birth of HCI - 1983
+* Notable events:
+	1. First ACM SIGCHI conference (1983)	2. Publication of The Psychology of Human-Computer Interaction by Card, Moran, and Newell (1983)	3. Apple Macintosh announced via brochures (December, 1983) and launched (January, 1984)
 
+넓고 얕은게 target을 선택 할때 좋다.
+
+## 3월 21일
+## Information Visualization
+
+information visualization은 그림을 그리는데 정답이 없는, 추상적인 data를 대상으로 한다. scientific visulazation은 답이 정해져 있다. 빨리 실물과 같게 할 것 이냐. e.g., 뉴욕 central park를 뛴 사람들의 gps data의 visualization.
+
+https://fathom.info/aging/  이 정도는 구현해야함
+
+spread sheet을 보고 바로 정보를 얻어내기가 어렵다. scatter plot 만으로도 data가 어떤 특성을 가지고 있는지 알아낼 수 있다.
+
+cognition: 눈으로 본다음에 어떤 판단을 내리는 것
+
+wokring memory를 확장 시켜주는 aritificial memory, 복잡한 data를 잘 visualization하면 working memory를 extend할 수 있으며, 찾을 수 없었던 정보를 얻어낼 수도 있다. cognition을 건너 뛸 수 있게 해준다.
