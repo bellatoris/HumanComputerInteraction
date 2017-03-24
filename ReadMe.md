@@ -444,3 +444,31 @@ spread sheet을 보고 바로 정보를 얻어내기가 어렵다. scatter plot 
 cognition: 눈으로 본다음에 어떤 판단을 내리는 것
 
 wokring memory를 확장 시켜주는 aritificial memory, 복잡한 data를 잘 visualization하면 working memory를 extend할 수 있으며, 찾을 수 없었던 정보를 얻어낼 수도 있다. cognition을 건너 뛸 수 있게 해준다.
+
+visual encoding Idiom (-> Principle)
+
+real-time이 매우 중요함 (100ms 까지는 괜찮음 15fps) data양이 너무 많아서 100ms를 만족 못 시키는 경우가 생기고 있다.
+
+## 3월 23일
+
+### Perception for InfoVis
+Effective하냐? 차 옆에 나라이름 쓰는게 더 effective함 Expressiveness하냐? 막대가 무언가 의미 있는 것 처럼 보임
+
+relative perception은 잘하지만 absolute perception은 잘 못한다.
+
+1:4를 보여줄 때 무엇을 쓸까? 막대기가 제일 좋다.
+
+전체 기준을 줘버리니까 어느 것이 긴지 한번에 알아봄 왜냐? 작은것을 보고 비교하게 되니까. 큰 것 두개를 비교할 때는 작은 차이가 잘 보이지 않지만, 작은 것 두개를 비교 할 때는 작은 차이가 잘 보인다.
+
+user가 무엇을 원하느냐에 따라 best representation이 달라진다.
+
+### Mapping
+data를 가공해서 encoding 해야함
+
+attention하기 전에 cognition이 된다.
+
+사람이 motion을 잘 catch 한다.
+
+스까 쓰지 말아라
+
+task에 따라 visual representation의 ranking이 달라짐
