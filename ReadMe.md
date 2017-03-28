@@ -434,41 +434,198 @@ Apple이 HCI 혁신 연구를 잘 가져와서 상업화 했다.
 
 ## 3월 21일
 ## Information Visualization
+### What is it?
+* Scientific Visualization vs. Information Visualization
+* Data Visualization - its power
+* Data Visualization - definition
 
-information visualization은 그림을 그리는데 정답이 없는, 추상적인 data를 대상으로 한다. scientific visulazation은 답이 정해져 있다. 빨리 실물과 같게 할 것 이냐. e.g., 뉴욕 central park를 뛴 사람들의 gps data의 visualization.
+### Visualization
+Scientific Visualization 은 빠르고 실물과 동일하게 visualization 하는 것을 목표로 하는 반면 Information Visualization 은 추상적인 data를 사용자에게 정보를 잘 전달하게끔 visulization 하는 것을 목표로 한다. 그렇기에 information visualization 은 정답이 존재 하지 않는다.
 
-https://fathom.info/aging/  이 정도는 구현해야함
+[visualization of age](https://fathom.info/aging)
 
-spread sheet을 보고 바로 정보를 얻어내기가 어렵다. scatter plot 만으로도 data가 어떤 특성을 가지고 있는지 알아낼 수 있다.
+Data가 spread sheet으로 존재하는 경우가 많다. 그러나 spread sheet을 보고 바로 정보를 얻어내기가 어려운데, 그 data를 scatter plot 하는 것 만으로도 data가 어떤 특성을 가지고 있는지 알아낼 수 있다. 또한 통계학적 수치만 보고서 판단하는 것도 오류를 범할 수가 있다. 이런 경우에도 visualization을 통해서 data의 분포나 경향같은 것을 좀더 정확히 알아낼 수 있다.
 
-cognition: 눈으로 본다음에 어떤 판단을 내리는 것
+### Definitions
+* The use of computer-supported, interactive, visual representations of ***abstract*** data to amplify **cognition**  
+-- Stuart Card, Jock Mackinlay, Ben Shneiderman, 1999
+* Finding the ***artificial memory*** that best supports our natural means of perception  
+-- Bertin, 1983
+* Provides tools that present data in a way to help people understand and gain insight from it.
 
-wokring memory를 확장 시켜주는 aritificial memory, 복잡한 data를 잘 visualization하면 working memory를 extend할 수 있으며, 찾을 수 없었던 정보를 얻어낼 수도 있다. cognition을 건너 뛸 수 있게 해준다.
+**cognition**: 눈으로 본다음에 어떤 판단을 내리는 것
+
+wokring memory를 확장 시켜주는 **aritificial memory**, 복잡한 data를 잘 visualization하면 working memory를 extend할 수 있으며 (간단한 예로 2자리수 곱셈을 암산으로 하는 것은 시간도 오래 걸리고 틀릴 확률도 높지만, 연필과 종이를 사용해서 할 경우 훨씬 짧은 시간에 더 정확한 결과를 얻을 수 있다) 찾을 수 없었던 정보를 얻어낼 수도 있다. 
+
+### Why use an external representation?
+> Computer-based visualization systems provide **visual representation** of datasets designed to help people carry out tasks more effectively. 
+
+* external representation: replace **cognition** with **perception**
+
+external representation을 통해서 바로 정보를 인식 함으로써 cognition을 건너 뛸 수 있게 해준다.
+
+### Resource limitations
+> Vis designer must take into account three very different kinds of resource limitations: those of computers, of humans, and of displays.
+
+* computational limits
+	* processing time
+	* system memory
+
+* human limits
+	* human attention and memory
+
+* display limits
+	* pixels are precious resource, the most constrained resource
+	* **information density:** ratio of space used to encode info vs unused white space
+		* tradeoff between clutter and wasting space, find sweet spot between dense and sparse    
 
 visual encoding Idiom (-> Principle)
 
-real-time이 매우 중요함 (100ms 까지는 괜찮음 15fps) data양이 너무 많아서 100ms를 만족 못 시키는 경우가 생기고 있다.
+### ***InfoVis*** Reference Model
+![Infovis](Images/Infovis.png)
+
+RawData 에서 Data Table 을 만드는 것도 상당히 고역이다. 이런 것만 전문적으로 해주는 프로그램을 만드는 회사도 존재
+
+### Model for Design and Validation Vis System
+* Four nested levels of vis design
+* Threats to validating each level
+	* Why validate? "Design space is large, and most designs are ineffective"
+
+![vissystem](Images/vissystem.png)
+
+### ***InfoVis*** is Interdisciplinary
+* Graphics: drawing in real time (< 100ms)
+* Cognitive psychology: appropriate representation
+* **HCI:** using users and tasks to guide design and evaluation  
+
+real-time이 매우 중요하다. 100ms(15fps) 안에 반응이 나와야 user 가 인과관계를 파악할 수 있다. 그러나 요즘에는 data양이 너무 많아서 100ms를 만족 못 시키는 경우가 생기고 있다.
+
 
 ## 3월 23일
 
 ### Perception for InfoVis
-Effective하냐? 차 옆에 나라이름 쓰는게 더 effective함 Expressiveness하냐? 막대가 무언가 의미 있는 것 처럼 보임
+* Visual Perception
+* Visual Encodings of Quantitative Data
+* Data Types and Tasks for InfoVis
 
-relative perception은 잘하지만 absolute perception은 잘 못한다.
+### Any better encodings?
+![aitable](Images/aitable.png)
 
-1:4를 보여줄 때 무엇을 쓸까? 막대기가 제일 좋다.
+Effective하냐? 차 옆에 나라이름 쓰는게 더 effective함 
+Expressiveness하냐? 막대가 무언가 의미 있는 것 처럼 보임
+
+사람은 relative perception은 잘하지만 absolute perception은 잘 못한다.
+
+1:4를 보여줄 때 무엇을 쓸까? 1D-막대기가 제일 좋다. 2D 나 3D 는 바로바로 알기가 매우 어렵다.
 
 전체 기준을 줘버리니까 어느 것이 긴지 한번에 알아봄 왜냐? 작은것을 보고 비교하게 되니까. 큰 것 두개를 비교할 때는 작은 차이가 잘 보이지 않지만, 작은 것 두개를 비교 할 때는 작은 차이가 잘 보인다.
 
 user가 무엇을 원하느냐에 따라 best representation이 달라진다.
 
 ### Mapping
+* input
+	* data semantics
+	* use domain knowledge
+
+* output 
+	* visual encoding
+		* visual, graphical perceptual, retinal
+		* channels, attributes, dimensions, variables
+	* use human perception   
+	
+* processing
+	* algorithms
+	* handle computational constraints
+
 data를 가공해서 encoding 해야함
 
-attention하기 전에 cognition이 된다.
+### Preattentive Processing
 
-사람이 motion을 잘 catch 한다.
+* Cognitive operations done preattentively, wihtout the need for focused attention 
+	* less than 200-250 ms
+		* eye movements take 200 ms
+		* minimum time to initiate eye movement
+		* involves only information available in a single glance
 
-스까 쓰지 말아라
+* Popout effects
+* Segmentation effects
+
+예를 들어서 같은 색의 글씨 중에서 한 글자만 다른 색이라면 그 글자를 attention 하기 전에 cognition이 될 것 이다. 또한 사람은 motion을 잘 catch 하므로 한 글자만 움직이고 있어도 cognition 을 attention 전에 할 것 이다.
+
+### What Kinds of Tasks?
+* Target detection
+	* Is something there?
+* Boundary detection
+	* Can the elements be grouped?
+* Region tracking
+	* Can a distinctive moving group be traced?
+* Counting 
+	* How many elements of a certain type are present?
+
+### Laws of preattentive disply
+* Must stand out on some simple dimension
+	* color
+	* simple shape = orientation, size
+	* motion
+	* depth
+* Lessons for highlighting - one of each, 스까 쓰지 말아라
 
 task에 따라 visual representation의 ranking이 달라짐
+
+## 3월 28일
+### Design Guidelines/Principles
+* Visual presentation of query components
+* Visual presentation of results
+* Rapid, incremental and reversible actions
+* Immedicate and continuous feedback
+* Selection by pointing (not typing)
+* Reduce errors
+* Encourages exploration
+* **Visual Information Seeking Mantra**
+	* Overview first, zoom and filter, details on demand 
+
+### Tufte's Design Principles
+
+* Tell the truth (Expressiveness)
+	* **Graphical integrity**
+	*  모든 진실을 다 이야기 해라.
+* Do it effecively with clarity, precision (Expressiveness)
+	* **Design principles/aesthetics**
+* "**simple design, intense content**"
+
+### Graphicl Integrity
+* Your graphic should tell the truth about your data
+* Consider visual perception
+* User-centered vs. designer-centered
+
+![chart](Images/chart.png)
+중간 pick 를 user 입장에서는 찾기가 어렵다. 세로축으로 보는게 아니라 가로축으로 보려고 하기 때문, 시간별 trend 를 얻고 싶은 user 입장에서 나쁜 visualization 이다. 그러나 그 양만을 알고 싶은 user 에게는 좋은 visualization 일 수 있다.
+
+### Measuring Misrepresentation
+* Visual attribute value should be directly proportional to data attribute value
+* Height/width vs. area vs. volume
+* Lie factor = Size of effect shown in graphic / Size of effect in data
+* Lie factor 가 1에 가까워야 effective 하게 표현한 것이다.
+
+### Design Principles
+* Maximize data-ink ratio
+
+Data ink ratio = Data ink / Total ink used in graphic  
+= proportion of graphic's ink devoted to the non-redudant display of data-information
+
+* Avoid chartjunk
+	* Extraneous visual elements that detract from information
+	* all visual elements in charts and graphs that are not necessary to comprehend the information represented on the graph, or that distract the viewer from this information
+
+![chartjunk](Images/chartjunk.png)
+
+그러나 메세지 전달 측면에서는 저런 장식이 도움이 될 수 있다. 하지만 그래프의 y 축의 시작점을 0 으로 놓지 않는다 던가 해서 user 를 속이는 것은 chartjunk 이다.
+
+* Use **small multiples**
+	* Repeat visually similar graphical elements nearby rather than spreading far apart
+	* The same graphical design structure is repeated 
+	* Learn once and compare -> invite comparisons
+	* Reveal, all at once, a scope of alternatives, a range of options -> overview 
+
+* Utilize narratives of space and time
+	* Tell a story of position and chronology through visual elements 
