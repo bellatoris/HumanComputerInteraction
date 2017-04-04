@@ -629,3 +629,143 @@ Data ink ratio = Data ink / Total ink used in graphic
 
 * Utilize narratives of space and time
 	* Tell a story of position and chronology through visual elements 
+
+## 4월 4일
+## Design Process: brainstorm
+### Affordance
+* "A property in which the **physical characteristics** of an object or environment influence its **function**."
+	* **Round** wheels are better suited than square wheels for **rolling**.
+	* (Desktop) Metaphor
+		* Three dimensional buttons on a computer screen.
+	* Encourage intended function
+	* Discourage improper use
+
+* Make it inconceivable that the design could function or be used otherwise 
+
+### Mapping 
+* "A relationship between controls and their movements or effects"
+	* Control-effect relationship
+	* Control-display relationship
+	* Stimulus-response compatibility
+	* Good mapping for greate ease of use
+	* Effect corresponds to expectation?
+	* A void one control-multiple effect relationship
+		*  Visually distinct modes to **indicate** the current function
+	* Consider social/cultural conventions
+		* Down to turn it on in UK  
+
+### Mental Model
+* "Representations of systems and environments derived from experience"
+* System model: mental models of **how systems work**
+* Interaction model: mental models of **how people interact with systems**
+	* Personal use of the system
+	* Lab testing (e.g., Focus groups and Usability testing)
+	* Direct observation
+		* What about a design that is not yet available?
+	* Create an interaction experience that draws from common mental model 
+	* Have people learn a new model (clear and consistent)		  
+* Conceptual Model
+
+### The IDEO Design Process
+![ideo](Images/ideo.png)
+
+* **Understand the problem area**
+	* why do we need a new design and how to come up with one
+	* produce a smell set of key ideas, general orientation
+
+* **Observe potential users and customers**
+	* fictitious character maps
+	* know the (potential users)
+
+* **Visualize and predict**
+	* brainstorm, sketching, prototyping
+	* detailed scenarios or storyboards
+	* depict the interactions between users and the new device (design)
+
+* **Evaluate and refine**
+	* user testing, feedback
+	* iterative, spiral development model
+
+* **Implement** 	 
+
+
+loop를 돌면서 design하는 것을 design process라 한다. 핵심은 loop다.
+
+문제를 이해해야 한다. 누가 쓸것인지 왜 만들어야 하는지, motivation이 필요함, 어떤 문제점이 있어서 새로운 디자인이 필요한지.
+
+새로운 디자인이 나왔으면, 어떻게 만들 것인지, 핵심적인 문제가 있으면 어떻게 해결할 것인지. 구체적인 개선안이 있어야한다. 문제를 파악한 후 문제를 수정하기 위한 핵심적인 아이디어를 몇개 뽑아 놔야한다. 
+
+우리의 해결 방법이 문제를 해결 할 수 있는지 관찰해야 한다. user를 이해하고 user가 어떤 문제점이 있고, 어떤 상황에 있는지 관찰해야한다. 
+
+brain-storm, sketch, prototype 하구 나서 시나리오와 시퀀스를 잡는다. user와 디바이스간의 인터랙션이 어떻게 일어나는지 스케치 해야 한다. 핵심만 그려아한다.
+
+user test를 하고 feedback을 하고 iterative하게 작업한다.
+
+### System Centered Design
+* What can be built easily on this platform?
+* What cna I create from the available tools?
+* What do I as a programmer find interesting to work on?
+
+내가 가지고 있는 tool, 능력, system 중심으로 생각해서 design 하는 것
+ 
+### User Centered Design
+* Design is based upon a user's
+	* Abilities and real needs
+	* Context 
+	* Work
+	* Tasks
+ 
+Golden rule of interfae design: ***Know The User***
+
+* ... is based on **understanding the domain of work of play** in which people are engaged and in which they interact with computers, and programming computers to facilitate human action. ...
+*  Three assumptions
+	* The result of a good design is a ***satified customer***
+	* The process of desgin is a ***collaboration*** *between designers and customers*. The *design evolves and adapts* to their changing concerns, and the process produces a specification as an important byproduct. 
+	* The customer and designer are in *constant* ***communication*** during the entire process
+
+collaboration 잘 하고 communication 잘 하면 부산물로 좋은 결과가 나온다. 
+
+### Designer Centered Design
+* The experts know best
+* Users can't see past what they know
+
+내가 해봐서 안다. 내가 제일 잘 안다. Users는 자기가 아는 만큼만 안다. 잘 될 수도 있지만, maybe not
+
+### Design Thinker: Designer Who Create
+
+![designer](Images/designer.png)
+
+### Advice from Wonderland
+> There is no use trying, said Alice; one can't believe impossible things. I dare to say you haven't had much practice, said the Queen. When I was your age, I always did it for half an hour a day. Why, sometimes **I've believed as many as six impossible things before breakfast.**
+> 
+> Lewis Carroll (Alice's Adventures in Wonderland)
+
+### Understanding: gathering user's knowledge
+* Contextual Inquiry: user가 하는 것을 지켜 보면서 이해 하는 것.
+* Real persons with real constraints
+* Tools
+	* Notepad
+	* Camera
+	* Tape recorder
+	* Video 
+
+### Conducting an interview
+* Typical topics to explore	* What is the problem at hand?	* How is it addressed now?	* What are the limitation of the current practice?	* Who, when, where and why will they use the system?	* What will they do with it?	* Could you show me?* Listen to users!	* Do not comment on what is possible or not!	* Do not force your views!	* Users are always right!	* Be sure to have clear communication channel!
+
+### Brainstorming
+***"The best way to get a good idea is to get a lot of ideas"***
+
+* Seed the brainstorm
+	* Topic statement
+* Get physical
+* Follow the rules (IDEO)
+	* Stay focused
+	* One conversation at a time
+	* Encourage wild ideas
+	* Defer judgement
+	* Build upon idea from others
+* Number your ideas
+* Target: 100 ideas per hour
+
+### Cycle in the project lifespan
+![cycle](Images/cycle.png) 	   
