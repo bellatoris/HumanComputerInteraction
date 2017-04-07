@@ -190,10 +190,8 @@ target 대상에 맞게 affordance를 주어야 한다.
 	* Tell a story of position and chronology through visual elements 
 
 ![train](Images/train.png)  
-legend가 너무 많고, 시간순서를 가로로 늘어뜨려 놓아 보기가 불편하다.
-
-![train2](Images/Schedule-design.png)  
-legend가 훨씬 줄어들었으며, 시간순서를 세로로 늘어뜨려 보기도 편해졌으며, 주말의 경우 평일에 비해 언제 안오는지를 한눈에 알아 볼 수 있게 되었다.
+왼쪽의 경우 legend가 너무 많고, 시간순서를 가로로 늘어뜨려 놓아 보기가 불편하다.  
+오른쪽의 경우 legend가 훨씬 줄어들었으며, 시간순서를 세로로 늘어뜨려 보기도 편해졌으며, 주말의 경우 평일에 비해 언제 안오는지를 한눈에 알아 볼 수 있게 되었다.
 
 ### Natural Mapping: Gas Stove
 ![gasstove1](Images/gasstove1.png)
@@ -729,7 +727,7 @@ collaboration 잘 하고 communication 잘 하면 부산물로 좋은 결과가 
 * The experts know best
 * Users can't see past what they know
 
-내가 해봐서 안다. 내가 제일 잘 안다. Users는 자기가 아는 만큼만 안다. 잘 될 수도 있지만, maybe not
+내가 해봐서 안다. 내가 제일 잘 안다. Users는 자기가 아는 만큼만 안다. 잘 될 수도 있지만, 대부분은 그렇지 않다.
 
 ### Design Thinker: Designer Who Create
 
@@ -767,5 +765,218 @@ collaboration 잘 하고 communication 잘 하면 부산물로 좋은 결과가 
 * Number your ideas
 * Target: 100 ideas per hour
 
+### "Deep Dive" Video
+* IDEO designing a shopping cart of the future
+* fidelity: accuracy, low fidelity 는 핵심 idea 만 표현한 것, high fidelity 는 실제 제품과 매우 비슷하게 만든 것.
+
+![cart](Images/cart.png) 
+
 ### Cycle in the project lifespan
-![cycle](Images/cycle.png) 	   
+![cycle](Images/cycle.png)
+
+## The Human Factor
+## 4월 6일 
+chapter 2 읽어 보세요
+
+### Models of the Human
+* Descrpitive models are tools for thinking (see Chapter 7)
+* It would be useful to have a descriptive model for the human
+* In fact, there are many (e.g., Model Human Processor, Chpater 1)
+* We begin with two useful models for the human
+
+target에 대해서 추상화된 것을 제시하는게 model
+
+### Newell's Time Scale of Human Action
+![Newell](Images/Newell.png)
+
+우리가 주로 다룰 부분은 Cognitive Band 이다.
+
+### Human Factors Model
+![hfm](Images/hfm.png)
+
+### Human Senses
+> **Rosa:** You deny everthing except what you want to believe. That's the sort of man you are.
+> **Bjartur:** I have my five senses, and don't see what need there is for more.
+> (Halldór Laxness, *Independent People*)
+
+* The five senses:
+	* Vision (sight)
+	* Hearing (audition)
+	* Touch (tactition)
+	* Smell
+	* Taste
+
+### Vision (The Eye)
+* People obtain about 80% of their information through vision (the eye)
+
+![eye](Images/eye.png)
+
+### Fovea Image
+* Sharp central vision
+* 1% of retina, 50% of visual cortex
+* Fovea images is ≈1° of visual angle:
+
+![fovea](Images/fovea.png)
+
+### Visual Stimulus
+* Physical properties of light
+	* Frequency
+	* Intensity (luminance)
+* Create subjective properties of vision
+	* Colour
+	* Brightness
+
+### Colour Spectrum
+![colour](Images/colour.png)
+
+### Fixations and Saccades
+* Fixation
+	* Eyes are stationary (dwell) 
+	* Take in visual detail from the environment
+	* Long or short, but typically at least 200ms
+* Saccade
+	* Rapid repositioning of the eye to fixate on a new location
+	* Quick: ≈120 ms
+
+saccade 에는 micro saccade 랑 normal saccade 가 있다. Micro saccade 는 한 곳을 바라보고 있더라도, 눈이 피로해지는 것을 막기위해 초점을 계속 옮기는 것을 말한다.
+
+### Yarbus' Eye Tracking Research (1965)
+![Yarbus](Images/Yarbus.png)
+
+똑같은 사진을 주고 다른 task 줬을 때 eye tracking pattern이 완전히 다른 것을 확인 할 수 있다.
+
+### Scan Paths
+* Visual depiction of saccades and fixations
+* Saccades => straight lines
+* Fixations => circles
+	* Diameter of circle ∝ duration of fixation  
+* Applications
+	* User behaviour research (e.g., reading patterns)
+	* Marketing research (e.g., ad placement)
+
+### Scan Path Example
+![scanpath](Images/scanpath.png)
+
+### Hearing (Audition)
+* Sound => cyclic fluctuations of pressure in a medium, such as air
+* Created when physical objects are moved or vibrated
+* Examples 
+	* Slamming a door, plucking a guitar string, shuffling cards, speaking (via larynx)
+
+### Auditory Stimulus
+* Physical properties of sound
+	* Frequency 
+	* Intensity
+* Create subjective properties of hearing
+	* Pitch 
+	* Loudness
+
+### Properties of Sounds
+* Loudness
+* Pitch
+* Timbre
+* Attack
+
+### Timbre (음색)
+* A.k.a *richness*, *brightness*
+* Results from harmonic structure of sound
+* E.g., a musical note of 200 Hz, has harmonics at 400 Hz, 600 Hz, 800 Hz, etc.
+* Notes of the same frequency from different instruments are distinguished, in part, due to timbre
+
+### Attack (음의 발생)
+* A.k.a *envelope*
+* Results from the way a note and its harmonics build up and transition in **time** - from silent, to audible, to silent
+* Considerable information in the onset envelop
+* Assists in distinguishing notes of the same pitch coming from different instruments
+* Onset envelop created through articulation (e.g., legato, staccato)
+
+![attack](Images/attack.png)
+
+### Touch (Tactition)
+* Part of somatosensory system, with...
+* Receptors in skin, muscles, joints, bones
+	* Sense of touch, pain, temperature, position, shape, texture, resistance, etc.
+* Tactile feedback examples:
+
+![touch](Images/touch.png)
+
+### Smell and Taste
+* Semll (olfaction)
+	* Ability to perceive odours
+	* Occurs through senosory cells in nasal cavity
+* Taste (gustation)
+	* Chemical reception of sweet, salty, bitter, and sour sensations
+* Flavour
+	* A perceptual process that combines smell and taste
+* Only a few examples in HCI (e.g., Brewster et al., 2006; Bodnar et al., 2004)
+
+### Responders
+* Human control their environment through responders, for example
+	* A finger to text or point
+	* Feet to walk or run
+	* Eyebrow to frown  
+	* Vocal chords to speak
+	* Torso to lean
+* Penfiel's (1990) motor homunculus
+	* Shows human responders and the relative area of motor cortex dedicated to each 
+
+### Motor Homunculus
+![homunculus](Images/homunculus.png)
+
+### Handedness
+* Some users are left handed, others right handed
+* Handedness exists by degree
+* Edinburgh Handedness Inventory used to measure handedness
+
+### Edinburgh Inventory for Handedness
+![handedness](Images/handedness.png)
+
+### Human Voice
+* Human vocal chords are responders
+* Sounds created through combination of 
+	* Movement in the larynx
+	* Pulmonary pressure in the lungs
+* Two kinds of vocalized sounds:
+	* Speech
+	* Non-speech
+* Both with potential for computer model
+	* Speech + speech recognition
+	* Non-speech + signal detection (e.g., frequency, loudness, duration, change direction, etc.)
+
+### Non-speech Example
+* NVVI = non-verbal voice interaction
+
+![nvvi](Images/nvvi.png)
+
+### The Eye as a Responder
+* As a controller, the eye is called upon to do "double duty"
+	1. Sense and perceive the environment/computer
+	2. Act as a controller via saccades and fixations
+* This suggests a modification to the human factors model presented earlier 
+
+### Modified Human Factors Model
+![modified_hfm](Images/modified_hfm.png)
+
+### Example - Eye Typing 
+![eyetyping](Images/eyetyping.png)
+
+### The Brain
+* Most complex biological structure known
+* Billions of neurons
+* Enables human capacity for
+	* Pondering, remembering, recalling, reasoning, deciding, communicating, etc.
+* Sensors (human inputs) and responders (human outputs) are nicely mirrored, but it is the brain that connects them
+
+### Human Uniqueness
+* With associations and meaning attached to sensory input, humans are vastly superior to the machines they interact with:
+
+> People excel at perception, at creativity, at the ability to go beyond the information given, making sense of otherwise chaotic events, We often have to interpret events far beyond the information available, and our ability to do this efficiently and effortlessly, usually without even being aware that we are doing so, greatly adds to our ability to function.
+
+### Perception
+* 1st stage of processing for sensory input
+* Associations formed
+	* Auditory stimulus => harmoinous, discordant  
+	* Visual stimulus => familiar, strange
+	* Tactile stimulus => warm, hot
+	* Smell stimulus => pleasurable, abhorrent
+	* Taste stimulus => sweet, sour
