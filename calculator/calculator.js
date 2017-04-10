@@ -1,4 +1,17 @@
-$(function () {
+$(function() {
+    var currentTable = '#table1';
+    $('.select').click(function() {
+        var tableNumber = $(this).text();
+        currentTable = '#table' + tableNumber;
+
+        $('div').css('display', 'none');
+        $(currentTable).css('display', 'block');
+    });
+
+    function inCurrentTable(input) {
+        return currentTable + ' ' + input;
+    }
+
     // state
     // implement calculator by using finite state machine.
     // state = 0 => initial state
@@ -14,6 +27,8 @@ $(function () {
         stateNumber: 0,
     };
 
+    var memory = 0;
+
     function initState() {
         state.leftOperand = '';
         state.rightOperand = '';
@@ -23,13 +38,74 @@ $(function () {
 
         $('.clear').text(state.clearState);
         $('#output').attr('value', 0);
+        $('#result').attr('value', 0);
+        $('.operator').css('background-color', 'buttonface');
     }
 
-    $('#state').click(function () {
+    $('#state').click(function() {
         $(this).text(state.stateNumber);
+    });
+    
+
+    // memory state 
+    $('.mReset').click(function() {
+        state.clearState = 'CE';
+        $('.clear').text(state.clearState);
+
+        switch (state.stateNumber) {
+            case 0:
+            case 1: {
+                // init ,state1 -> state1
+                state.stateNumber = 1;
+
+                state.leftOperand = memory;
+                $('#output').attr('value', memory);
+                break;
+            }
+            case 2:
+            case 3: {
+                // state2, state3 -> state3
+                state.stateNumber = 3;
+
+                state.rightOperand = memory;
+                $('#output').attr('value', memory);
+                break;
+            }
+            case 4: {
+                // state4 -> state1
+                state.stateNumber = 1;
+
+                state.operator = '';
+                state.rightOperand = '';
+                state.leftOperand = memory;
+                $('#output').attr('value', memory);
+                break;
+            }
+        }
+    });
+
+    $('.mPlus').click(function() {
+        var number = $('#output').attr('value');
+        memory += parseInt(number, 10);
+
+        $('#memory').attr('value', memory);
+    });
+
+    $('.mMinus').click(function() {
+        var number = $('#output').attr('value');
+        memory -= parseInt(number, 10);
+
+        $('#memory').attr('value', memory);
+    });
+
+    $('.mClear').click(function() {
+        memory = 0;
+
+        $('#memory').attr('value', memory);
     })
 
-    $('.number').click(function () {
+    // calculator state
+    $('.number').click(function() {
         var number = $(this).text();
 
         state.clearState = 'CE';
@@ -84,8 +160,11 @@ $(function () {
         }
     });
 
-    $('.operator').click(function () {
+    $('.operator').click(function() {
         var operator = $(this).text();
+
+        $('.operator').css('background-color', 'buttonface');
+        $(this).css('background-color', 'red');
 
         state.clearState = 'CE';
         $('.clear').text(state.clearState);
@@ -105,6 +184,7 @@ $(function () {
                 state.stateNumber = 2;
 
                 state.operator = operator;
+                $('#result').attr('value', state.leftOperand);
                 break;
             }
             case 3: {
@@ -115,6 +195,7 @@ $(function () {
                 state.operator = operator;
                 state.rightOperand = '';
                 $('#output').attr('value', state.leftOperand);
+                $('#result').attr('value', state.leftOperand);
                 break;
             }
             case 4: {
@@ -128,7 +209,9 @@ $(function () {
         }
     });
 
-    $('.result').click(function () {
+    $('.result').click(function() {
+        $('.operator').css('background-color', 'buttonface');
+
         switch (state.stateNumber) {
             case 0:
             case 1: {
@@ -142,6 +225,10 @@ $(function () {
                 state.rightOperand = state.leftOperand;
                 state.leftOperand = operate(state);
                 $('#output').attr('value', state.leftOperand);
+                $('#result').attr('value', state.leftOperand);
+
+                state.clearState = 'CE';
+                $('.clear').text(state.clearState);
                 break;
             }
             case 3:
@@ -151,12 +238,16 @@ $(function () {
 
                 state.leftOperand = operate(state);
                 $('#output').attr('value', state.leftOperand);
+                $('#result').attr('value', state.leftOperand);
+
+                state.clearState = 'CE';
+                $('.clear').text(state.clearState);
                 break;
             }
         }
     });
 
-    $('.clear').click(function () {
+    $('.clear').click(function() {
         switch (state.stateNumber) {
             case 0:
             case 1: {
@@ -164,38 +255,14 @@ $(function () {
                 initState();
                 break;
             }
-            case 2: {
+            case 2:
+            case 3:
+            case 4:  {
                 if (state.clearState === 'CE') {
-                    // state2 -> state2
                     state.clearState = 'C'
                     $('#output').attr('value', 0);
                     $('.clear').text(state.clearState);
                 } else {
-                    // state2 -> init
-                    initState();
-                }
-                break;
-            }
-            case 3: {
-                if (state.clearState === 'CE') {
-                    // state3 -> state3
-                    state.clearState = 'C'
-                    $('#output').attr('value', 0);
-                    $('.clear').text(state.clearState);
-                } else {
-                    // state3 -> init
-                    initState();
-                }
-                break;
-            }
-            case 4: {
-                if (state.clearState === 'CE') {
-                    // state4 -> state4
-                    state.clearState = 'C'
-                    $('#output').attr('value', 0);
-                    $('.clear').text(state.clearState);
-                } else {
-                    // state4 -> init
                     initState();
                 }
                 break;
