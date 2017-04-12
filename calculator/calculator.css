@@ -14,7 +14,8 @@ div {
 
 #intermediate {
     width: 300px;
-    height: 25px;
+    min-height: 20px;
+    height: auto;
     margin: auto;
     text-align: right;
 }

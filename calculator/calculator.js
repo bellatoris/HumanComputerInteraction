@@ -3,6 +3,9 @@ $(function () {
     $('.select').click(function () {
         var tableNumber = $(this).text();
         currentTable = '#table' + tableNumber;
+        timeoutHandle = '';
+        $('.select').removeClass('btn-primary');
+        $(this).addClass('btn-primary');
 
         $('div').css('display', 'none');
         $(currentTable).css('display', 'block');
@@ -31,6 +34,7 @@ $(function () {
     var history = '';
     var equation = '';
     var equationList = [];
+    var timeoutHandle = '';
 
     function initState() {
         state.leftOperand = '';
@@ -45,6 +49,11 @@ $(function () {
         $('.clear').text(state.clearState);
         $('#output').attr('value', 0);
         $('#intermediate').text("");
+
+        if (timeoutHandle !== '') {
+            clearTimeout(timeoutHandle);
+            timeoutHandle = '';
+        }
     }
 
     // memory state 
@@ -104,12 +113,28 @@ $(function () {
         $('#memory').attr('value', memory);
     })
 
+    function operatorToString(op) {
+        switch (op) {
+            case '+': return '#add';
+            case '-': return '#sub';
+            case '*': return '#mul';
+            case '/': return '#div';
+        }
+    }
+
     // calculator state
     $('.number').click(function () {
         var number = $(this).text();
 
         state.clearState = 'CE';
         $('.clear').text(state.clearState);
+
+        if (timeoutHandle !== '') {
+            clearTimeout(timeoutHandle);
+            timeoutHandle = setTimeout(function () {
+                $(operatorToString(state.operator)).click();
+            }, 900);
+        }
 
         switch (state.stateNumber) {
             case 0:
@@ -165,6 +190,10 @@ $(function () {
 
         state.clearState = 'CE';
         $('.clear').text(state.clearState);
+
+        if (timeoutHandle !== '') {
+            clearTimeout(timeoutHandle);
+        }
 
         switch (state.stateNumber) {
             case 0: {
@@ -230,6 +259,12 @@ $(function () {
         }
     });
 
+    $('#table3 .operator').dblclick(function () {
+        timeoutHandle = setTimeout(function () {
+            console.log('timeout');
+        }, 1000);
+    });
+
     $('.result').click(function () {
         switch (state.stateNumber) {
             case 0:
@@ -241,12 +276,17 @@ $(function () {
                 // state2 -> state4
                 state.stateNumber = 4;
 
-                state.rightOperand = state.leftOperand;
-                var result = operate(state);
-                $('#output').attr('value', result);
-                appendHistory(makeResult(state, result));
-                history = '';
-                state.leftOperand = result;
+                if (timeoutHandle !== '') {
+                    appendHistory(history.substr(0, history.length - 2) + " = " + state.leftOperand);
+                    history = '';
+                } else {
+                    state.rightOperand = state.leftOperand;
+                    var result = operate(state);
+                    $('#output').attr('value', result);
+                    appendHistory(makeResult(state, result));
+                    history = '';
+                    state.leftOperand = result;
+                }
 
                 state.clearState = 'CE';
                 $('.clear').text(state.clearState);
@@ -283,6 +323,10 @@ $(function () {
                 break;
             }
         }
+        if (timeoutHandle !== '') {
+            clearTimeout(timeoutHandle);
+            timeoutHandle = '';
+        }
         $('#intermediate').text("");
     });
 
@@ -317,6 +361,9 @@ $(function () {
                     state.clearState = 'C'
                     $('#output').attr('value', 0);
                     $('.clear').text(state.clearState);
+                    if (timeoutHandle !== '') {
+                        clearTimeout(timeoutHandle);
+                    }
                 } else {
                     initState();
                 }
@@ -373,20 +420,20 @@ $(function () {
         $li.append($('<input class="nInput" type="text" value="0" readonly>'));
         $li.append(
             $('<button>')
-            .text('compute')
-            .click(function() {
-                var i;
-                var result = 0;
-                var currentOperator = '';
-                for (i = 0; i < e.length; i++) {
-                    if (e[i] === 'box') {
-                        result = operate2(result, this.parentNode.childNodes[i].value, currentOperator);
-                    } else {
-                        currentOperator = this.parentNode.childNodes[i].textContent;
+                .text('compute')
+                .click(function () {
+                    var i;
+                    var result = 0;
+                    var currentOperator = '';
+                    for (i = 0; i < e.length; i++) {
+                        if (e[i] === 'box') {
+                            result = operate2(result, this.parentNode.childNodes[i].value, currentOperator);
+                        } else {
+                            currentOperator = this.parentNode.childNodes[i].textContent;
+                        }
                     }
-                }
-                this.parentNode.childNodes[i+1].value = result;
-            })
+                    this.parentNode.childNodes[i + 1].value = result;
+                })
         );
         $li.append(
             $('<button>')
@@ -396,7 +443,7 @@ $(function () {
                 })
         );
         $('#equation').append($li)
-    }
+    };
 
     function operate2(leftOperand, rightOperand, operator) {
         leftOperand = parseInt(leftOperand, 10);
@@ -428,7 +475,7 @@ $(function () {
                 break;
             }
         }
-    })
+    });
 
     $('.cancel').click(function () {
         switch (state.stateNumber) {
@@ -442,5 +489,5 @@ $(function () {
                 break;
             }
         }
-    })
+    });
 })
