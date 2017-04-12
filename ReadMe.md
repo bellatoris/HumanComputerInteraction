@@ -972,6 +972,8 @@ saccade 에는 micro saccade 랑 normal saccade 가 있다. Micro saccade 는 �
 
 > People excel at perception, at creativity, at the ability to go beyond the information given, making sense of otherwise chaotic events, We often have to interpret events far beyond the information available, and our ability to do this efficiently and effortlessly, usually without even being aware that we are doing so, greatly adds to our ability to function.
 
+## 4월 11일
+
 ### Perception
 * 1st stage of processing for sensory input
 * Associations formed
@@ -980,3 +982,13 @@ saccade 에는 micro saccade 랑 normal saccade 가 있다. Micro saccade 는 �
 	* Tactile stimulus => warm, hot
 	* Smell stimulus => pleasurable, abhorrent
 	* Taste stimulus => sweet, sour
+
+illsuion 이 굉장히 많다. perception 을 믿지 말아라. Illusion 을 잘 피해서 외부로 부터 오는 자극을 잘 perceive 하는 쪽으로 가는게 design.
+
+문제가 너무 복잡해지면 사람들은 아예 포기하는 경향이 있다.
+
+perpetual intermeidate: user 는 보통 intermediate 에 존재한다. 그래서 보통 major effort 를 intermeidate 를 위해서 쓴다.
+
+attention 은 아직 불명확. 
+
+Design 때문에 error 가 일어날 수 있다.

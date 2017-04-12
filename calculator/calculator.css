@@ -2,6 +2,57 @@
     box-sizing: border-box;
 }
 
+body {
+    padding: 0;
+    margin: 0;
+    text-align: center;
+}
+
+div {
+    margin: auto;
+}
+
+#intermediate {
+    width: 300px;
+    height: 25px;
+    margin: auto;
+    text-align: right;
+}
+
+#mem, #history, #equation {
+    width: 300px;
+    margin: auto;
+    text-align:left;
+    padding: 0;
+}
+
+#output, #memory {
+    width: 300px;
+    text-align: right;
+}
+.mytable {
+    max-width: 300px;
+    margin: auto;
+}
+
+.mytable > tbody> tr >  td {
+    width: 75px;
+    padding: 0;
+}
+
+.number, .operator, .clear, .result, .mClear, .mReset, .mPlus, .mMinus, .box, .save, .cancel {
+    border: none;
+    border-radius: 0;
+    width: 100%;
+}
+
+.nInput {
+    width: 50px;
+    text-align: center;
+    border: none;
+}
+
+
 #table2 {
     display: None;
 }

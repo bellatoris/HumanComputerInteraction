@@ -4,125 +4,139 @@
 <head>
     <meta charset="utf-8">
     <title>Calculator</title>
+    <link rel="stylesheet" type="text/css" href="bootstrap.css">
     <link rel="stylesheet" type="text/css" href="calculator.css">
 </head>
 
 <body>
-    <button class="select">1</button>
-    <button class="select">2</button>
-    <button class="select">3</button></br>
+    <button type="button" class="btn btn-default select">1</button>
+    <button type="button" class="btn btn-default select">2</button>
+    <button type="button" class="btn btn-default select">3</button></br>
 
-    <input id="output" type="text" value="0" readonly></br>
-    memory:<input id="memory" type="text" value="0" readonly></br>
-    result:<input id="result" type="text" value="0" readonly>
-
+    <p id="intermediate"></p>
+    <input id="output" type="text" value="0" readonly>
     <div id="table1">
-        <table>
+        <table class="table table-bordered mytable">
             <tr>
-                <td><button class="mClear">MC</button></td>
-                <td><button class="mReset">MR</button></td>
-                <td><button class="mPlus">M+</button></td>
-                <td><button class="mMinus">M-</button></td>
+                <td><button type="button" class="btn btn-default mClear">MC</button></td>
+                <td><button type="button" class="btn btn-default mReset">MR</button></td>
+                <td><button type="button" class="btn btn-default mPlus">M+</button></td>
+                <td><button type="button" class="btn btn-default mMinus">M-</button></td>
             </tr>
             <tr>
-                <td><button class="number">7</button></td>
-                <td><button class="number">8</button></td>
-                <td><button class="number">9</button></td>
-                <td><button id="add" class="operator">+</button></td>
+                <td><button type="button" class="btn btn-default number">7</button></td>
+                <td><button type="button" class="btn btn-default number">8</button></td>
+                <td><button type="button" class="btn btn-default number">9</button></td>
+                <td><button type="button" class="btn btn-default operator" id="add">+</button></td>
             </tr>
             <tr>
-                <td><button class="number">4</button></td>
-                <td><button class="number">5</button></td>
-                <td><button class="number">6</button></td>
-                <td><button id="sub" class="operator">-</button></td>
+                <td><button type="button" class="btn btn-default number">4</button></td>
+                <td><button type="button" class="btn btn-default number">5</button></td>
+                <td><button type="button" class="btn btn-default number">6</button></td>
+                <td><button id="sub" type="button" class="btn btn-default operator">-</button></td>
             </tr>
             <tr>
-                <td><button class="number">1</button></td>
-                <td><button class="number">2</button></td>
-                <td><button class="number">3</button></td>
-                <td><button id="mul" class="operator">*</button></td>
+                <td><button type="button" class="btn btn-default number">1</button></td>
+                <td><button type="button" class="btn btn-default number">2</button></td>
+                <td><button type="button" class="btn btn-default number">3</button></td>
+                <td><button id="mul" type="button" class="btn btn-default operator">*</button></td>
             </tr>
             <tr>
-                <td><button class="clear">C</button></td>
-                <td><button class="number">0</button></td>
-                <td><button class="result">=</button></td>
-                <td><button id="div" class="operator">/</button></td>
+                <td><button type="button" class="btn btn-success clear">C</button></td>
+                <td><button type="button" class="btn btn-default number">0</button></td>
+                <td><button type="button" class="btn btn-primary result">=</button></td>
+                <td><button id="div" type="button" class="btn btn-default operator">/</button></td>
             </tr>
         </table>
     </div>
 
     <div id="table2">
-        <table>
+        <table class="table table-bordered mytable">
             <tr>
-                <td><button class="mClear">MC</button></td>
-                <td><button class="mReset">MR</button></td>
-                <td><button class="mPlus">M+</button></td>
-                <td><button class="mMinus">M-</button></td>
+                <td><button type="button" class="btn btn-default mClear">MC</button></td>
+                <td><button type="button" class="btn btn-default mReset">MR</button></td>
+                <td><button type="button" class="btn btn-default mPlus">M+</button></td>
+                <td><button type="button" class="btn btn-default mMinus">M-</button></td>
             </tr>
             <tr>
-                <td><button class="number">7</button></td>
-                <td><button class="number">8</button></td>
-                <td><button class="number">9</button></td>
-                <td><button id="add" class="operator">+</button></td>
+                <td><button type="button" class="btn btn-default number">7</button></td>
+                <td><button type="button" class="btn btn-default number">8</button></td>
+                <td><button type="button" class="btn btn-default number">9</button></td>
+                <td><button type="button" class="btn btn-default operator" id="add">+</button></td>
             </tr>
             <tr>
-                <td><button class="number">4</button></td>
-                <td><button class="number">5</button></td>
-                <td><button class="number">6</button></td>
-                <td><button id="sub" class="operator">-</button></td>
+                <td><button type="button" class="btn btn-default number">4</button></td>
+                <td><button type="button" class="btn btn-default number">5</button></td>
+                <td><button type="button" class="btn btn-default number">6</button></td>
+                <td><button id="sub" type="button" class="btn btn-default operator">-</button></td>
             </tr>
             <tr>
-                <td><button class="number">1</button></td>
-                <td><button class="number">2</button></td>
-                <td><button class="number">3</button></td>
-                <td><button id="mul" class="operator">*</button></td>
+                <td><button type="button" class="btn btn-default number">1</button></td>
+                <td><button type="button" class="btn btn-default number">2</button></td>
+                <td><button type="button" class="btn btn-default number">3</button></td>
+                <td><button id="mul" type="button" class="btn btn-default operator">*</button></td>
             </tr>
             <tr>
-                <td><button class="clear">C</button></td>
-                <td><button class="number">0</button></td>
-                <td><button class="result">=</button></td>
-                <td><button id="div" class="operator">/</button></td>
+                <td><button type="button" class="btn btn-success clear">C</button></td>
+                <td><button type="button" class="btn btn-default number">0</button></td>
+                <td><button type="button" class="btn btn-primary result">=</button></td>
+                <td><button id="div" type="button" class="btn btn-default operator">/</button></td>
+            </tr>
+            <tr>
+                <td><button type="button" class="btn btn-warning save">Start</button></td>
+                <td><button type="button" class="btn btn-default cancel">Cancel</button></td>
+                <td><button type="button" class="btn btn-default box">Box</button></td>
             </tr>
         </table>
+        </br>
+        <ul id="equation">Equation</ul>
     </div>
 
     <div id="table3">
-        <table>
+        <table class="table table-bordered mytable">
             <tr>
-                <td><button class="mClear">MC</button></td>
-                <td><button class="mReset">MR</button></td>
-                <td><button class="mPlus">M+</button></td>
-                <td><button class="mMinus">M-</button></td>
+                <td><button type="button" class="btn btn-default mClear">MC</button></td>
+                <td><button type="button" class="btn btn-default mReset">MR</button></td>
+                <td><button type="button" class="btn btn-default mPlus">M+</button></td>
+                <td><button type="button" class="btn btn-default mMinus">M-</button></td>
             </tr>
             <tr>
-                <td><button class="number">7</button></td>
-                <td><button class="number">8</button></td>
-                <td><button class="number">9</button></td>
-                <td><button id="add" class="operator">+</button></td>
+                <td><button type="button" class="btn btn-default number">7</button></td>
+                <td><button type="button" class="btn btn-default number">8</button></td>
+                <td><button type="button" class="btn btn-default number">9</button></td>
+                <td><button type="button" class="btn btn-default operator" id="add">+</button></td>
             </tr>
             <tr>
-                <td><button class="number">4</button></td>
-                <td><button class="number">5</button></td>
-                <td><button class="number">6</button></td>
-                <td><button id="sub" class="operator">-</button></td>
+                <td><button type="button" class="btn btn-default number">4</button></td>
+                <td><button type="button" class="btn btn-default number">5</button></td>
+                <td><button type="button" class="btn btn-default number">6</button></td>
+                <td><button id="sub" type="button" class="btn btn-default operator">-</button></td>
             </tr>
             <tr>
-                <td><button class="number">1</button></td>
-                <td><button class="number">2</button></td>
-                <td><button class="number">3</button></td>
-                <td><button id="mul" class="operator">*</button></td>
+                <td><button type="button" class="btn btn-default number">1</button></td>
+                <td><button type="button" class="btn btn-default number">2</button></td>
+                <td><button type="button" class="btn btn-default number">3</button></td>
+                <td><button id="mul" type="button" class="btn btn-default operator">*</button></td>
             </tr>
             <tr>
-                <td><button class="clear">C</button></td>
-                <td><button class="number">0</button></td>
-                <td><button class="result">=</button></td>
-                <td><button id="div" class="operator">/</button></td>
+                <td><button type="button" class="btn btn-success clear">C</button></td>
+                <td><button type="button" class="btn btn-default number">0</button></td>
+                <td><button type="button" class="btn btn-primary result">=</button></td>
+                <td><button id="div" type="button" class="btn btn-default operator">/</button></td>
             </tr>
         </table>
     </div>
 
-    <button id="state"></button>
+    </br>
+    <p id="mem">Memory</p>
+    <input id="memory" type="text" value="0" readonly>
+
+    </br>
+    </br>
+    <ul id="history">History</ul>
+
     <script src='https://code.jquery.com/jquery-3.2.1.min.js'></script>
+    <script type='text/javascript' src='bootstrap.js'></script>
     <script type='text/javascript' src='calculator.js'></script>
 </body>
 
