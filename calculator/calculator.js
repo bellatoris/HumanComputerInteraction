@@ -94,17 +94,32 @@ $(function () {
     });
 
     $('.mPlus').click(function () {
-        var number = $('#output').attr('value');
-        memory += parseInt(number, 10);
+        switch (state.stateNumber) {
+            case 0:
+            case 1:
+            case 2:
+            case 3:
+            case 4:
+                var number = $('#output').attr('value');
+                memory += parseInt(number, 10);
 
-        $('#memory').attr('value', memory);
+                $('#memory').attr('value', memory);
+
+        }
     });
 
     $('.mMinus').click(function () {
-        var number = $('#output').attr('value');
-        memory -= parseInt(number, 10);
+        switch (state.stateNumber) {
+            case 0:
+            case 1:
+            case 2:
+            case 3:
+            case 4:
+                var number = $('#output').attr('value');
+                memory -= parseInt(number, 10);
 
-        $('#memory').attr('value', memory);
+                $('#memory').attr('value', memory);
+        }
     });
 
     $('.mClear').click(function () {
@@ -182,6 +197,36 @@ $(function () {
                 $('#output').attr('value', number);
                 break;
             }
+            case 5: {
+                // state5 -> state8
+                state.stateNumber = 8;
+                equation = number;
+                equationList[equationList.length] = number;
+                $('#output').attr('value', equation);
+                break;
+            }
+            case 7: {
+                // state7 -> state8
+                state.stateNumber = 8;
+                equation = $('#output').attr('value');
+                equation += ' ' + number;
+                equationList[equationList.length] = state.operator;
+                equationList[equationList.length] = number;
+                $('#output').attr('value', equation);
+                break;
+            }
+            case 8: {
+                equation = $('#output').attr('value');
+                if (equationList[equationList.length - 1] === '0') {
+                    equationList[equationList.length - 1] = number
+                    equation = equation.substr(0, equation.length - 1) + number;
+                } else {
+                    equation += number;
+                    equationList[equationList.length - 1] += number;
+                }
+                $('#output').attr('value', equation);
+                break;
+            }
         }
     });
 
@@ -250,8 +295,14 @@ $(function () {
                 $('#output').attr('value', equation + ' ' + operator);
                 break;
             }
-
             case 7: {
+                state.operator = operator;
+                $('#output').attr('value', equation + ' ' + operator);
+                break;
+            }
+            case 8: {
+                // state8 -> state7
+                state.stateNumber = 7;
                 state.operator = operator;
                 $('#output').attr('value', equation + ' ' + operator);
                 break;
@@ -278,6 +329,7 @@ $(function () {
 
                 if (timeoutHandle !== '') {
                     appendHistory(history.substr(0, history.length - 2) + " = " + state.leftOperand);
+                    state.rightOperand = state.leftOperand;
                     history = '';
                 } else {
                     state.rightOperand = state.leftOperand;
@@ -401,6 +453,17 @@ $(function () {
                         appendEquation(equationList);
                         $(this).text('Start');
                         initState();
+                        break;
+                    }
+                }
+                case 8: {
+                    if (equationList.length !== 1) {
+                        $('.box').toggleClass('btn-info');
+                        $('.cancel').toggleClass('btn-danger');
+                        appendEquation(equationList);
+                        $(this).text('Start');
+                        initState();
+                        break;
                     }
                 }
             }
@@ -410,8 +473,12 @@ $(function () {
     function appendEquation(e) {
         var $li = $('<li>');
         for (var i = 0; i < e.length; i++) {
-            if (e[i] === 'box') {
-                $li.append($('<input class="nInput" type="text" value="0">'))
+            if (!isOperator(e[i])) {
+                if (e[i] === 'box')
+                    $li.append($('<input class="nInput" type="text" value="0">'));
+                else
+                    $li.append($('<input class="nInput" type="text" value="0">')
+                        .attr('value', (parseInt(e[i], 10))));
             } else {
                 $li.append(e[i]);
             }
@@ -426,7 +493,7 @@ $(function () {
                     var result = 0;
                     var currentOperator = '';
                     for (i = 0; i < e.length; i++) {
-                        if (e[i] === 'box') {
+                        if (!isOperator(e[i])) {
                             result = operate2(result, this.parentNode.childNodes[i].value, currentOperator);
                         } else {
                             currentOperator = this.parentNode.childNodes[i].textContent;
@@ -457,6 +524,10 @@ $(function () {
         }
     }
 
+    function isOperator(operator) {
+        return operator === '+' || operator === '-' || operator === '*' || operator === '/';
+    }
+
     $('.box').click(function () {
         switch (state.stateNumber) {
             case 5: {
@@ -481,7 +552,8 @@ $(function () {
         switch (state.stateNumber) {
             case 5:
             case 6:
-            case 7: {
+            case 7:
+            case 8: {
                 initState();
                 $('.box').toggleClass('btn-info');
                 $('.cancel').toggleClass('btn-danger');
