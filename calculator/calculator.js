@@ -9,6 +9,18 @@ $(function () {
 
         $('div').css('display', 'none');
         $(currentTable).css('display', 'block');
+
+        switch (state.stateNumber) {
+            case 5:
+            case 7:
+            case 8: {
+                $('#table2 .save').toggleClass('btn-danger');
+                $('#table2 .save').text('Start');
+                $('#table2 .result').text('=');
+                break;
+            }
+        }
+        initState();
     });
 
     function inCurrentTable(input) {
@@ -57,9 +69,16 @@ $(function () {
     }
 
     // memory state 
-    $('.mReset').click(function () {
+    $('.mRecall').click(function () {
         state.clearState = 'CE';
         $('.clear').text(state.clearState);
+
+        if (timeoutHandle !== '') {
+            clearTimeout(timeoutHandle);
+            timeoutHandle = setTimeout(function () {
+                $(operatorToString(state.operator)).click();
+            }, 1000 * parseFloat($('#timeout').val(), 10));
+        }
 
         switch (state.stateNumber) {
             case 0:
@@ -148,7 +167,7 @@ $(function () {
             clearTimeout(timeoutHandle);
             timeoutHandle = setTimeout(function () {
                 $(operatorToString(state.operator)).click();
-            }, 900);
+            }, 1000 * parseFloat($('#timeout').val(), 10));
         }
 
         switch (state.stateNumber) {
@@ -288,13 +307,6 @@ $(function () {
                 $('#intermediate').text(history);
                 break;
             }
-            case 6: {
-                // state6 -> state7
-                state.stateNumber = 7;
-                state.operator = operator;
-                $('#output').attr('value', equation + ' ' + operator);
-                break;
-            }
             case 7: {
                 state.operator = operator;
                 $('#output').attr('value', equation + ' ' + operator);
@@ -374,6 +386,16 @@ $(function () {
                 $('#intermediate').text(history);
                 break;
             }
+            case 8: {
+                if (equationList.length !== 1) {
+                    $('.save').toggleClass('btn-danger');
+                    $('.save').text('Start');
+                    appendEquation(equationList);
+                    $(this).text('=');
+                    initState();
+                }
+                break;
+            }
         }
         if (timeoutHandle !== '') {
             clearTimeout(timeoutHandle);
@@ -421,6 +443,12 @@ $(function () {
                 }
                 break;
             }
+            case 5:
+            case 7:
+            case 8: {
+                initState();
+                state.stateNumber = 5;
+            }
         }
     });
 
@@ -439,32 +467,21 @@ $(function () {
 
     $('.save').click(function () {
         if ($(this).text() === 'Start') {
-            $(this).text('Save');
-            $('.box').toggleClass('btn-info');
-            $('.cancel').toggleClass('btn-danger');
+            $(this).text('Cancel');
+            $('#table2 .result').text('Save');
+            $(this).toggleClass('btn-danger');
             initState();
             state.stateNumber = 5;
         } else {
             switch (state.stateNumber) {
-                case 6: {
-                    if (equationList.length !== 1) {
-                        $('.box').toggleClass('btn-info');
-                        $('.cancel').toggleClass('btn-danger');
-                        appendEquation(equationList);
-                        $(this).text('Start');
-                        initState();
-                        break;
-                    }
-                }
+                case 5:
+                case 7:
                 case 8: {
-                    if (equationList.length !== 1) {
-                        $('.box').toggleClass('btn-info');
-                        $('.cancel').toggleClass('btn-danger');
-                        appendEquation(equationList);
-                        $(this).text('Start');
-                        initState();
-                        break;
-                    }
+                    $(this).toggleClass('btn-danger');
+                    $(this).text('Start');
+                    $('#table2 .result').text('=');
+                    initState();
+                    break;
                 }
             }
         }
@@ -474,34 +491,32 @@ $(function () {
         var $li = $('<li>');
         for (var i = 0; i < e.length; i++) {
             if (!isOperator(e[i])) {
-                if (e[i] === 'box')
-                    $li.append($('<input class="nInput" type="text" value="0">'));
-                else
-                    $li.append($('<input class="nInput" type="text" value="0">')
-                        .attr('value', (parseInt(e[i], 10))));
+                $li.append($('<input class="nInput" type="text" value="0">')
+                    .attr('value', (parseInt(e[i], 10))));
             } else {
                 $li.append(e[i]);
             }
         }
         $li.append(' = ');
         $li.append($('<input class="nInput" type="text" value="0" readonly>'));
-        $li.append(
-            $('<button>')
-                .text('compute')
-                .click(function () {
-                    var i;
-                    var result = 0;
-                    var currentOperator = '';
-                    for (i = 0; i < e.length; i++) {
-                        if (!isOperator(e[i])) {
-                            result = operate2(result, this.parentNode.childNodes[i].value, currentOperator);
-                        } else {
-                            currentOperator = this.parentNode.childNodes[i].textContent;
-                        }
+
+        var computeButton = $('<button>')
+            .text('compute')
+            .click(function () {
+                var i;
+                var result = 0;
+                var currentOperator = '';
+                for (i = 0; i < e.length; i++) {
+                    if (!isOperator(e[i])) {
+                        result = operate2(result, this.parentNode.childNodes[i].value, currentOperator);
+                    } else {
+                        currentOperator = this.parentNode.childNodes[i].textContent;
                     }
-                    this.parentNode.childNodes[i + 1].value = result;
-                })
-        );
+                }
+                this.parentNode.childNodes[i + 1].value = result;
+            })
+        $li.append(computeButton);
+        computeButton.click();
         $li.append(
             $('<button>')
                 .text('delete')
@@ -527,39 +542,4 @@ $(function () {
     function isOperator(operator) {
         return operator === '+' || operator === '-' || operator === '*' || operator === '/';
     }
-
-    $('.box').click(function () {
-        switch (state.stateNumber) {
-            case 5: {
-                state.stateNumber = 6;
-                equation += 'box'
-                equationList[equationList.length] = 'box';
-                $('#output').attr('value', equation);
-                break;
-            }
-            case 7: {
-                state.stateNumber = 6;
-                equation += ' ' + state.operator + ' box';
-                equationList[equationList.length] = state.operator;
-                equationList[equationList.length] = 'box';
-                $('#output').attr('value', equation);
-                break;
-            }
-        }
-    });
-
-    $('.cancel').click(function () {
-        switch (state.stateNumber) {
-            case 5:
-            case 6:
-            case 7:
-            case 8: {
-                initState();
-                $('.box').toggleClass('btn-info');
-                $('.cancel').toggleClass('btn-danger');
-                $('.save').text('Start');
-                break;
-            }
-        }
-    });
 })

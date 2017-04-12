@@ -20,14 +20,14 @@ div {
     text-align: right;
 }
 
-#mem, #history, #equation {
+#mem, #history, #equation, #time {
     width: 300px;
     margin: auto;
     text-align:left;
     padding: 0;
 }
 
-#output, #memory {
+#output, #memory, #timeout {
     width: 300px;
     text-align: right;
 }
@@ -41,7 +41,7 @@ div {
     padding: 0;
 }
 
-.number, .operator, .clear, .result, .mClear, .mReset, .mPlus, .mMinus, .box, .save, .cancel {
+.number, .operator, .clear, .result, .mClear, .mRecall, .mPlus, .mMinus, .box, .save, .cancel {
     border: none;
     border-radius: 0;
     width: 100%;
