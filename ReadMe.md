@@ -983,12 +983,472 @@ saccade 에는 micro saccade 랑 normal saccade 가 있다. Micro saccade 는 �
 	* Smell stimulus => pleasurable, abhorrent
 	* Taste stimulus => sweet, sour
 
-illsuion 이 굉장히 많다. perception 을 믿지 말아라. Illusion 을 잘 피해서 외부로 부터 오는 자극을 잘 perceive 하는 쪽으로 가는게 design.
+### Psychophysics
+* Branch of experimental psychology
+* Studied since the 19th century
+* Relationship between human perception and physical phenomena
+* Experimental method:
+	* Present subject with two stimuli, one after the other
+	* Stimuli differ in a physical property (e.g., frequency)
+	* Randomly vary the difference
+	* Determine threshold below which the subject deems the two stimuli "the same"
+	* This threshold is the *just noticeable different* (JND) 
 
-문제가 너무 복잡해지면 사람들은 아예 포기하는 경향이 있다.
+### Illusion - Other Senses
+* If illusion is possible for the visual sense, the same should be true for the other senses
+* Tactile/haptic illusion: phantom limb
+* Auditory illusion:
+	* -[Shepard scale](https://www.youtube.com/watch?v=BzNzgsAE4F0&feature=youtu.be), Shepard-Risset glissando 
+	* Visit *YouTube* for examples
+
+Illsuion 이 굉장히 많다는 것을 알 수 있다. 그렇기에 Perception 을 있는 그대로 믿을 수 없다. 이러한 Illusion 을 잘 피해서 외부로 부터 오는 자극을 잘 perceive 하는 쪽으로 가는게 design 이다.
+
+### Cognition
+* Cognition is the human process of conscious intellectual acitivity
+	* E.g., thinking, reasoning, deciding
+* Spans many fields
+	* E.g., neurology, linguistics, anthropology
+* Sensory phenomena => easy to study because they exist in the physical world
+* Congnitive phenomena => hard to study because they exist within the human brain
+
+### Making a Decision
+* Not possible to directly measure the time for a human to "make a decision"
+* When does the measurement begin and end?
+* Where is it measured?
+* On what input is the human deciding?
+* Through what output is the decision conveyed?
+* There is a sensory stimulus and motor response that bracket the decision 
+
+### Making a Deicision - in Parts
+![decision](Images/decision.png)
+
+### Examples of Simple Decisions
+* Driving a car => decision to depress the brake pedal in response to a changing signal light
+* Using a mobile phone => decision to press REJECT-CALL in response to an incoming call
+* Reading news online => decision to click the CLOSE button on a popup ad
+* These are *reaction time* tasks (discussed shortly)
+
+### A More Involved Decision
+* Game (e.g., Black Jack: 남은 카드를 카운팅 해서 내가 다음에 받을 카드가 무엇일지 확률을 계산해야하고, 딜러의 눈빛, 목소리의 톤 등으로 딜러가 가진 카드가 무엇인지 유추해서 다음 카드를 받을지 말지 결정해야 한다.)
+* 문제가 너무 복잡해지면 사람들은 아예 포기하는 경향이 있다.
+
+### Memory
+* Vast repository
+* Long-term memory
+	* Declarative/explicit area => information about events in time objects in the external world (data segment)
+	* Implicit/procedural area => information about how to use objects and how to do things (code segment) 
+* Short-term memory
+	* A.k.a *working memory*
+	* Information is active and readily availbale for access 
+	* Amount of working memory is small, about 7 (±2) units or chunks 
+
+### Short Term Memory Experiment
+* Random sequences of digits recited to subjects
+* Sequences vary from 4 to 12 digits
+* After recitation, subjects copy sequence from memory to a sheet of paper
+* Transcriptions on sheets scored (correct/incorrect)
+* Result (n ≈ 60):
+
+![shortterm](Images/shortterm.png)
+
+Sequence length 가 8 부터는 거의 기억하지 못하는 것을 확인 할 수 있다.
+
+### Chunking
+* Units in short term memory may be recoded as a chunk
+* Expands capacity of short term memory
+* E.g., Commit to memory and recall
+
+![chunking](Images/chunking.png)
+
+### Language
+* The mental faculty that allows humans to communicate
+* As speech, available to (almost) all humans without effort
+* As writing, only a available with considerable effort
+* HCI interest: primarily in writing, creation of text
+
+> Humankind is defined by language; but civilization is defined by writing.
+
+### Corpus
+* One way to characterise written text is a corpus
+* Large collection of representative text samples
+* A corpus may be reduced to a word-frequency list:
+
+![corput](Images/corpus.png)
+
+### Part-of-speech Tagging
+* Some corpora include part-of-speech (POS) tagging
+* Each word is tagged by its category (e.g., noun, verb, adjective)
+* Used in word prediction to narrow search space
+* Example:
+	* The *paint* is dry. (noun)
+	* Children *paint* with passion. (verb)
+
+### Statistics and Language
+* Native speakers intuitively understand the statistical natue of their language.
+
+### Redundancy and Language
+* Since humans can fill in missing parts, perhaps the missing parts can be eliminated
+* This shortens the text (efficient)
+
+### Recoding
+* Other ways to shorten text 
+* Recoding: replacing words/characters with shortened tags using linguistics tricks
+* Examples
+	* Sound:
+		* th@s => that's
+		* gr8 => great
+	* Invented acronyms:
+		* w => with
+		* gf => girlfriend
+		* x => times
+
+### Entropy in Language
+* If redundancy is what we know, entropy is what we don't know
+* Entropy is the uncertainty about forthcoming letters, words, phrases, ideas, etc.
+* Shannon demonstrated entropy and redundancy in a letter guessing experiment 
+	* Subject shown text with letters blocked
+	* Subject guesses letters one at a time
+	* Letters revealed as guessing proceeds:
+		* Incorrect => show correct letter
+		* Correct => show "-"
+
+### Letter Guessing Experiment
+![guessing](Images/guessing.png) 
+
+* Observations:
+	* Errors most common at beginning of words
+	* Errors less common as a word progresses
+	* Errors even less common as a phrase progresses
+* Entropy discussion:
+	* The two phrases (original and "reduced") contain the same information
+	* With a good statistical model, the original text can be obtained from the reduced text
+	* Therefore, it is only necessary to transmit the reduced text  
+
+### Entropy of Printed English
+* Shannon demostrated how to calculate the entropy (H) of printed English
+* Considering single letter frequencies alone,
+	* H = 4.25 bits per letter
+* Entropy (viz, uncertainty) goes down as more letters are considered (1 pervious letter, 2 previous letters, etc.)
+* In the extreme (considering up to about 100 letters),
+	* H ≈ 1 bit per letter
+	* Redundancy ≈ 75%
+
+### Human Factors Model
+![hfm2](Images/hfm2.png)
+
+### Human Performance
+* Humans uses their sensors, brain, and responders to do things
+* When the three work together to achieve a *goal*, human performance arises
+* Examples:
+	* Tying sholeaces
+	* Folding clothes
+	* Searching the web
+	* Entering a text message on a mobile phone       
+
+### Speed-accuracy Trade-off
+* Fundamental property of human performance 
+* Go faster and errors increase
+* Slow down and accuracy impoves
+* HCI research on a new interface or interaction technique must consider both the speed in doing tasks (achieving the goal!) and the accompanying accuracy
+
+### Human Diversity
+* Human performance is highly complex:
+	* Human differ (age, gender, skill, motivation, etc.)
+	* Environmental conditions affect performance
+	* Secondary tasks often present
+* Human diversity and human performance often shown in a distribution 
+
+### Human Diversity and Performance
+![typing](Images/typing.png)
 
 perpetual intermeidate: user 는 보통 intermediate 에 존재한다. 그래서 보통 major effort 를 intermeidate 를 위해서 쓴다.
 
-attention 은 아직 불명확. 
+### Reaction Time
+* One of the most primitive manifestations of human performance is *simple reaction time* 
+* Definitions: The delay between the occurence of a single fixed stimulus and the initiation of a response assigned to it
+* Example: pressing a button in response to the onset of a stimulus light	 
 
-Design 때문에 error 가 일어날 수 있다.
+### Sensory Stimuli and Reaction Time
+* Delay time varies by type of sensory stimuli
+* Approximate values
+	* Auditory => 150 ms
+	* Visual => 200 ms
+	* Smell => 300 ms
+	* Pain => 700 ms
+
+### Reaction Time Experiment
+![reaction](Images/reaction.png)
+
+### Visual Search
+* A variation on simple reaction time
+* User scans a collection of items looking for desired item
+* Time increases with the number of items to scan
+* Included in the dem software with N = 1, 2, 4, 8, 16, or 32 items
+![visual](Images/visual.png)
+![visual](Images/visualexp.png)
+
+추세선이 Linear 한 것을 보아, 사람도 눈으로 Linear search 를 해서 결과를 내는 것을 확인 할 수 있다. No-match 의 경우 모든 element 를 다 봐야해서 reaction time 이 더 긴 것을 볼 수 있다.
+
+### Skilled Behaviour
+* For many tasks, human performance improves considerably and continuously with practice
+	* Note: Very little improvement with practice in the simpler reaction time tasks
+* In these tasks, there is interest in studying the **progression of learning and the performance** achieved according to the amount of practice
+* Categories of skilled behaviour:
+	1. Sensory-motor skill (e.g., darts, gaming)
+	2. Mental skill (e.g., chess, programming)
+	* Some tasks (e.g., Laparoscopic Surgery) required a lot of both  
+
+### Attention
+* *Texting while driving!*
+* Attention is complex
+	* Divided attention, secondary tasks
+	* Which tasks require attention?
+		* Can't talk and type
+	* Which tasks do not require attention?
+		* Can talk and walk
+	* What are the human limits? *What is attention?*
+* Two categories of attention
+	* Divided attention (attending to more than one task)
+	* Selected attention (attending to one task to the exclusion of others)    
+
+### Human Error
+* Human error can be studied from many levels
+* Simple view: An error is a dicrete event where the outcome deviated from the desired outcome
+* But, tasks that are performed in error are often at least partly correct 
+
+### Variability and Error
+![error](Images/error.png)
+
+### Accidents
+* A broader perspective is often necessary
+* Serious accidents causing significant damage or loss of life are often attributed to *human error*
+* But the fault many be a *design induced error*
+* Interaction errors (e.g., an operator pressing the wrong button or entering a wrong value) are not only possible, they are, in time, **likely** and must be anticipated in the design
+
+## 4월 13일
+## Human Information Processor 1
+
+### Human Information Processor (Card, Moran, Newell)
+
+![hip](Images/hip.png)
+
+* Unified model
+	* several aspects of cognitive psychology into a unified picture
+	* Recognize-act cycle
+	* Simplified (limited) model
+* Intended audience
+	* Computer Scientists
+* Predicting human behavior
+	* Human performance while using the computer
+* Human mind as an information processing system
+* Practival and influential
+
+### Subsystems of the Model Human Processor
+
+* Each system with **memory** and **processor**
+	* Memory: capacity, decay time, code type (physical, acoustic, visual, semantic)
+	* Processor: cycle time
+* Perceptual system
+	* sensors ane memories (visual image store and auditory image store)
+	* symolically codes the output of the sensory system
+* Cognitivie system
+	* receives symbolically coded info from **working memory** 
+	* matches info in **long term memory**
+	* make **decision** about how to respond
+* Motor system
+	* carries out response
+	![srt](Images/srt.png)
+
+* Simple Reaction Time
+	* see α on screen
+	* coded representation in the visual image store (α')
+	* visually coded symbol in Working Memory (α'')  
+	=> Perceptual Processor cycle (T_P)   
+	
+	* occurence of the stimulus connected with a response (i.e., decide how to respond)  
+	=> Cognitive Processor cycle (T_C)  
+	
+	* carry out physical movement  
+	=> Motor Processor cycle (T_M)
+	
+### Perceptual System - Eye
+
+![eye2](Images/eye2.png)
+
+* Central Vision
+	* fovea
+	* 2 degress across
+	* details obtained
+* Peripheral Vision
+	* retina
+	* orientation
+	* intensity
+* Head Movement
+	* If > 30° away from fovea  
+
+### Perceptual Processor
+* Physical store from our senses: see/hear/smell...
+* From **physical** perception to **abstract** concept
+	* color, shape, orientation, brightness, movement to "B" or "circle"
+* Coded for transfer to working memory
+	* Progressive decoding 
+		* Example: 10 ms/letter
+	* Selective decoding
+		* Spatial 
+		* Pre-attentive: color, direction ...
+* Capacity
+	* Example: 17 letters
+
+### Pre-attentive Task
+* Tasks which can be performed in less than 250ms
+	* human visual system cannot decide to changes its focus of attention
+* Requrie only "a single glance" at the image being displayed
+* Pre-attentive properties to assist in performing visual tasks
+	* *target detection*
+	* *boundary detection*
+	* *counting/estimation*      
+
+### Perceptual Processor
+* Decay: 200 ms [90~1000] \(half-time)
+* Half-life: time after which probability of retreival < .5
+
+![halflife](Images/halflife.png)
+
+* 50 ms (이게 사람의 한계 같아서 설정한듯 하다) 만 글자를 보여주고 다시 기억해 내게 하였다.
+* difficult to remember what is on the screen for more than 200 ms
+* Design 시 user 에게 200 ms 이상의 시간이 지난 후에 기억해야만 하는 task를 주면 안된다.
+
+* Cycle time = Unit impulse response
+	* Time that takes before human **claims to see it** after impulse
+	* Time response of the visual system to a very breif pulse of light
+	* Quantum experience: 100 ms [50~200]
+		* *Perceptual Fusion*
+		* *Causality*
+	* [30/sec] 3 clicks in each 100 ms cycle time are fused into a single percept
+	![fusion](Images/fusion.png)
+
+### Perceptual Processor - Cycle Time
+* Cycle time could vary according to conditions
+	* "Variable Perceptual Processor Rate Principle"
+	* The perceptual processor cycle time varied inversely with stimulus intensity
+* Bloch's Law (1885): *I·t = k, t < cycle time*
+	* *I*: intensity of stimulus
+	* *t*: lasting time of stimulus
+	* examples: Pulse of light lasting 10 ms with intensity of 50 has same appearance as a pulse of 20 ms with intensity of 25 
+
+### Example: Moving Picture Rate
+* Example 1. Compute the frame rate at which frames of a moving picture must be refreshed to give illusion of movement.
+
+*At least one frame within perceptual processor cycle time*  
+*Frame rate > 1/(cycle time) = 1/100 = 10 frame/sec*
+	 
+실제 연구 결과 30 frame/sec 는 나와야 부드럽게 느껴진다.
+
+### Perceptual Causality
+* *Perceptual Fusion*: Two stimuli within a perceptual processor cycle appear **fused**  
+=> the first event appears to **cause** the other
+* 1/(PP cycle time) fps = 10 fps (frame per second)  
+=> perceived as a moving picture
+* UI responses < PP cycle time  
+=> appear instantaneous 
+![causality](Images/causality.png)
+
+### Wokring Memory
+* The working memory is your register set
+* Access in chunks
+	* Task dependent construct
+	* 7 +/- 2 (Miller)
+* Working memory deacy with time
+	* Content dependent
+	* Limited attention span
+		* 5 s attention span seems like a good idea, since after that you will be losing most of the information
+	* commit to longer term memory
+	* "external cognition tool" like writing on a piece of paper   
+
+### Working Memory: Decay Rate
+* Effect of **interference**
+* 7 [5~226] sec half-life (73 for 1 chunk)
+* Long-term memory kicks in
+	![workingmemory](Images/workingmemory.png)
+	
+### Working Memory: Interfernce
+![interference](Images/interference.png)
+
+### Working Memory: Chunks
+* ***chunks***
+	* Activated elements in Long-Term memory
+	* Unit of memory or perception
+	* Depends on presentation and what you already know
+	* "BSCBMICRA" vs. "CBSIBMRCA"
+* Chunks can be related to other chunks
+* Activation spread in LTM => interfere with old ones 
+	* ROBIN ROBERT BIRD WING FLY 
+	* Limited amount of activation resource => decay
+
+### Working Memory: Capacity
+* Pure capacity: 3 [2.5~4.1] chunks
+	* Number of immediately preceding digits recallable from a long series when the series unexpectedly stops
+* Effective capacity (augmented by the use of LTM)
+	* e.g., Longest number that can be repeated back
+	* 7 ± 2 [5~9] chunks (Miller, 1953)
+	* Fastman can do 81 chunks
+		* 81 decimal digits presented at a uniform rate of 1 digit per sec
+
+### Long term memory
+* Very large (or infinite) capacity
+	* Semantic encoding
+	* A network of related chunks, accessed associatively from the WM
+* Associative access      
+	* Fast read: 70 ms
+		* can be accessed by pattern matching during each processing cycle
+	* Expensive write: 10 s
+		* noisy
+		* Several Rehearsal and/or recall
+		* information is stored in a semantic encoding not in perceptual information
+* Context at the time of acquisition is key for retrieval
+* Knowledge repository
+* Unlimited capacity and little decay (no erasure)
+* Retrieval could fail:
+	* No effective associations
+	* Interference by similar assocations (light/dark vs. light/heavy)
+* To remember something later
+	* Associate it with items already in LTM in novel ways
+	* Elaborative Rehearsal vs. Maintenance Rehearsal (repetition)
+
+### Cognitive Processor
+* (Recognize-Act) Cycle time: 70 ms
+	* **Recognize**: contents of WM initiate associatvely-linked actions in LTM
+	* **Act**: modify contents of WM
+* Cognitive Processing Rate: 70 [25~170]
+	* Typical matching time
+		* Digits: 33 ms
+		* Colors: 38 ms
+		* Geometry: 50 ms
+* Variable Cognitive Processor Rate Principle
+	* Cycle time is shorter when greater effort is induced
+		* by increased task demands or information loads
+	* Also decrease with practice
+
+### Cognitive Processor
+* **Parallel** in **recognition** phase, **serial** in **action** phase
+	* Can be aware of many things at once
+	* Once locus of attention at a time (i.e. cannot do more than one at a time)
+		* Eastern 401, December 1972
+			* Crew focused on checking the landing gear indicator bulb,
+			* Meanwhile the aircraft is loosing altitude (horn, warning indicator...),
+			* Aircraft crashed in the Everglades
+	* But what about driving, reading signs, and talking can all be kept going?
+		* Skilled intermittent allocation of control actions to each task
+		* Interrupt-driven time-sharing systems   
+
+### Stay in the Flow
+* A key to good interface design
+	* users have only one focus of attention at a time
+	* divide it between your interface and what they are doing 
+	* Optimal: spend all their time on what they are doing 
+	* spend effot to maintain what is on their working memory (x)
+	* interface have to leave as little a cognitive foot print as possible
+* Flow: The Psychology of Optimal Experience
+	* by Mihaly Csikszentmihalyi
+* Thinking, Fast and Slow
+	* by Daniel Kahnenman  
