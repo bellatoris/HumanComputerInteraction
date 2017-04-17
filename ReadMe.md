@@ -23,7 +23,7 @@ Human을 위한 Interactive한 computing system과 그것들을 둘러싼 여러
 * ISO에서 정의한 UX: A person’s **perceptions** and **responses** that result from the use or anticipated use of a product, system or service.  
 * UX란 real world에서 product가 어떻게 행동하며 어떻게 user들에 의해 사용되는지이다.  
 * UX의 정의는 사람마다 각자 다르게 내린다. 그렇기에 Engineer들이 보기에 과학이나 공학이 아니라고 볼 수도 있지만, 재밌다. 
-* Cannot design a user experience, only design *for* a user experience. 즉 user experience를 간접적으로 design하고 설계할수는 있어도 직접적으로는 불가능하다. (말그래도 user의 experience이기 때문)
+* Cannot design a user experience, only design *for* a user experience. 즉 user experience를 간접적으로 design하고 설계할수는 있어도 직접적으로는 불가능하다. (말 그대로 user의 experience이기 때문)
 
 ### UX의 특징은?
 * Humane But Soft: soft? 인도적이지만 부드럽다? 말랑말랑하다. 확실하게 정의 할수 없다.
@@ -144,7 +144,7 @@ Prof.Donal Norman
 
 광고를 위해 이것 저것 기능을 추가하면, 오히려 시스템을 복잡하게 만들어 사용성을 떨어뜨린다.
 
-### We're or Designising For Ourselves
+### We're not Designising For Ourselves
 사용할 사람들을 위해서 디자인 해야 한다.
 ![whodesignthis](Images/whodesignthis.png)
 
@@ -217,7 +217,7 @@ target 대상에 맞게 affordance를 주어야 한다.
 * Cultural Contraints
 	* Allowable actions for social situations
 * **Logical Constraints**
-	* only one pieceleft, only one possible place to go
+	* only one piece left, only one possible place to go
 	* spatial layout of components
 	* **"Natural mapping"** work by this contraints
     
@@ -261,11 +261,11 @@ target 대상에 맞게 affordance를 주어야 한다.
 **make things visible**: 꼭 눈으로 봐야만 visible한게 아니라 image가 떠오르게 하는 것,  
 손을 자연스럽게 내려놓으면 있음, 기능이 너무 많으면 헷갈린다.
 
-**provide feedback**: (0.1초 안에 줘야 바로바로 feedback이 온다고 생각하게됨) feedback을 잘 줘야causality를 느낄 수 있다.
+**provide feedback**: (0.1초 안에 줘야 바로바로 feedback이 온다고 생각하게됨) feedback을 잘 줘야 causality 를 느낄 수 있다.
 
 **recognize causality**: 원인과 결과를 알 수 있게 해주어야함. touch는 discoverability가 있다. 누르면 뭔일이 일어난 줄 몰름
 
-### Cauality
+### Causality
 * Causality - interpretation of "feedback"
 * People assume that the thing that happens right after an action be caused by that action
 * False causality
@@ -328,7 +328,7 @@ But no serach, search는 Google발전 시켰다.
 
 ### Sketchpad (1963)
 * Ivan E Sutherland's PhD thesis
-* "taling to computer graphically"
+* "talking to computer graphically"
 * "don't know what the problem is and how to solve it"
 * "making computer almost like a human assistance"
 * let human solve the problem as they are formulating  it
@@ -396,7 +396,7 @@ counterbalanced: 순서는 달랐다.
 
 ### NLS (Douglas Engelbart, 1968)
 * Mouse
-* A cording keyboard
+* A coding keyboard
 * Foldable outline system
 * Hypertext
 * Online help...
@@ -516,6 +516,15 @@ Expressiveness하냐? 막대가 무언가 의미 있는 것 처럼 보임
 
 1:4를 보여줄 때 무엇을 쓸까? 1D-막대기가 제일 좋다. 2D 나 3D 는 바로바로 알기가 매우 어렵다.
 
+### Stevens Power Law
+* *p*: perceived magnitude
+* *a*: actual magnitude
+* *p=ka^α*
+* *p1/p2 = (a1/a2)^α*
+* length judgment: *α≈1*
+* area judgment: *α<1*
+* volume judgment *α≪1*
+
 전체 기준을 줘버리니까 어느 것이 긴지 한번에 알아봄 왜냐? 작은것을 보고 비교하게 되니까. 큰 것 두개를 비교할 때는 작은 차이가 잘 보이지 않지만, 작은 것 두개를 비교 할 때는 작은 차이가 잘 보인다.
 
 user가 무엇을 원하느냐에 따라 best representation이 달라진다.
@@ -538,7 +547,6 @@ user가 무엇을 원하느냐에 따라 best representation이 달라진다.
 data를 가공해서 encoding 해야함
 
 ### Preattentive Processing
-
 * Cognitive operations done preattentively, wihtout the need for focused attention 
 	* less than 200-250 ms
 		* eye movements take 200 ms
@@ -669,7 +677,7 @@ Data ink ratio = Data ink / Total ink used in graphic
 
 * **Understand the problem area**
 	* why do we need a new design and how to come up with one
-	* produce a smell set of key ideas, general orientation
+	* produce a small set of key ideas, general orientation
 
 * **Observe potential users and customers**
 	* fictitious character maps
@@ -701,7 +709,7 @@ user test를 하고 feedback을 하고 iterative하게 작업한다.
 
 ### System Centered Design
 * What can be built easily on this platform?
-* What cna I create from the available tools?
+* What can I create from the available tools?
 * What do I as a programmer find interesting to work on?
 
 내가 가지고 있는 tool, 능력, system 중심으로 생각해서 design 하는 것
@@ -795,8 +803,8 @@ target에 대해서 추상화된 것을 제시하는게 model
 ![hfm](Images/hfm.png)
 
 ### Human Senses
-> **Rosa:** You deny everthing except what you want to believe. That's the sort of man you are.
-> **Bjartur:** I have my five senses, and don't see what need there is for more.
+> **Rosa:** You deny everthing except what you want to believe. That's the sort of man you are.  
+> **Bjartur:** I have my five senses, and don't see what need there is for more.  
 > (Halldór Laxness, *Independent People*)
 
 * The five senses:
