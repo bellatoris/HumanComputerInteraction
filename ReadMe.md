@@ -174,7 +174,7 @@ affordance: 처음 봤을때 어떻게 사용해야 할지 알려주는 느낌 e
 target 대상에 맞게 affordance를 주어야 한다.
 
 ### Fundamental Design Goals
-* Provide theright affordances
+* Provide the right affordances
 * Provide a good **mapping**  
 	* Mercedes seat adjustment
 	* 좌석의 모양에 맞게 버튼이 배치 되어있다. 버튼에 따라, 좌석의 어느 부분이 움직일지 쉽게 짐작할 수 있다.
@@ -242,9 +242,11 @@ target 대상에 맞게 affordance를 주어야 한다.
 
 ### Three Conceptual Models
 * Three aspects of mental models
-	* Design model
-	* User's model
-	* System image
+	* Design model (the conceptualization the designer had in mind)
+	* User's model (what the user develops to explain the operation of the system)
+	* System image (ths systems's appearance, operation, way it responds, manuals/insturctions included with it)
+
+Ideally, the design model and user model are the same. The designer must ensure that the system image is consistent with and operates according to the proper conceptual model.
 
 ![conceptualmodel](Images/conceptualmodel.png) 
 
@@ -396,7 +398,7 @@ counterbalanced: 순서는 달랐다.
 
 ### NLS (Douglas Engelbart, 1968)
 * Mouse
-* A coding keyboard
+* A chording keyboard
 * Foldable outline system
 * Hypertext
 * Online help...
@@ -655,7 +657,7 @@ Data ink ratio = Data ink / Total ink used in graphic
 	* Stimulus-response compatibility
 	* Good mapping for greate ease of use
 	* Effect corresponds to expectation?
-	* A void one control-multiple effect relationship
+	* Avoid one control-multiple effect relationship
 		*  Visually distinct modes to **indicate** the current function
 	* Consider social/cultural conventions
 		* Down to turn it on in UK  
