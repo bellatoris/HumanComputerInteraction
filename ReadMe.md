@@ -1462,3 +1462,237 @@ perpetual intermeidate: user 는 보통 intermediate 에 존재한다. 그래서
 	* by Mihaly Csikszentmihalyi
 * Thinking, Fast and Slow
 	* by Daniel Kahnenman  
+
+## 4월 25일
+
+## 프로젝트
+5월 첫째주 까지 주제를 잡는다. 소셜한 이펙트가 있을 수록 더 큰 점수가 있을 것임, 데이터를 가지고 사람들과 인터랙션 하는 방향으로 가야함. **D3.js 를 미리 보는 것이 도움이 많이 될 것이다.**
+
+### Human Performance
+* To address uncertainties in parameters of Model Human Processor => three versions of the MHP model
+	* Slowman: worst performance
+	* Fastman: best performance
+	* Middleman: nominal performance
+
+wokring memory 의 경우도 사람마다 capacity 가 달랐다. 우선 Middleman 에 맞춰서 디자인 하고 나머지에 맞춰야 상업적으로 성공 할 수 있다. 
+
+### Motor System
+* Receive input from the cognitive processor
+* Execute motor programs (not step-by-step)
+	* Pianist: up to 16 finger movements per second 
+	* Point of no-return for muscle action
+	* Part of the learning process is to transfer from cognitive to muscle memory
+
+	![motor](Images/motor.png)
+
+	실험 설명: 최대한 빨리 줄을 왔다 갔다 그으면서 선을 넘지 말아라. reversal: 한번 왔다 갔다 한것.
+
+Program 을 실행하는 경우 한번에 실행하는 것이다. 예를 들어서, 피아노를 친다할 때 건반을 하나 누르고 그 다음 명령을 기다리는 것이 아니라, 한번 명령을 받으면 주루룩 치는 것이다. 그래서 한번 시작하고 나면 중간에 멈추는 것이 어렵다. Muscle memory: 실제 memory 가 존재하는 것이 아니라, 실제 memory 가 있는 것처럼 muscle 이 알아서 하는 것처럼 보인다. => 연습을 통해서 이루어진다.
+
+### Closed Loop vs. Open Loop
+Closed Loop
+
+* Feedback from perception through cognitive to motor
+* E.g., 마우스로 타겟을 클릭하는 것
+
+Open Loop
+
+* Control is planned in advance and motor executes without perception or cognitivie
+* E.g., 
+
+Motor system 에는 위의 두 가지 control 이 있다. Open loop control 은 미리 계획 되어있어서, perception 이나 cognition 이 중간에 끼어들지 않고, 한번에 수행하는 것. Closed loop control 은 task 를 수행하는 중간 중간에 계속 고치는 것이다. Perception 이나 Cognition 이 계속 끼어들어서 perception, cognition, motor 세 가지가 같이 동작한다. E.g., 마우스 움직여서 타깃을 누르는 것, 중간 중간에 adjustment 가 존재한다. 
+
+### Motor Processor
+* Open Loop: MP to issue commends
+	* 5 sec/68 pen reversals = 74 ms
+	* Motor processor cycle time
+* Closed Loop: corrections using visual feedback
+	* Perception + Decision (Cognition) + Motor cycle times
+	* = (5 sec)/(20 corrections) = 250 ms
+* Cycle time: 70 [30 ~ 100] ms
+
+실험에서 선을 넘는 순간 correction 이 일어날 것이다. =>  250 ms = 100 (perception) + 70 (cognition) + 70 (motor)
+
+### Put it together: **Fitts**' law (tapping task)
+이름이 Fitts 임 시험 나올 것 임
+![Fitts](Images/Fitts.png)
+
+MT = a + b * ID = a + b * log\_2(2D/w)  
+W: target width  
+D: distance to target
+
+variation:
+
+* T = I\_M * log\_2(2D/S)
+* T = I\_M * log\_2(D/S + 1)
+* T = I\_m * log\_2(D/S + 0.5)
+
+T: movement time  
+S: target width  
+D: distance to target    
+I\_M (= ID/T): index of performance, 63 msec/bit [22 ~ 122 ms/bit], (fastman ~ slowman)  
+I\_D (= log\_2(2D/S)): index of difficulty
+
+![Fitts2](Images/Fitts2.png)
+
+### Fitt's Law
+* The time to move the hand to the target T = n(τ\_P + τ\_C + τ\_M)
+	* τ\_P : observe the hand	* τ\_C : decide on the correction	* τ\_M : do the correction 
+* Let X\_i be the distance remaining to the target after the i-th correction (X_0 = D)
+* Let ε be the relative accuracy of movement: ε = X\_i / X\_i-1
+	* X\_1 = εX_0 = εD
+	* X\_2 = εX_1 = (ε^2)D
+	* X\_n = (ε^n)D < 1/2 * S (stop condition)
+	* n = - log\_2(2D/S) / log\_2(ε)
+	* T = I\_M * log\_2(2D/S) where I\_M = -(τ\_P + τ\_C + τ\_M) / log\_2(ε) (≈ 63 msec/bit)
+
+### Implications: Fitts' Law
+사람들의 age 에 따라서 결과를 나눠봄
+
+![adult](Images/adult.png)
+
+All paths taken by adult participants to click on a 32 pixel target at a distance of 256 pixels.  
+어른들의 경우 correction 이 끝에서 많이 일어난 것을 확인 할 수 있다.
+
+![5years](Images/5years.png)
+
+All paths taken by 5 year-old participants to click on a 32 pixel target at a distance of 256 pixels.  
+5살 어린애들은 엉망진창이었음 correction 이 훨씬 많이,  심하게 일어남
+
+![4years](Images/4years.png)
+
+All paths takens by 4 year-old participants to click on a 32 pixel target at a distance of 256 pixels.  
+4살은 더 심각함
+
+### Fitts' Law
+* Relies on "Closed Loop" control of Motor System
+* Implications:
+	* Larger (Closer) targets easier to click
+	* Macintosh menu bar is faster to use (correction time)
+	* Pie menu is fater than popup menu
+
+이걸 알고 있는 상태에서 유저 인터페이스를 디자인 하면 많은 차이가 생긴다.  
+맥킨토시 메뉴바가 윈도우의 메뉴바에 비해 더 쉽게 사용할 수 있다. 타깃 사이즈가 커서 에러가 덜 일어난다.  
+가까운 타깃이 클릭하기 쉽다. => pie menu
+
+![pie](Images/pie.png)
+
+### Power Law of Practice
+연습을 많이 할수록 태스크에 걸리는 시간이 기하 급수적으로 줄어든다.
+
+T\_n = T\_1 * n ^ -a
+
+* The time to do a task decreases with practice
+* The rate of decrease is proportional to a power of the amount of practice
+* Typical values for a are [.2 ~ .6]
+
+### Learning ("Learning and memory" Anderson)
+* Power law of learning 
+
+![learning](Images/learning.png)
+
+## Human Info Processor II
+
+### Human Information Processor (Card, Moran, Newell)
+
+* Perceptual Processor
+	* Cycle time: **100** ms
+* Cognitive Processor
+	* Cycle time: **70** ms
+* Motor Processor
+	* Cycle time: **70** ms
+
+It is a model - understandable by computer scientists  
+Predictive, but simplistic  
+Does not describe actual underlying mechanisms
+
+### Put it together: Do two letters have same name?
+a A
+
+Perceive first letter (representations @ VIS and WM)  
+Start clock (how long it takes to respond to the second symbol)  
+Perceive second letter (τ\_P)  
+Recognize letter (τ\_C)   
+Match (τ\_C)  
+Initiate response (τ\_C)  
+Respond (τ\_M)
+
+=> τ\_P + 3 * τ\_C + τ\_M
+
+### Put it together: Are A and B letters? (class match)
+
+![classmatch](Images/classmatch.png)
+
+### How many days are in April, 2017?
+
+* Perceive calendar (τ\_P)* Recognize last day (τ\_C)* Decide to move eye to last day (τ\_C)* Move eye to last number (τ\_M)* Perceive number (τ\_P)* Recognize number(τ\_C)* Initiate response (τ\_C)* Respond (τ\_M)
+=> 2 * τ\_P + 4 * τ\_C + 2 * τ\_M= 2 * 100 + 4 * 70 + 2 * 70 = 620ms
+
+### Eye Movement
+* Eye movement time (saccade + fixation)
+	* 230 ms [70 - 700 ms]
+	* Saccade takes 120 ms
+* If you move **one eye movement per phrase** while reading, and one phrase is 2.5 words, then  
+	(60 sec/min) / (.230 sec/EM * 1/2.5 EM/word)  
+	= 652 words/minute
+	
+	So, speed readers (2,500 words/minute) don't see all words => they skim!  
+
+### Putting it together: Reading Speed
+* Reading speed
+* What are limits?
+* Which limits could be removed?
+
+=> RSVP reader
+
+T\_p + T\_c = 100 ms + 70 ms
+
+(2.5 words/phrase) * (60 sec/min) / (.170 sec/phrase)  
+= 882 words / minute
+
+## Predictive Models
+### Predictive Models
+Deep learning 의 발전으로 요즘 각광을 받고 있는 모델이다.
+
+* A predictive model is an equation
+* Predicts the outcome on a ***criterion variable*** (aka ***dependent*** *variable* or *human response*) based on the value of one or more ***predictor variables*** (aka ***independent*** *variables*)
+* Note: the predictor variables must be ratio-scale attributes (See **HCI:ERP** for discussion)
+* Predictive models, like descriptive models, allow a probelm space to be explored
+* However, predictive models deal with numbers, not concepts
+
+### Why Use Predictive Models
+* Card et al. presented perhaps the first predictive model in HCI. In many respects, their work was straight-forward experimental research; but they went further:
+	* "While these empirical results are of direct use in selecting a pointing device,it would obviously be of greated benefit if a **theoretical account of the results** could be made. For one thing, *the need for some experiments might be obviated*; for another, *ways of improving pointing performance might be suggested.*"
+* This is call for the use of predictive models in HCI
+* They went on to present predictive models using Fitt's law (which we meet shortly)
+
+## 4월 27일
+Opti 가 손가락을 가지고 tapping 할 때 훨씬 더 optimal 하다. Practice 시에 Opti 가 Qwerty 보다 성능이 더 좋을 것이다. 교수님이 여러번 해봤는데 20 번 안에 crossover point 가 보이진 않았다.
+
+### Stages of skill acquisition ("Learning and memory" Anderson)
+
+### Problem solving
+Difference reduction: 차이를 줄이려고 함
+Sub-goaling: n 번째 문제를 풀기 위해 n - 1 번째 문제를 푼다.
+
+Difference reduction 만으로는 Hobbit-Orcs 문제를 풀 수 없다. Greedy algorithm 쓰면 local minima 에 갖혀 버릴 수가 있다. 
+
+### Production Rules
+자기 자신만의 rule 을 long-term memory 에 저장해 놓는다.
+counting 시에 저절로 1, 2, 3, 이러지 1 을 말하고 1 에다가 1 을 더해서 2 를 말하고 그러진 않는다.
+long-term memory
+
+### Experts
+
+### The design process
+Definition: Project 자체를 define 하는 stage. 
+
+### Design phase: Definition
+
+Identify and name key **persona**
+user interface 를 design 할 때도 fictitious user 를 만드는데 이 user 와 user 의 행동, 특성들이 persona 이다. Reference point 가 persona 이다. No elastic user. Solid 해야 한다. 
+이 persona 의 **goal** 을 identify 해야 한다. goal 에 집중 해야지 task 에 집중 하면 안된다. 밑의 단으로 내려가려 하면 안된다. 어떤 technology 로도 goal 을 달성 할 수 있다. 
+
+### Why do study?
+**archetype**: 전형적인 타입 (e.g., 전형적인 정치인, 전형적인 스포츠맨) 
+굉장히 speicific 하지만, broad 한 user 를 대표해야 함
