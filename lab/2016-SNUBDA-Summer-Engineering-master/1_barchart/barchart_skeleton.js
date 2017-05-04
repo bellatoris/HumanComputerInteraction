@@ -16,4 +16,19 @@ function init() {
   ];
 
   // 여기서부터 코드를 작성하세요.
+  var svg = d3.select('svg');
+
+  svg
+    .selectAll('rect')
+    .data(data)
+    .enter()
+      .append('rect')
+      .attr('width', function(d, i) {
+        return d.value * 10;
+      }) 
+      .attr('height', 20)
+      .style('fill', 'steelblue')
+      .attr('transform', function(d, i) {
+        return 'translate(0,' + i * 30 + ')';
+      });
 }
