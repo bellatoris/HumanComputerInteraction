@@ -1666,6 +1666,124 @@ Deep learning 의 발전으로 요즘 각광을 받고 있는 모델이다.
 * This is call for the use of predictive models in HCI
 * They went on to present predictive models using Fitt's law (which we meet shortly)
 
+![predExample](Images/predExample.png)
+
+### Predictive Model Examples
+* Linear prediction equation
+* Fitts' law
+* Choice reaction time
+* Keystroke-level model (KLM)
+* Skill acquisition
+* More than one predictor
+
+### Linear Prediction Equation
+* The basic prediction equation express a linear relationship between a predictor variable (x) and a criterion variable (y): 
+
+![linear](Images/linear.png)
+
+### Linear Regression
+* A linear prediction equation is built using statistical procedure know as *linear regression*
+* Goal: 
+	* Given a set of x-y sample points, find the coefficients m and b (previous slide) for the line that **minimizes the squared distances (least squares) of the points from the line**
+* The result is a prediction equation that gives the best estimiate y in terms of x
+* The assumption, of course, is that the relationship is linear
+* Want the details? Just enter "linear regression" or "least squares" into Google or Wikipedia
+
+### Example 
+* A research project investigated text entry on osft keyboards
+* The research also asked...
+	* Can stylus **tapping** entry speed be predicted from touch **typing** entry speed?
+* Touch typing speed is the predictor variable (x - measured in a pre-test)
+* Stylus typing speed is the criterion variable (y - measured experimentally)
+* Data and scatter plot
+
+### Data and Scaater Plot
+![regression](Images/regression.png)
+
+There seems to be a relationship: Faster touch typists seem to be faster at stylus tapping.
+
+Questions:  
+What is the prediction equations?  
+How **strong** is the relationship?
+
+### Prediction Equation
+![prediction](Images/prediction.png)
+
+### Fitts' Law
+* One of the most widely used models in HCI
+* Model for rapid aimed movements (e.g., moving a cursor toward a target and selecting the target)
+* Three applications:
+	1. Use a Fitts' law prediction equation to analyze and compare design alternatives => predictive model
+	2. Use Fitts' *index of performance* (now *throughput*) as a dependent variable in a comparative evaluation (use IM)
+	3. Determine if a device or technique "conforms to Fitts' law"
+* Origins: Two highly-cited papers in experimental psychology, one from 1954, the other from 1964
+
+### Fitts' Law - Task Paradigms
+![fittslaw](Images/fittslaw.png)
+
+These sketches were adapted from Fitts' 1954 and 1964 papaers. It is easy to imagine comparable tasks implemented on computing technology.
+
+### Fitts' Index of Difficulty (ID)
+* Fitts' index of difficulty (ID) is a measure of the difficulty of a **target selection task**:
+
+![id](Images/id.png)
+
+* Normally the prediction equation is built using the *effective* index of difficulty (ID\_e) - includes an "adjustment for accuracy" (see HCI:ERP for discussion)
+* Fitts hypothesized that the relationship between movement time (MT) and ID is linear
+
+### Fitss' Law Models for Pointing Devices
+* A research project compared four pointing devices, including two for remote pointing 
+* Twelve participants performed a series of a serial target selection tasks using the four devices
+* For our purpose, we'll look at the data and models for two of the devices:
+
+![mouse](Images/mouse.png)
+
+### Experiment Conditions and Observations
+![result](Images/result.png)
+
+* effective target width: W\_e = 4.133 * SD\_x
+* SD\_x: standard deviation in the selection coordinated gathered over a sequence of trials for a particular D-W condition
+* TP (or IP): index of performace (throughput), ID\_e/MT
+
+### Fitts' Law Prediction Equations
+![fpe](Images/fpe.png)
+
+### Choice Reaction Time
+* Given n stimuli, associated one-for-one with n responses, the **time to react to the onset of a stimulus** is the *choice reaction time*
+* Modeled by the Hick-Hyman law:
+	* RT = a + b * log\_2(n + 1)
+* Coefficients:
+	* a ~ 200 ms
+	* b ~ 150 ms/bit
+* And Information processing model (like Fitts' law)
+
+![crt](Images/crt.png)
+
+### Hick-Hyman law
+* Choice Reaction time
+	* Time to choose one out of n actions: RT = a + b * H
+* log rather than linear 
+
+![hhl](Images/hhl.png)
+
+* H: information contenct of a task (# of bits)
+	* information-theoretic entropy of the decision
+	* uncertainty about whether to respond or not (uncertainty principle)
+* H = ∑\_i p\_i * log\_2(1/p\_i + 1)
+	* p\_i: probability of occurence of the i-th item in the set
+* When p_i is 1/n for all i, H = log\_2(n + 1)
+* Application example
+	* one menu of eight itme vs. two menus of four items
+	* [http://www.lap.umd.edu/poms/](http://www.lap.umd.edu/poms/) (The Psychology of Menu Selection)   
+
+### Skill Acquistion
+
+* When learning a skill, we begin as *novices*
+* Initial performance is poor, but, with practice, we acquire skill
+* With continued practice, we become proficient, perhaps *experts*
+* The novice to expert transition is well suited to predictive modeling
+* Dependent variable => proficiency (typically, the time or speed in doing a task)
+
 ## 4월 27일
 Opti 가 손가락을 가지고 tapping 할 때 훨씬 더 optimal 하다. Practice 시에 Opti 가 Qwerty 보다 성능이 더 좋을 것이다. 교수님이 여러번 해봤는데 20 번 안에 crossover point 가 보이진 않았다.
 
@@ -1696,3 +1814,73 @@ user interface 를 design 할 때도 fictitious user 를 만드는데 이 user �
 ### Why do study?
 **archetype**: 전형적인 타입 (e.g., 전형적인 정치인, 전형적인 스포츠맨) 
 굉장히 speicific 하지만, broad 한 user 를 대표해야 함
+
+## 5월 2일
+
+### Who to study?
+제품의 target 이 누군지 시작해야함, 제대로 정하기 위해서는 Persona 를 만들어야 함. 구체적인 사람에 대한 description, 나이, 이름, 직업 다 있다. 다양한 유저를 지원하는 가장 좋은 방법은 가장 specific 한 사람을 정해놓고 그 사람에 맞게 design 하면 된다.
+
+### Why personas?
+너무 많은 다양한 사람이 있고 그 사람들의 needs 는 모두 다르다. 그 needs 를 모두 만족 시키려 하다가는 이상한 design 이 나오고 누구도 만족시키지 못하게 된다. Clear 한 persona set 을 가지고 있어야 하고, 그 persona 를 위한 design 을 해야한다. Persona 는 아주 특정한 사람은 아니고, 너무 broad 해도 안된다.
+
+### Key persona **attributes**
+Archetype users: 전형적인 user, 전형화를 한다. e.g., 10 대 여고생: 화장을 엷게 하고 교복을 입은 등등,
+How to find them? 인터뷰를 하고, 관찰하고 등등... 관찰하는게 매우 중요하다. 관찰 한 후에 cluster 를 찾아야 한다. Goal 을 만들어내고, Goal 이 완벽한지 따진다. narrative 를 쭉 풀어간다. 그 persona 를 가지고 이야기를 풀어가다가 막히면 문제가 있는 것이다.
+Design each interface for a **single primary** persona 특정 persona 를 상정하고 design 해야 한다. 앞서 너무 specific 하면 안된다는 것과 모순
+
+### Aligh Archetypes with Your Design
+* Archetype
+	* 무의식적으로 들어나게 되는 것
+	* 머릿속의 쏠림 현상
+	* 선입견 (?)
+
+그런 것 들을 잘 이용하면, 메세지 전달을 강력하게 할 수 있다. 
+
+### Constructing Personas
+매우 힘든 작업이다.
+
+### Character Map
+Persona 를 만드는 방법 중 하나, Table 을 만든 후에 clustering 을 한 후에 outlier 는 뽑아 버려서 버린다거나, attribute 를 없앤다 거나 table 을 cleaning 해서 하나의 persona 를 뽑아 낸다.
+
+### Persona 
+Primary persona 는 하나만 있다. 다른 persona 는 절대 만족시켜 줄수 없는, 특정 goal 혹은 needs 가 있다. Primary persona 를 만족시키면 나머지도 만족 한다. 불만족 하지는 않는다. Secondary persona 는 추가적인 needs 가 있다. Primary persona 를 위해서 design 하고, 시간이나 자원이 남으면 secondary persona 를 위한 추가 작업을 한다. Supplementary 안해도 되는데 추가적으로 하는 것. 중요하지 않음
+
+stakeholder: funding 하는 사람
+
+Customer: end user 가 아니고, 사는 사람? e.g., 장난감의 경우 쓰는 사람은 애들이지만, 사는 사람은 엄마 아빠이다. customer persona 를 생각 안하면 팔리지 않는다.
+
+Served: 그 것을 당하는 사람들 e.g., 의료기기의 경우 사용하는 사람들은 의사, 간호사 지만 당하는 사람은 환자들이다. served persona 를 생각 안할 수도 있지만, 윤리적으로 문제가 생길 수 있다.
+
+Negative: early adapter 들이 negative persona 임 내가 Primary 를 위해서 design 하면 무시되는 사람이 negative persona
+
+굉장히 구체적으로 description 해야함.
+
+### Goals
+Task 보다는 Goal 을 위에 둬야 하고, Solution 은 언급하면 안된다. Goal 은 specific 하게 describe 하는게 아니라, high level description 해야 한다. Task 도 마찬가지. framing 되어서 딴게 생각이 안나게 될 수도 있어서.
+
+세 가지 Goal이 있다.
+
+### Hierarchy of Needs
+아랫단의 needs 가 만족되어야 윗단의 needs 가 생긴다.
+
+## Prototyping
+### Prototypes
+Prototyping 이란 incomplete 한 model of design 이다. 실물이 나타나면, 많은 것이 보이게 된다. 실물을 만져보면서 실제 세상을 알게 될 수 있다.
+
+왜 prototypes 을 하냐? Designer 가 design 된 실물을 실제로 볼 수도 있고, user 들에게 사용하게 할 수도 있다. 이렇게 하면 나중에 생길 문제점을 미리 막을 수 있어서, 비용을 아낄 수 있다. 많은 아이디어들을 싼값에 검증 해 볼 수 있다. 
+
+### Idea Selection 
+Idea 를 모두 HiFi 로 prototyping 할 수 없으니까 pruning 을 해야한다. Window to market: 팔아먹을 수 있는지 확인 하는 것
+
+### Prototyping Methods
+Rapid low-fi: 종이 가지고 sketching 하는 거
+Wizard of Oz appraoched: 사람이 컴퓨터인 것 처럼 행동 하는 것(?)
+
+### Sketches
+crude 하게 그리는게 더 의미가 있다. 아직 덜 된거라는 느낌이 들어서 comment 를 더 이끌어 낼 수 있다.
+
+### Low fidelity prototypes 
+* Inexpensive
+* High level feedback about the dynamic of the interface 
+* 부담 없이 User 가 reaction 할 수 있다.
+* Might be inaccurate, 실제 제품과 많이 차이가 날 수 있다.
