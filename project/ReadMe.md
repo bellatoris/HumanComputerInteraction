@@ -21,9 +21,9 @@
 
 ## Interface 
 
-![interface1](interface1.jpeg)
+<img src="interface1.jpeg" height=400>
 
-![interface2](interface2.jpeg)
+<img src="interface2.jpeg" height=400>
 
 ## Implementation Plan
 | Todo | Due date|
