@@ -1884,3 +1884,51 @@ crude 하게 그리는게 더 의미가 있다. 아직 덜 된거라는 느낌�
 * High level feedback about the dynamic of the interface 
 * 부담 없이 User 가 reaction 할 수 있다.
 * Might be inaccurate, 실제 제품과 많이 차이가 날 수 있다.
+
+## 5월 16일
+### Low fidelity interface elements
+이런 장난 같은 것들로 high-level 의 feedback 을 얻을 수 있다. 
+
+### Wizard of Oz (I, II, III)
+존재 하지 않은 기술을 활용해서, 기술이 발전 하면 이렇게 사용 할 수 있을 것이다를 상상해서 prototyping 한다. 
+Wizard 는 숨어 있고, 정확한 알고리즘이 존재 해서 그 알고리즘을 정확히 따라서 진행한다.
+
+### Using a Paper Prototype
+
+### Low-Tech Prototype Problems
+디자인 바꾸면, 종이에 적은거 지우고 다시 다 적어야해서 너무 귀찮다. 그래서 컴퓨터로 된 것도 있지만, 마찬가지로 UI 가 바뀌면, 이미지를 다 바꿔야해서 귀찮다.
+
+위자드와 사용자 모두 어떻게 동작해야하는지를 모두 숙지해놔야 제대로 실험이 가능하다. 너무 복잡한 기능은 싦험이 거의 불가능 하다.
+
+### Medium fidelity prototypes (II and III)
+Prototype tool 을 사용한다. 
+
+* Vertical: 굉장히 specific 한 질문에 대해서 답을 하는데에 쓰임.
+* Horizontal: 기능 보다는 form 을 구현함. 전체적인 모양을 구현한다. 
+* Scenario: 그 scenario 만 구현해서, 그 scenario 만 동작하도록 구현함. 사용자가 다른 곳으로 가려하는 것을 막는 버퍼가 필요
+
+### Medium fidelity prototypes (Summary)
+* Time consuming
+* Be careful about user expectations
+	* 개발자가 바꾸는 것을 거부 할 수 있음
+	* 실제라고 생각해서 코멘트를 주기 때문에 개발자의 생각과 갭이 존재 할 수 있음
+* 작은 디테일에 대한 코멘트가 들어온다
+
+### High fidelity prototypes
+controlled setting 에서만 구현을 함 (전체를 구현하기 힘드니까)
+
+마케팅 하는 사람과의 커뮤니케이션이 중요
+
+특정 문제는 굉장히 뿌리 깊은 문제일 수 있다. 이런 문제가 안생기도록 미리 발견하는게 중요 
+
+### Prototyping
+산디과에서 쓰는 prototyping 얘기이다.
+Concept prototyping: 종이와 연필 가지고 하는 prototyping, 그림을 너무 잘 그리면, 진짜가 아닌데 진짜라는 느낌을 줄 수 있다.
+
+Rapid prototyping: Scailing fallacy 가 생길 수 있음 e.g., 풍동에서는 잘 동작하는데, 실제 현실에서 잘 동작 안할 수 있다.
+
+Evolutionary prototyping: design spec 이 uncertain 하거나 changing 할 때 사용, 계속 design 이 바뀌고 진화해 나간다. 디자이너가 개발능력이 될 때 많이 사용. Final product 를 개발하는 tool 을 가지고 거기서 부터 바로 prototyping 을 함. 싼 값에 여러가지를 탐색할 수 있는 가능성이 좀 줄어듬. 그러나 개발능력이 매우 출중하면 매우 도움되는 테크닉이다. Incremental prototyping 이라고 부르기도 한다. 
+
+### High Level Model of Human Behavior
+HIP model 이 아닌 GOMS model 이 나온다.
+HIP model 은 단순하고 짧은 task 를 위한 model. GOMS model 은 좀 더 complex 한 task 에 익숙해져서 maximum performance 를 낼 때의 model. 정확한 숫자를 주지만, 그 숫자 자체는 의미가 없다. 모델 자체가 정확하지도 않을 뿐더러, 사용자들이 항상 skilled 사용자가 아니기 때문, 그러나 상대적인 값을 비교해서 객관적인 비교를 할 수 있어서 매우 유용한다.
