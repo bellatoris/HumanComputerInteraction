@@ -1932,3 +1932,5 @@ Evolutionary prototyping: design spec 이 uncertain 하거나 changing 할 때 �
 ### High Level Model of Human Behavior
 HIP model 이 아닌 GOMS model 이 나온다.
 HIP model 은 단순하고 짧은 task 를 위한 model. GOMS model 은 좀 더 complex 한 task 에 익숙해져서 maximum performance 를 낼 때의 model. 정확한 숫자를 주지만, 그 숫자 자체는 의미가 없다. 모델 자체가 정확하지도 않을 뿐더러, 사용자들이 항상 skilled 사용자가 아니기 때문, 그러나 상대적인 값을 비교해서 객관적인 비교를 할 수 있어서 매우 유용한다.
+
+## 5월 18일
