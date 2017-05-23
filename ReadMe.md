@@ -1933,4 +1933,37 @@ Evolutionary prototyping: design spec 이 uncertain 하거나 changing 할 때 �
 HIP model 이 아닌 GOMS model 이 나온다.
 HIP model 은 단순하고 짧은 task 를 위한 model. GOMS model 은 좀 더 complex 한 task 에 익숙해져서 maximum performance 를 낼 때의 model. 정확한 숫자를 주지만, 그 숫자 자체는 의미가 없다. 모델 자체가 정확하지도 않을 뿐더러, 사용자들이 항상 skilled 사용자가 아니기 때문, 그러나 상대적인 값을 비교해서 객관적인 비교를 할 수 있어서 매우 유용한다.
 
-## 5월 18일
+## 5월 23일
+KLM-GOMS model 이 컴퓨터 하는 사람들한테 좀더 적합함.
+CPM-GOMS 모델은 멀티 태스킹도 포함되어 있고, 훨씬 복잡하다.
+
+### GOMS example I
+사용자가 실수를 안하다고 가정.
+
+### Keystroke Level Model (KLM)
+* Focused on expert user
+	* no selection rules (no decision making)
+	* 그러나 두가지 선택지가 있을 경우, 둘의 평균을 내서 selection rule 이 있다고 볼 수도 있다.
+
+### How to use KLM
+
+### KLM Heuristics for Placing M
+Point and Click 사이에는 생각할 필요 없으니까 M 을 뺀다. 4564.23 한번에 기억했다가 쭉 적는다. 전문가기 때문에 cd 를 생각할 시간이 필요없다.
+
+### Converting Temperature
+3초 빨라짐. 3초가 정말 의미가 있느냐. Learnability 면은 어떤지, accuracy 는 어떤지, 판단하고 생각하는 로드는 어떤지.
+
+### GOMS: Application and Limitations
+Telephone operator: 전화 교환원
+
+relative 하게 비교하는 데에 좋은거지, 실제 시간은 의미가 없다.
+
+### NYNEX Example
+GOMS model 사용해서 비교해서 유의미한 결과를 얻었지만, 실험을 안했어도 되는 obvious 한 결과였다. 그러나 GOMS model 을 사용하면 숫자가 나오니까, 정량적인 결과를 제시 할 수 있다.
+
+## Conceptual Framework
+Design model: 디자이너가 생각하는 시스템의 모델
+System image: 그것을 구현한 것
+User's model: System 을 사용하면서 생긴 system 에 대한 user 만의 모델. 
+
+User's model 이랑 Design model 이랑 일치하는게 ideal 하지만 보통 일치하지 않는다. 
