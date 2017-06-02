@@ -1777,41 +1777,179 @@ These sketches were adapted from Fitts' 1954 and 1964 papaers. It is easy to ima
 	* [http://www.lap.umd.edu/poms/](http://www.lap.umd.edu/poms/) (The Psychology of Menu Selection)   
 
 ### Skill Acquistion
-
 * When learning a skill, we begin as *novices*
 * Initial performance is poor, but, with practice, we acquire skill
 * With continued practice, we become proficient, perhaps *experts*
 * The novice to expert transition is well suited to predictive modeling
 * Dependent variable => proficiency (typically, the time or speed in doing a task)
+* Independent variable => amount of practice (e.g., hours, days, months, blocks, sessions)
+
+### Power Laws of Learning
+* Relationship between proficiency and practice is non-linear:
+	* At first, a small amount of practice yields substantial improvement
+	* Later, the same "small amount of pracitce" yields only a slight improvement
+* Relationship best expressed by a power function:
+	* *y* = *b* \* *x^a* (general form)
+	* *T\_n* = *T\_1* \* *n^a* (power law of learning)
+		* where ...
+		* *T\_n* => time to do the task on the n-th trial
+		* *T\_1* => time to do the task on the 1-st trial (a constant)
+		* *n* => trial indiciator (e.g., hours, days, blocks, sessions)
+		* *a* => a constant setting the shape of the curve
+
+Note: *a* is negative since task completion time *decreases* with practice
+
+### Power Law of Practice
+
+* The time *T\_n* to perform a task on the n-th trial follows a power law
+	* *T\_n* = *T\_1* \* *n^-a*
+* The time to do a task decreases with practice
+* The rate of decrease is proportional to a power of the amount of practice
+* Typical values for *a* are [.2 ~ .6]
+
+### Speed Variation
+* Dependent variable can be speed (S), the reciprocal of time 
+* Model predicts "tasks per unit time" (e.g., words per minute)
+* Mathematical form:
+	* *S\_n* = *S\_1* \* *n^a* 
+		* where...
+		* *S\_n* => speed on the n-th trial
+		* *S\_1* => speed on the 1-st trial (a constant)
+		* *n* => trial indicator (e.g., hours, days, blocks, sessions)
+		* *a* => a constant setting the shape of the curve
+	
+Note: *a* is positive and < 1 reflecting the diminishing return with practice
+
+### Curve Shapes
+
+![curve](Images/curve.png)
+
+### Example
+* An experiment compared two soft keyboards for text entry
+	* Qwerty => conventional letter arrangement
+	* Opti => optimized to minimize finger of stylus movement
+
+	![qwerty](Images/qwerty.png)
+	
+* Qwerty expected to be faster initially 
+* Opti expected to be faster with practice
+* Participants performed 20 sessions of text entry; results =>
 
 ## 4월 27일
+### Results
+![qr](Images/qr.png)
+
+### Power Law of Learning
+![plol](Images/plol.png)
+
 Opti 가 손가락을 가지고 tapping 할 때 훨씬 더 optimal 하다. Practice 시에 Opti 가 Qwerty 보다 성능이 더 좋을 것이다. 교수님이 여러번 해봤는데 20 번 안에 crossover point 가 보이진 않았다.
 
+### Log-log Model
+* If the *x* and *y* data are transformed to the log scales, the relationship is linear
+* Example:
+	
+	![llmodel](Images/llmodel.png)
+	
+### Learning ("Learning and memory" Anderson)
+![lmemory](Images/lmemory.png) 
+
 ### Stages of skill acquisition ("Learning and memory" Anderson)
+Example: Using a manual transmission
 
+* Cognitive
+	* Verbal representation of knowledge
+	* Instructions or Examples
+	* Learn thorugh problem-solving
+* Associative
+	* Proceduralization
+		* From rehearsal to recognition
+* Autonomous
+	* More and more automated
+	* Faster and faster
+	* No cognitive involvement
+		* become difficult to verbally describe the skill (or what to do)
+	* **The importance of motor program**
+
+![sosa](Images/sosa.png)
+     
 ### Problem solving
-Difference reduction: 차이를 줄이려고 함
-Sub-goaling: n 번째 문제를 풀기 위해 n - 1 번째 문제를 푼다.
+* Hobbits and Orcs crossing a river
+	* three hobbits and three orcs arrive at a riverbank
+	* they all with to cross onto the other side
+	* A boat can only hold two creatrues at one time
+	* Whenever orcs outnumber hobbits on any side of the river, the orcs will kill the hobbits
+* Problem solving framework
+	* States
+	* Goals
+	* Operators
+		* Mechanism to select operators
+			* Difference reduction: 차이를 줄이려고 함
+			* Sub-goaling: n 번째 문제를 풀기 위해 n - 1 번째 문제를 푼다.
+	* Search
 
+### Differnce Reduction
+* What is the difficult step in the Hobbit-Orcs problem?
+	* This transition goes against the gain of difference reduction, but it's critical.
+* "Greedy" algorithm
+* Optimize simple metric => could get stuck in local minima
+  
 Difference reduction 만으로는 Hobbit-Orcs 문제를 풀 수 없다. Greedy algorithm 쓰면 local minima 에 갖혀 버릴 수가 있다. 
 
+### Operator Subgoaling 
+* <= Working backward from goals
+* Requires memory for state
+* Like AI-style "planning"
+
 ### Production Rules
+* Condition-action pairs represent procedural knowledge
+* Can be applied with less memory
+* Can recognize directly what to do without having to think through all the possibilities. (i.e., linear search replaced with immediate recognition)
+* How does this apply to counting?
+* How does this relate to long-term memory?
+
 자기 자신만의 rule 을 long-term memory 에 저장해 놓는다.
 counting 시에 저절로 1, 2, 3, 이러지 1 을 말하고 1 에다가 1 을 더해서 2 를 말하고 그러진 않는다.
-long-term memory
 
 ### Experts
+* Practice
+* Knowledge
+* Rules
+
+=> Automatized Skills
+
+* Doesn't engage cognitive system
+	* No working memory load 
+	* Not interruptible
+	* Even perception goew away as system goes open-loop 
+
+## Persona and Goals
 
 ### The design process
+![definition](Images/definition.png)
+
 Definition: Project 자체를 define 하는 stage. 
 
 ### Design phase: Definition
-
-Identify and name key **persona**
+* Using data collected in the analysis phase
+	* Identify and name key **persona** 
+		* A fictitious user representing a class of users
+			* Represent a key set of behavior and goals
+		* Provide a common reference point for all involved in the design process 
+			* No elastic users
+	* Identify and name key **goals**
+		* What do users **wish** to accomplish?
+		* How different goals articulate with each others?
+		* Goals are not Tasks!
+			* Tasks are techonology dependent
+			* Goals are not technology dependent  
+   
 user interface 를 design 할 때도 fictitious user 를 만드는데 이 user 와 user 의 행동, 특성들이 persona 이다. Reference point 가 persona 이다. No elastic user. Solid 해야 한다. 
 이 persona 의 **goal** 을 identify 해야 한다. goal 에 집중 해야지 task 에 집중 하면 안된다. 밑의 단으로 내려가려 하면 안된다. 어떤 technology 로도 goal 을 달성 할 수 있다. 
 
 ### Why do study?
+* Persona: descriptive **models** of users
+	* **composite archetypes** based upon observed **behavior pattersn**
+	* represent **broad** cro 
 **archetype**: 전형적인 타입 (e.g., 전형적인 정치인, 전형적인 스포츠맨) 
 굉장히 speicific 하지만, broad 한 user 를 대표해야 함
 
@@ -1967,3 +2105,161 @@ System image: 그것을 구현한 것
 User's model: System 을 사용하면서 생긴 system 에 대한 user 만의 모델. 
 
 User's model 이랑 Design model 이랑 일치하는게 ideal 하지만 보통 일치하지 않는다. 
+
+## 5월 25일
+교수님 코멘트: 지진 뿐만 아니라 단층대나, 원자력 발전소 같은 것을 같이 그리면 더욱 재밌을 것이다.
+
+## 5월 30일
+
+### Three Conceptual Models
+
+### The Seven Stages of Action (Aspects of a Task)
+
+### Cognitive Engineering (Norman, 1986)
+* Cognitive Psychology/Cognitive Sceince/Human Factors 로 부터 알려진 이론들을 실제 design 에 적용해 보자.
+
+Gulf of **execution** and **evaluation**
+
+gulf 가 좁을 수록 좋다. 넓으면 usability issue 가 생긴다. 평가가 어려우면 gulf of evaluation 가 넓은 것이다.
+
+Gulf 는 designer 가 control 할 수 없다. 
+
+print system 은 gulf of execution 은 좁아도, gulf of evaluation 은 넓다. 
+
+### The Gulf of Execution
+
+### The Gulf of Evaluation
+feedback 과 유저가 받아들인 것이 같으면 gulf of evaluation 이 좁은 것.
+
+### Meaning and Form of Expression
+Ariculatory Distance: 기계적인 거리 e.g., 원에 대한 natural language description 과 그려진 원의 거리(차이)
+
+Semantic Distance: 의미적인 거리 
+
+### Gulf of evaluation: statistical analysis (1)
+
+### Gulf of execution: Drawing a rectangle (1)
+command 를 다 이해하고, 머릿속으로 그려봐야 함.
+
+### How to bridge the gulfs
+* system side: ui 를 잘 만드는 것
+* user side: conceptual model 을 잘 만드는 것
+
+### Cognitive engineering example
+Unix shell: Gulf of execution and Gulf of evaluation 이 넓다. command 들을 다 알고 있어야 한다.
+
+GUI: Gulf of execution and Gulf of evaluation 이 좁다. 좋은 ux 를 제공한다.
+
+### Three Pinciples of Direct Manipulation
+
+incremental: action 들이 incremental 해야 한다. e.g., 커서를 움직일 때 비례적으로 움직여야 한다. 
+reversible: undo 할 수 있어야 한다.
+
+### Direct manipulation (Shneiderman, 1974)
+Direct engagement: 주인의식을 가지고 engage를 가지고 task 하고 있다는 느낌을 받음, 구현이 어떻게 되어있는지 알 필요 없다.
+
+fewer error messages?
+
+### Grammatical structure
+
+### Interface metaphors
+실생활에 쓰고 있는 개념, 경험들을 소프트웨어에 그대로 구현하는게 메타포라고 볼 수 있다. 유저에게 배우는 부담을 줄일 수 있다.
+
+desktop metaphors: 책상위의 여러가지 object e.g., files, folders, trash can
+
+conversation metaphor: 언어를 사용해서 system 과 소통
+model world metaphor: 세상에 실제 존재하는 것과 동일한 방식을 이용해서 system 과 소통
+
+### Direct Engagement
+* Model world metaphor
+* 마우스와 키보드를 사용해서 indirectly 조종 하고 있지만, 내가 원하는 데로 잘 움직여서, 사용자들이 direct 하게 조종하고 있다고 느끼게 해줌, 완전 몰입을 하게 함, interface 가 사라진 것 처럼 느끼게 해줌  => Flow 에 빠진다.
+
+### Metaphors caveats
+physical world 에서 할 수 없는 것들을 virtual world 에서는 가능하다. metaphor 에 제한 되다보면 다양한 interface possibility, 창의력을 제한하게 됨.
+
+physical world 에서 가능한 것들이 virtual world 에서는 불가능 한데, 가능하다고 믿게 만들 수 있다.
+
+* Too literal or cute: command line 을 쓰면 간단한 일을 힘들게 하게 될 수도 있다. e.g., file 이름에 숫자 붙이기.
+
+### Direct manipulation: Good or Evil?
+중급자들한테 좋다고 하는데, 사람들은 대부분 intermediate level 에 존재하므로, 매우 좋은 것이다.  
+
+Accuracy 측면에서 안좋을 수 있다.
+
+## Graphic Design
+선으로 그룹핑 하지마라 쓰면 지저분해 보이고 없어보인다.
+
+## 6월 1일 
+
+### Relating structure: Hierarchy
+* Provide a (hierarchical) context for each piece of information 
+	* Example: distinctive style for labels
+
+Directory 가 먼저고 file 이 나중인데 왼쪽의 UI 는 반대로 디자인 되어있다. 그러나 정렬을 왼쪽이 더 잘 되어 있다.
+
+### Relating structure: Balance
+사람들은 unbalance 하면 벗어나고 싶어한다. 그러나 꼭 symmetry 하지 않아도 harmonious global arrangement 를 줄 수 있다.
+
+### Human Size Perception
+그림 모양에 따라 height 나 width 를 다르게 인식한다.
+
+### Tool: Symmetry
+Balance 를 잘 맞춰줘야 user 들이 그 UI 에 좀 더 머무르려고 한다.
+
+### Tool: Alignment
+Alignment 가 안맞으면 structure 가 안보이게 된다. 오른쪽이 훨씬 깔끔하고 hierarchy 적으로 잘 정리되어 있다. Semantic 한 restruction 도 매우 잘 이루어졌다.
+
+### Tool: Negative space
+Printer Effects 를 특이한 position 에 가져다 놓았다. Alignment 측면에서 개선될 점이 존재한다.
+
+### Tool: Simplicity
+쓸데없이 entity 개수가 많아지면 안된다. Perfection 은 더 이상 뺄게 없을 때 이루어진다.
+
+### Color
+Color palettes 를 꺼내놓고 palettes 에 존재하는 color 를 쓰면 통일성을 주고 깔끔하게 보일 수 있다. 채도가 높은  색을 쓰면 눈이 매우 피곤하다.
+
+### What not to do!
+우선 balance 가 잘 안 맞는다. Word document 도 아니고 dot 이 있다. Alignment 도 잘 안되어 있다.
+
+### Consistency
+Grids 를 그려 놓은 다음에 design 하면 각각도 깔끔해 지지만, 전체적으로 통일되고 깔끔해 진다.
+
+Banner blindness
+page 가 바뀐 다음에 banner 가 바뀌어 있으면 사람들은 그것을 알아차리지 못하는 경우가 많다.
+
+## Design Heuristics
+이것을 따라서 Design 하면 좋기도 하지만, 이를 사용해서 UI 를 평가할 수도 있다. HCI 쪽에서 evaluation 은 매우 중요하다.
+
+### Evaluating Without Users
+User 없이도 design 을 evaluation 하고 중요한 점을 이끌어 낼 수 있다. 그 때 쓰는 것이 design heuristics.
+
+* Goal
+* Cognitive Walkthroughs
+	* **Task-oriented** 
+* Action Analysis
+	* e.g., GOMS model
+
+### Cognitive Walkthrough
+User 들이 이 UI 를 처음 쓸 때 사람들의 생각과 행동을 상상 해보는 formalized 된 방법 
+프로토타입을 가지고 태스크를 하나 고른 다음에 내가 지금 이밸류에이터인데 프라이머리 페르소나에 감정이입을 해서 스토리 텔링을 할 수 있어야 한다. 스토리 텔링하다 막히면 문제가 있는 것. 또 유저가 왜 이 액션을 하는지 설명할 수 있어야 한다.
+
+### Action Analysis
+### Heuristic Analysis
+### Problems found by a single inspector
+한 명만 수행하면 아무리 전문가라 해도 문제가 있을 수 있다. Evaluator 가 많으면 서로서로 이빨 빠진 데를 메꿀 수 있다.
+
+### Usability Engineering
+3~5 명의 evaluator 를 사용하면 최고의 비용 대비 효과를 누릴 수 있다.
+
+### Nielsen's evaluation phases (1 - 2)
+* Pre-evaluation training
+	* Provide the evaluator with domain knowledge if needed
+	* e.g., 원자력 발전소의 UI 를 평가 하기 전에 원자력 발전소를 이해 시켜야 함 
+* Evaluation
+	* First step: get a feel for flow and scope
+	* Second step: focus on specific elements
+		* Multiple passes approach is better
+		* Create a list of all problems
+		* Rate severity of problem
+
+###  Nielsen's evaluation phases (3 - 4)
