@@ -1485,9 +1485,11 @@ wokring memory 의 경우도 사람마다 capacity 가 달랐다. 우선 Middlem
 
 	![motor](Images/motor.png)
 
-	실험 설명: 최대한 빨리 줄을 왔다 갔다 그으면서 선을 넘지 말아라. reversal: 한번 왔다 갔다 한것.
+	실험 설명: 최대한 빨리 줄을 왔다 갔다 그으면서 선을 넘지 말아라.  
+	reversal: 한번 왔다 갔다 한것.
 
-Program 을 실행하는 경우 한번에 실행하는 것이다. 예를 들어서, 피아노를 친다할 때 건반을 하나 누르고 그 다음 명령을 기다리는 것이 아니라, 한번 명령을 받으면 주루룩 치는 것이다. 그래서 한번 시작하고 나면 중간에 멈추는 것이 어렵다. Muscle memory: 실제 memory 가 존재하는 것이 아니라, 실제 memory 가 있는 것처럼 muscle 이 알아서 하는 것처럼 보인다. => 연습을 통해서 이루어진다.
+Program 을 실행하는 경우 한번에 실행하는 것이다. 예를 들어서, 피아노를 친다할 때 건반을 하나 누르고 그 다음 명령을 기다리는 것이 아니라, 한번 명령을 받으면 주루룩 치는 것이다. 그래서 한번 시작하고 나면 중간에 멈추는 것이 어렵다.  
+Muscle memory: 실제 memory 가 존재하는 것이 아니라, 실제 memory 가 있는 것처럼 muscle 이 알아서 하는 것처럼 보인다. => 연습을 통해서 이루어진다.
 
 ### Closed Loop vs. Open Loop
 Closed Loop
@@ -1504,7 +1506,7 @@ Motor system 에는 위의 두 가지 control 이 있다. Open loop control 은 
 
 ### Motor Processor
 * Open Loop: MP to issue commends
-	* 5 sec/68 pen reversals = 74 ms
+	* 5 sec/68 pen reversals = 74 ms/reversal
 	* Motor processor cycle time
 * Closed Loop: corrections using visual feedback
 	* Perception + Decision (Cognition) + Motor cycle times
@@ -1525,7 +1527,7 @@ variation:
 
 * T = I\_M * log\_2(2D/S)
 * T = I\_M * log\_2(D/S + 1)
-* T = I\_m * log\_2(D/S + 0.5)
+* T = I\_M * log\_2(D/S + 0.5)
 
 T: movement time  
 S: target width  
@@ -1535,7 +1537,7 @@ I\_D (= log\_2(2D/S)): index of difficulty
 
 ![Fitts2](Images/Fitts2.png)
 
-### Fitt's Law
+### Fitts' Law
 * The time to move the hand to the target T = n(τ\_P + τ\_C + τ\_M)
 	* τ\_P : observe the hand	* τ\_C : decide on the correction	* τ\_M : do the correction 
 * Let X\_i be the distance remaining to the target after the i-th correction (X_0 = D)
@@ -1860,10 +1862,10 @@ Example: Using a manual transmission
 	* Verbal representation of knowledge
 	* Instructions or Examples
 	* Learn thorugh problem-solving
-* Associative
+* Associative: 한 task 를 반족적으로 수행하면 몇 개의 단계들이 하나로 묶여서 수행된다.
 	* Proceduralization
 		* From rehearsal to recognition
-* Autonomous
+* Autonomous: 중간에 interrupt 가 불가능해진다.
 	* More and more automated
 	* Faster and faster
 	* No cognitive involvement
@@ -1907,8 +1909,7 @@ Difference reduction 만으로는 Hobbit-Orcs 문제를 풀 수 없다. Greedy a
 * How does this apply to counting?
 * How does this relate to long-term memory?
 
-자기 자신만의 rule 을 long-term memory 에 저장해 놓는다.
-counting 시에 저절로 1, 2, 3, 이러지 1 을 말하고 1 에다가 1 을 더해서 2 를 말하고 그러진 않는다.
+자기 자신만의 rule 을 long-term memory 에 저장해 놓는다. 그리고 task 를 수행 할 때 단계적으로 이루어지는게 아니라 long term memory 에 저장되어 있던 자신만의 rule 에 의해 즉각적으로 이루어진다. E.g., counting 시에 저절로 1, 2, 3, 이러지 1 을 말하고 1 에다가 1 을 더해서 2 를 말하고 그러진 않는다.
 
 ### Experts
 * Practice
@@ -1946,28 +1947,60 @@ Definition: Project 자체를 define 하는 stage.
 user interface 를 design 할 때도 fictitious user 를 만드는데 이 user 와 user 의 행동, 특성들이 persona 이다. Reference point 가 persona 이다. No elastic user. Solid 해야 한다. 
 이 persona 의 **goal** 을 identify 해야 한다. goal 에 집중 해야지 task 에 집중 하면 안된다. 밑의 단으로 내려가려 하면 안된다. 어떤 technology 로도 goal 을 달성 할 수 있다. 
 
+## 5월 2일
 ### Why do study?
 * Persona: descriptive **models** of users
 	* **composite archetypes** based upon observed **behavior pattersn**
-	* represent **broad** cro 
-**archetype**: 전형적인 타입 (e.g., 전형적인 정치인, 전형적인 스포츠맨) 
-굉장히 speicific 하지만, broad 한 user 를 대표해야 함
+	* represent **broad** cross-section of users 
 
-## 5월 2일
+**archetype**: 전형적인 타입 (e.g., 전형적인 정치인, 전형적인 스포츠맨), 굉장히 speicific 하지만, broad 한 user 를 대표해야 함
 
-### Who to study?
+* Identify and name key "persona"
+	* Help alignment (consensus and commitment)
+	* Drives design to desired product
+	* Communication tool with stakeholders/developers/designers
+	* Helps later in usability studies to get right users
+	* Help market/sales plans 
+
+> The best way to successfully accommodate a variety of users is to design for ***specific types of individuals*** *with* ***specific needs***
+
 제품의 target 이 누군지 시작해야함, 제대로 정하기 위해서는 Persona 를 만들어야 함. 구체적인 사람에 대한 description, 나이, 이름, 직업 다 있다. 다양한 유저를 지원하는 가장 좋은 방법은 가장 specific 한 사람을 정해놓고 그 사람에 맞게 design 하면 된다.
 
 ### Why personas?
+* Moving from
+	* Too many conflicting goals
+* To 
+	* A clear set of personas, each with a well articulated set of goals
+* Not a specific person
+* Not too broad as to include everyone
+  
 너무 많은 다양한 사람이 있고 그 사람들의 needs 는 모두 다르다. 그 needs 를 모두 만족 시키려 하다가는 이상한 design 이 나오고 누구도 만족시키지 못하게 된다. Clear 한 persona set 을 가지고 있어야 하고, 그 persona 를 위한 design 을 해야한다. Persona 는 아주 특정한 사람은 아니고, 너무 broad 해도 안된다.
 
 ### Key persona **attributes**
-Archetype users: 전형적인 user, 전형화를 한다. e.g., 10 대 여고생: 화장을 엷게 하고 교복을 입은 등등,
-How to find them? 인터뷰를 하고, 관찰하고 등등... 관찰하는게 매우 중요하다. 관찰 한 후에 cluster 를 찾아야 한다. Goal 을 만들어내고, Goal 이 완벽한지 따진다. narrative 를 쭉 풀어간다. 그 persona 를 가지고 이야기를 풀어가다가 막히면 문제가 있는 것이다.
+* Archetype users
+	* Exploring a specific range of behaviors
+	* Express the corresponding motivations
+	* Describe the corresponding goals
+* How to find them?
+	* User interview and observation
+	* Identify major clusters from stakeholders & user interviews
+	* Synthesize their goals
+	* Check for completeness
+	* Try them out by developing narrative
+* Desgin each interface for a **single primary** persona
+	* Yer other type might use the interface
+   
+Archetype users: 전형적인 user, 전형화를 한다. e.g., 10 대 여고생: 화장을 엷게 하고 교복을 입은 등등  
+How to find them? 인터뷰를 하고, 관찰하고 등등... 관찰하는게 매우 중요하다. 관찰 한 후에 cluster 를 찾아야 한다.  
+Goal 을 만들어내고, Goal 이 완벽한지 따진다. narrative 를 쭉 풀어간다. 그 persona 를 가지고 이야기를 풀어가다가 막히면 문제가 있는 것이다.  
 Design each interface for a **single primary** persona 특정 persona 를 상정하고 design 해야 한다. 앞서 너무 specific 하면 안된다는 것과 모순
 
-### Aligh Archetypes with Your Design
+### Align Archetypes with Your Design
 * Archetype
+	* Universal patterns of theme and form resulting from innate biases or dispotions
+	* Hardwired in the brain => unconscious
+	* Influence perception on an unconscious and affective level
+	* Useful when traditional modes of communication cannot be used 
 	* 무의식적으로 들어나게 되는 것
 	* 머릿속의 쏠림 현상
 	* 선입견 (?)
@@ -1975,15 +2008,47 @@ Design each interface for a **single primary** persona 특정 persona 를 상정
 그런 것 들을 잘 이용하면, 메세지 전달을 강력하게 할 수 있다. 
 
 ### Constructing Personas
+* Identify behavioral varibles
+	* acitivity, attitude, aptitude, motivation, skills
+* Map interview subjects to behavioral variables
+	* "character map", the Designer's Stance (in Bringing Design to Software)
+* Identify significant behavior patterns
+	* Goal-oriented interview questions
+* Check for completeness and redundancy
+* Expand description of attributes and behaviors
+* Designate persona types
+	* primary > secondary > supplemental > customer > served > negative
+   
 매우 힘든 작업이다.
 
 ### Character Map
+![cmap](Images/cmap.png)
+
 Persona 를 만드는 방법 중 하나, Table 을 만든 후에 clustering 을 한 후에 outlier 는 뽑아 버려서 버린다거나, attribute 를 없앤다 거나 table 을 cleaning 해서 하나의 persona 를 뽑아 낸다.
 
 ### Persona 
-Primary persona 는 하나만 있다. 다른 persona 는 절대 만족시켜 줄수 없는, 특정 goal 혹은 needs 가 있다. Primary persona 를 만족시키면 나머지도 만족 한다. 불만족 하지는 않는다. Secondary persona 는 추가적인 needs 가 있다. Primary persona 를 위해서 design 하고, 시간이나 자원이 남으면 secondary persona 를 위한 추가 작업을 한다. Supplementary 안해도 되는데 추가적으로 하는 것. 중요하지 않음
+* Primary: primary target for the design of an interface
+	* can be only one primary persona per interface for a product
+	* A primary persona will not be satisfied  by a design targeted at any other persona, but if the primary persona is target, all other personas will not, at least, be dissatisfied.
+* Secondary: mostly satisfied with the primary persona's interface
+	* but has specific additional needs that can be accommodated without upsetting the product's ability to serve the primary persona
+	* First design for the primary, and then adjust the design to accommodate the secondary.
+* Supplementary: User personas that not primary or secondary
+	* Their needs are completely represented by a combination of primary and secondary personas
+	* The ones added to the cast to address stakeholder assumptions (political persona)
+   
+Primary persona 는 하나만 있다. 다른 persona 는 절대 만족시켜 줄수 없는, 특정 goal 혹은 needs 가 있다. Primary persona 를 만족시키면 나머지도 만족 한다. 불만족 하지는 않는다.   
+Secondary persona 는 추가적인 needs 가 있다.   Primary persona 를 위해서 design 하고, 시간이나 자원이 남으면 secondary persona 를 위한 추가 작업을 한다.  
+Supplementary 안해도 되는데 추가적으로 하는 것. 중요하지 않음
 
 stakeholder: funding 하는 사람
+
+### Personas
+* Customer: address the needs of customers, not end users
+* Served: directly affected by the use of the product
+	* Treated like a secondary persona
+* Negative: specific types of users that the product is not being built to serve (definitiely not the target of the design)
+	* used to communicate stakeholders and product team members that there are specific types of users that the product is not being built to serve  
 
 Customer: end user 가 아니고, 사는 사람? e.g., 장난감의 경우 쓰는 사람은 애들이지만, 사는 사람은 엄마 아빠이다. customer persona 를 생각 안하면 팔리지 않는다.
 
@@ -1991,118 +2056,415 @@ Served: 그 것을 당하는 사람들 e.g., 의료기기의 경우 사용하는
 
 Negative: early adapter 들이 negative persona 임 내가 Primary 를 위해서 design 하면 무시되는 사람이 negative persona
 
+### Persona Example
+* **Persona Definition : Hans, Senior Partner of a Zurich Law Firm**
+
+	Hans is 45 years of age. He is a lawyer in a major firm in Zurich providing legal services to the banking community and major industrial concerns in Switzerland and the predominantly German speaking business community. Hans studied law at college and has been with the same firm since receiving his practicing certificate around 20 years ago. He has a wife and two children all of whom are very costly. He lives in luxury by Swiss standards, in a large house, around 20km from the city, nestled in the low mountains, with a nice view. He drives an S Class Mercedes. Hans has all the trappings of success and in order to be successful he has to be competitive.Hans has become dependent on his cell phone and his laptop computer. He uses his laptop for email, presentations, word processing and financial calculations with spreadsheet software.He regularly flies around central Europe negotiating Mergers and Acquisitions for his clients. It's high value business and he needs to get around Europe quickly and easily in order to be in the right meetings at the right time.Hans relies on Swiss Air to get him there. He is a frequent flyer who flies business class and gets upgraded into first class often. He expects first class service from the airline just as his clients expect first class service from him.
+
 굉장히 구체적으로 description 해야함.
 
 ### Goals
+* Motivation: why did they do that?
+* Goals, not tasks ("I want to ...")
+	* "I want to not be stressed", not "I want my equipment to work on the plane".
+	* "I want to never feel stupid", not "I want to be able to fill out this expense report without mistakes"
+* Tasks, not Solutions
+	* “I want to use this on my plane trip to California”, not “long battery life”	* “I want to easily find class files”, not “create hierarchy with homeworks, readings, and projects”	* “I want to discover and use speaker phone on demand with 3 people in my office watching me”, not “one hardware button to activate speakerphone”
+  
 Task 보다는 Goal 을 위에 둬야 하고, Solution 은 언급하면 안된다. Goal 은 specific 하게 describe 하는게 아니라, high level description 해야 한다. Task 도 마찬가지. framing 되어서 딴게 생각이 안나게 될 수도 있어서.
 
-세 가지 Goal이 있다.
+### Goals
+| User Goal (motivations) | Levels of Cognitive Processing |
+|:-----:|:-----:|
+| **Experience goals**: How users want to ***feel*** | **Visceral**: React to visual (sensory) aspects. E.g., Good/bad/safe/dangerous |
+| **End goals**: what a user wants to ***do*** | **Behvioral**: Simple everyday behaviors, Majority of human behaviors |
+| **Life goals**: what a user wants to ***be*** | **Reflective**: Conscious consideration and reflection on past experiences |
+
+* Non-users 
+	* Customer goals, Corporate goals, etc.
+* Meet user goals first! 
 
 ### Hierarchy of Needs
+* Serve low-level needs first, then high-level needs
+* working VCR => stable & consistent performance => easy and forgiving design => do things better than before => interacting in innovative way
+
+![hierarchy](Images/hierarchy.png)
+
 아랫단의 needs 가 만족되어야 윗단의 needs 가 생긴다.
 
 ## Prototyping
 ### Prototypes
+* The use of **simplified** and **incomplete** models of a design
+	* Explore ideas
+	* Elaborate requirements
+	* Refine specifications
+	* Test functionality
+* Help designers
+	* Get to know real-world design requirements
+	* Visualize, evaluate, learn, and improve design specifications
+  
 Prototyping 이란 incomplete 한 model of design 이다. 실물이 나타나면, 많은 것이 보이게 된다. 실물을 만져보면서 실제 세상을 알게 될 수 있다.
+
+* Why prototypes?
+	* Designs by designers OR design with users
+	* Early usability testing
+* Prototype types
+	* Low-tech prototypes are inexpensive, so you can do more of them
+	* Pay less now or more later
+	* More ideas => good ideas 
+* Studies have shown low-fidelity ("LoFi") prototypes help find as many usability issues as high-fidelity ("HiFi") ones [Virzi et al., 1996] 
 
 왜 prototypes 을 하냐? Designer 가 design 된 실물을 실제로 볼 수도 있고, user 들에게 사용하게 할 수도 있다. 이렇게 하면 나중에 생길 문제점을 미리 막을 수 있어서, 비용을 아낄 수 있다. 많은 아이디어들을 싼값에 검증 해 볼 수 있다. 
 
 ### Idea Selection 
+* Define each idea's importance
+	* Think about reality
+	* User preference and target user population
+	* Available hardware
+	* Available software
+	* Cost
+	* Window to market 
+	* ...
+* Rank ideas according to the your criteria
+* Pick the tops 1-5
+	* Depends on resources and stage of the project 
+ 
 Idea 를 모두 HiFi 로 prototyping 할 수 없으니까 pruning 을 해야한다. Window to market: 팔아먹을 수 있는지 확인 하는 것
 
 ### Prototyping Methods
+* Depending on the phase of the project
+	* Rapid low-fi implementation (I)
+		* Walk-throughs and paper based interface
+	* Rapid prototyping (II)
+		* *Director*, *Flash*
+		* Simulation of the interface and Wizard of Oz approaches
+	* Toolkit based implementation (III)
+		* Larger and larger group of uses using the real interface
+	* Full implementation (IV)
+
+![prototype](Images/prototype.png)
+ 
 Rapid low-fi: 종이 가지고 sketching 하는 거
 Wizard of Oz appraoched: 사람이 컴퓨터인 것 처럼 행동 하는 것(?)
 
+### Low fidelity prototypes
+* Paper/plastic based interface simulation
+	* Using sketches, foamcore, transparency and PICTIVE
+* Mode of operation
+
+![lofi](Images/lofi.png) 
+
+### Low fidelity tools
+* PICTIVE: experimental participatory design technique that is intended to enhance user participation in the design process
+	* low-tech objects
+	* high-tech video
+	
+![pictive](Images/pictive.png) 
+
 ### Sketches
+* invention through sketching
+* drawing of the outward appearance of the intended system
+* **crudity** means people concentrate on **high level** concepts
+* but hard to envision a dialog's progression
+
+![sketch](Images/sketch.png)
+
 crude 하게 그리는게 더 의미가 있다. 아직 덜 된거라는 느낌이 들어서 comment 를 더 이끌어 낼 수 있다.
 
-### Low fidelity prototypes 
+### Low fidelity prototypes (summary)
 * Inexpensive
 * High level feedback about the dynamic of the interface 
-* 부담 없이 User 가 reaction 할 수 있다.
+* Trigger users reactions
+	* Debrief (or listen to) users 
+	* 부담 없이 User 가 reaction 할 수 있다.
 * Might be inaccurate, 실제 제품과 많이 차이가 날 수 있다.
+	* Speed, human-human interferences ... 
 
 ## 5월 16일
 ### Low fidelity interface elements
+![lofiex](Images/lofiex.png)
+
 이런 장난 같은 것들로 high-level 의 feedback 을 얻을 수 있다. 
 
 ### Wizard of Oz (I, II, III)
-존재 하지 않은 기술을 활용해서, 기술이 발전 하면 이렇게 사용 할 수 있을 것이다를 상상해서 prototyping 한다. 
-Wizard 는 숨어 있고, 정확한 알고리즘이 존재 해서 그 알고리즘을 정확히 따라서 진행한다.
+* Testing a system that does not exist
+	* Voice recognition, face identification, handwriting recognition 
+* Mode of operation
+	* Users use the interface as intended
+	* A wizard (sometime hidden) responds to users behavior
+		* Follow an algorithm
+		* Reproduce the expected capability of the system  
+	* Example: an shopping cart assistant (in IDEO video)
+	
+존재 하지 않은 기술을 활용해서, 기술이 발전 하면 이렇게 사용 할 수 있을 것이다를 상상해서 prototyping 한다. Wizard 는 숨어 있고, 정확한 알고리즘이 존재 해서 그 알고리즘을 정확히 따라서 진행한다.
 
-### Using a Paper Prototype
+### Wizard of Oz Example
+* the listening typewriter, IBM 1984
+
+![woo](Images/woo.png)
 
 ### Low-Tech Prototype Problems
-디자인 바꾸면, 종이에 적은거 지우고 다시 다 적어야해서 너무 귀찮다. 그래서 컴퓨터로 된 것도 있지만, 마찬가지로 UI 가 바뀌면, 이미지를 다 바꿔야해서 귀찮다.
+* Design changes cumbersome
+	* repetitive erasing and redrawing
+	* even with computer-based tools, it may be difficult to apply changes to a specific subset of screens.
+* Wizard-of-Oz studies requires high cognitive load
+	* Low fidelity prototypes can grow to dozens, even hundreds, of screens
+	* It is difficult for human wizards to quickly navigate from screen to screen
 
+디자인 바꾸면, 종이에 적은거 지우고 다시 다 적어야해서 너무 귀찮다. 그래서 컴퓨터로 된 것도 있지만, 마찬가지로 UI 가 바뀌면, 이미지를 다 바꿔야해서 귀찮다.  
 위자드와 사용자 모두 어떻게 동작해야하는지를 모두 숙지해놔야 제대로 실험이 가능하다. 너무 복잡한 기능은 싦험이 거의 불가능 하다.
 
-### Medium fidelity prototypes (II and III)
-Prototype tool 을 사용한다. 
+### WOZ Pro
+![woz](Images/woz.png)
 
-* Vertical: 굉장히 specific 한 질문에 대해서 답을 하는데에 쓰임.
-* Horizontal: 기능 보다는 form 을 구현함. 전체적인 모양을 구현한다. 
-* Scenario: 그 scenario 만 구현해서, 그 scenario 만 동작하도록 구현함. 사용자가 다른 곳으로 가려하는 것을 막는 버퍼가 필요
+A pen-base software environment that supports the quick-and-easy creation of low fidelity user interface prototypes [Hundhausen et al., 2007]
+
+### Medium fidelity prototypes (II and III)
+* Using prototyping tools (Flash, Director, JavaScript, ...)
+	* **Vertical** prototype: Provide answer about a specific question
+		* includes in-depth functionality for only a few selected features
+		* Is dialog box design A faster than dialog box design B?
+	* **Horizontal** protoytpe: the full interface without the functionality 
+		* a simulation; no real work can be performed
+		* Is the command/menu structure OK?
+	* **Scenario** (prototype)
+		* scripts of particular fixed uses of the system; no deviation allowed
+  
+Vertical: 굉장히 specific 한 질문에 대해서 답을 하는데에 쓰임.  
+Horizontal: 기능 보다는 form 을 구현함. 전체적인 모양을 구현한다.   
+Scenario: 그 scenario 만 구현해서, 그 scenario 만 동작하도록 구현함. 사용자가 다른 곳으로 가려하는 것을 막는 버퍼가 필요
+
+![mefi](Images/mefi.png)
 
 ### Medium fidelity prototypes (Summary)
 * Time consuming
 * Be careful about user expectations
-	* 개발자가 바꾸는 것을 거부 할 수 있음
-	* 실제라고 생각해서 코멘트를 주기 때문에 개발자의 생각과 갭이 존재 할 수 있음
-* 작은 디테일에 대한 코멘트가 들어온다
+	* Developer might resist change
+	* Management might think it is real; 실제라고 생각해서 코멘트를 주기 때문에 개발자의 생각과 갭이 존재 할 수 있음
+* Do not get distracted by too small a detail; 작은 디테일에 대한 코멘트가 들어온다
+	* Color, font, ...
 
 ### High fidelity prototypes
-controlled setting 에서만 구현을 함 (전체를 구현하기 힘드니까)
-
-마케팅 하는 사람과의 커뮤니케이션이 중요
-
+* Piecewisw prototype
+	* Horizontal, vertical, scenario
+	* Controlled setting
+* Alpha and Beta releases
+	* Small scale distribution
+* Final product?
+	* Monitor help line
+	* Monitor sell rep.
+* Costly
+	* Problem can be deeply rooted in the software architecture
+    
+controlled setting 에서만 구현을 함 (전체를 구현하기 힘드니까)  
+마케팅 하는 사람과의 커뮤니케이션이 중요  
 특정 문제는 굉장히 뿌리 깊은 문제일 수 있다. 이런 문제가 안생기도록 미리 발견하는게 중요 
 
-### Prototyping
+### Prototyping (different classification)
+* Types of Prototyping (Universal principle of design, Lidwell, p.158)
+	* **Concept** prototyping to develop and evaluate preliminary design ideas
+		* Concept sketches and storyboards
+		* **Artificial reality problem**
+			* Design by a good artist or modeler look like they will work?
+	* **Rapid(throw-it-away)** prototyping to explore and test functionalities and performances
+		* e.g., New automobile design in wind tunnels
+		* **Scaling fallacy**
+	* **Evolutionary** prototyping when design specs are uncertain or changing 
+		* Iterative process (design => evaluation => refine)
+		* Software developers using the facilities for actual product development
+		* Designers tend to get tunnel vision, not exploring design alternatives
+		* Incremental prototyping
+ 
 산디과에서 쓰는 prototyping 얘기이다.
-Concept prototyping: 종이와 연필 가지고 하는 prototyping, 그림을 너무 잘 그리면, 진짜가 아닌데 진짜라는 느낌을 줄 수 있다.
-
-Rapid prototyping: Scailing fallacy 가 생길 수 있음 e.g., 풍동에서는 잘 동작하는데, 실제 현실에서 잘 동작 안할 수 있다.
-
+Concept prototyping: 종이와 연필 가지고 하는 prototyping, 그림을 너무 잘 그리면, 진짜가 아닌데 진짜라는 느낌을 줄 수 있다.  
+Rapid prototyping: Scailing fallacy 가 생길 수 있음 e.g., 풍동에서는 잘 동작하는데, 실제 현실에서 잘 동작 안할 수 있다.  
 Evolutionary prototyping: design spec 이 uncertain 하거나 changing 할 때 사용, 계속 design 이 바뀌고 진화해 나간다. 디자이너가 개발능력이 될 때 많이 사용. Final product 를 개발하는 tool 을 가지고 거기서 부터 바로 prototyping 을 함. 싼 값에 여러가지를 탐색할 수 있는 가능성이 좀 줄어듬. 그러나 개발능력이 매우 출중하면 매우 도움되는 테크닉이다. Incremental prototyping 이라고 부르기도 한다. 
 
+## Higher Level Model
+
 ### High Level Model of Human Behavior
-HIP model 이 아닌 GOMS model 이 나온다.
-HIP model 은 단순하고 짧은 task 를 위한 model. GOMS model 은 좀 더 complex 한 task 에 익숙해져서 maximum performance 를 낼 때의 model. 정확한 숫자를 주지만, 그 숫자 자체는 의미가 없다. 모델 자체가 정확하지도 않을 뿐더러, 사용자들이 항상 skilled 사용자가 아니기 때문, 그러나 상대적인 값을 비교해서 객관적인 비교를 할 수 있어서 매우 유용한다.
+* Model Human Processor (or HIP) for short (isolated) tasks 
+	* Matching a symbol to memory
+	* Determining the fastest speed to type on two different keyboards
+* People will become **skilled** and want efficient methods for **routine** tasks
+* GOMS are a family of methods used to model the user behavior for complex tasks
+* GOMS for quantitative analysis of interface design
+	* Predicts how long an **experienced worker** will take to perform an operation with an interface design
+	* Models **cognitive skills*, not problem-solving
+	* Family of methods (KLM, CMN-GOMS, CPM-GOMS, NGOMSL)
+ 
+HIP model 은 단순하고 짧은 task 를 위한 model. GOMS model 은 좀 더 complex 한 task 에 익숙해져서 maximum performance 를 낼 때의 model. 정확한 숫자를 주지만, 그 숫자 자체는 의미가 없다. 모델 자체가 정확하지도 않을 뿐더러, 사용자들이 항상 skilled 사용자가 아니기 때문, 그러나 상대적인 값을 비교해서 객관적인 비교를 할 수 있어서 매우 유용한다. 
 
 ## 5월 23일
-KLM-GOMS model 이 컴퓨터 하는 사람들한테 좀더 적합함.
-CPM-GOMS 모델은 멀티 태스킹도 포함되어 있고, 훨씬 복잡하다.
+### GOMS (Card et al.)
+* Describe the user behavior in term of 
+	* **G**oals
+		* A thing to do
+		* Like a function name - independent of application (i.e., "print page" works in any word processor)
+	* **O**perators
+		* Elementary perceptual, motor or cognitive actions.
+	* **M**ethods
+		* Sequences of sub-goals and operators that can accomplish a goal.
+		* Like the body of a function - implements a goal.
+	* **S**election rules
+		* Used if several methods are available for a given goal
+		* Not subjective - GOMS should run like a program
+* For skilled users only (KLM, CMN-GOMS)
+	* (models cognitive tasks, not problem-solving)
+* CPM-GOMS or NGOMSL takes into account nonexpert behavior such as learning times => more accurate and complete
+
+KLM-GOMS model 이 컴퓨터 하는 사람들한테 좀더 적합함.  
+CPM-GOMS 모델은 멀티 태스킹도 포함되어 있고, 훨씬 복잡하다.    
+ 
+### Overview of GOMS
+![ogom](Images/ogom.png)
 
 ### GOMS example I
+![gex](Images/gex.png)
+
 사용자가 실수를 안하다고 가정.
+
+### GOMS example II (From HCI Models, Theroies and Frameworks, J. Carroll)
+
+* Using a text editor to edit the following text as shown
+
+![fox](Images/fox.png)
+
+* Goals and sub-goals?
+* Operators?
+* Methods?
+* Selections rules?
+
+![cmn](Images/cmn.png)
 
 ### Keystroke Level Model (KLM)
 * Focused on expert user
 	* no selection rules (no decision making)
 	* 그러나 두가지 선택지가 있을 경우, 둘의 평균을 내서 selection rule 이 있다고 볼 수도 있다.
-
+* Describe the task using the following operators:
+	* K: pressing a key or pressing (or releasing) a button
+		* t_K = 0.2 sec
+	* P: pointing  
+		* t_P = 1.1 sec (without button pres)
+	* H: Homing (switching device)
+		* t_H = 0.4 sec
+	* M: Mentally prepare
+		* t_M = 1.35 sec
+	* R(t): system response time
+		* t_R = t
+  	   
 ### How to use KLM
+* Encode using all physical operators (K, P, H, R(t))
+* Apply KLM rules [0-4] to add M's
+* Transform R followed by an M (computer and user can work at the same time)
+	* If t <= t_M: R(t) => R(0)
+	* If t_M < t: R(t) => R(t - t_M)
+* Compute the total time by adding all times
+	* Will describe expert user behavior 
 
 ### KLM Heuristics for Placing M
+* 0: Insert M
+	* In front of all K
+	* In front of all P's selecting a command (not arguments)
+* 1: Remove M between **fully anticipated** operators
+	* PMK => PK
+* 2: if a string of MKs belong to a **cognitive unit** delete all M but first 
+	* 4564.23: MKMKMKMKMKMKMK => MKKKKKKK
+* 3: if K is a **redundant terminator** then delete M in front of it
+	* ↵↵: MKMK => MKK
+* 4a: if K terminates a constant string (command name) delete the M in front of it
+	* cd↵: MKKMK => KKMK
+* 4b: if K terminates a variable string (parameter) keep the M in front of it
+	* cd class↵: MKKKMKKKKKMK => MKKKMKKKKKMK
+* Delete overlapped Ms
+	* do not count any portion of an M that overlaps an R   
+
 Point and Click 사이에는 생각할 필요 없으니까 M 을 뺀다. 4564.23 한번에 기억했다가 쭉 적는다. 전문가기 때문에 cd 를 생각할 시간이 필요없다.
 
+### Converting Temperature ("Human Interface", Raskin)
+* Convert 92.5F to Celsius
+
+	![convert](Images/convert.png)
+
+	Assume:
+	
+	* the focuse is on the dialog box
+	* 4 characters for temperature
+* Move hand to the GID
+	* H* Point to the desired radio button 
+	* HP* Click on the radio button 
+	* HPK* Move hands back to the keyboard 
+	* HPKH* Type the four characters 
+	* HPKHKKKK* Tap Enter 
+	* HPKHKKKKK=> HMPMKHMKMKMKMKMK  
+=> HMPKHMKKKKMK
+
+* F to C: MKKKKMK (3.7s)* C to F: HMPKHMKKKKMK (7.15s)
+
+=> Average: 5.4s
+
 ### Converting Temperature
-3초 빨라짐. 3초가 정말 의미가 있느냐. Learnability 면은 어떤지, accuracy 는 어떤지, 판단하고 생각하는 로드는 어떤지.
+* Your desing. Can you do better?
+* Design an interface yourself
+* Perform KLM analysis and report
+
+### Converting temperature: Raskin's Redesign 
+![rede](Images/rede.png)
+
+MKKKK => 2.15s
+
+3초 빨라짐. 3초가 정말 의미가 있느냐.
+
+### Pros and Cons
+* What are other factors?
+	* Learnability
+	* Accuracy
+	* Cognitive load 
+
+Learnability 면은 어떤지, accuracy 는 어떤지, 판단하고 생각하는 로드는 어떤지.
 
 ### GOMS: Application and Limitations
-Telephone operator: 전화 교환원
-
+* Applications
+	* CAD system
+	* Telephone operator (CPM-GOMS)
+	* Text editing with keyboard and mouse (KLM)
+* Limitations
+	* Skilled users
+	* Does not deal with error
+	* Does not deal with skill aquisition
+	* Does not deal with high level issus (Functionality, workload, Fatigue)
+	* Better for relative than absolute timing 	 
+Telephone operator: 전화 교환원  
 relative 하게 비교하는 데에 좋은거지, 실제 시간은 의미가 없다.
 
 ### NYNEX Example
+* Worked well, but:
+	* Compared to marketing data
+	* Compared to very expensive field trial
+	* Individual Goal estimates very inaccruate (~50% off)
+	* Core analysis obvious in retrospect (saving not in bottleneck don't help)
+
+Was GOMS necessary, or could an expert analysis have revealed this?  
+ 
 GOMS model 사용해서 비교해서 유의미한 결과를 얻었지만, 실험을 안했어도 되는 obvious 한 결과였다. 그러나 GOMS model 을 사용하면 숫자가 나오니까, 정량적인 결과를 제시 할 수 있다.
 
+### Valus of GOMS?
+* Possibly good for high value decisions
+* Possibly good for making strong argument
+* Definitely good for helping designers develop an intuition about what works and what doesn't and the impact of design decisions on speed
+
 ## Conceptual Framework
-Design model: 디자이너가 생각하는 시스템의 모델
-System image: 그것을 구현한 것
-User's model: System 을 사용하면서 생긴 system 에 대한 user 만의 모델. 
+**Seven Stages of Action Model**  
+**Cognitive Engineering**  
+**Direct Manipulation**  
+
+### Three Conceptual Models
+* Three aspects of mental models 
+	* Design model: 디자이너가 생각하는 시스템의 모델
+	* System image: 그것을 구현한 것
+	* User's model: System 을 사용하면서 생긴 system 에 대한 user 만의 모델. 
+* conceptual frameworks
+	* explain and predict user behavior based on theories of **cognition** 
 
 User's model 이랑 Design model 이랑 일치하는게 ideal 하지만 보통 일치하지 않는다. 
 
@@ -2111,118 +2473,410 @@ User's model 이랑 Design model 이랑 일치하는게 ideal 하지만 보통 �
 
 ## 5월 30일
 
-### Three Conceptual Models
-
 ### The Seven Stages of Action (Aspects of a Task)
+![ssa](Images/ssa.png)
+
+### Design Question to Ask
+![dqa](Images/dqa.png)
 
 ### Cognitive Engineering (Norman, 1986)
 * Cognitive Psychology/Cognitive Sceince/Human Factors 로 부터 알려진 이론들을 실제 design 에 적용해 보자.
+* Apply what is known from science to design of machines
+* The way that people interact with machines
+	* (Cognitive) Principles behind human action and performance
+	* Systems that are pleasant to use (direct manipulation/engagement) 
+* Emphasis on users and tasks => User-centerd Design
 
-Gulf of **execution** and **evaluation**
+### Cognitive Engineering
+* Gulf of **execution** and **evaluation** [Norman 86]
+	* We **interact** on the left side of drawing
+	* We **solve problems and generate goals** in the right side of the drawings
+	
+	![ce](Images/ce.png)
+	
+	* **Neither gulf is under the control of the designer.** It depends on each individual's the cultural convention or technical knowledge 
 
-gulf 가 좁을 수록 좋다. 넓으면 usability issue 가 생긴다. 평가가 어려우면 gulf of evaluation 가 넓은 것이다.
-
-Gulf 는 designer 가 control 할 수 없다. 
-
+gulf 가 좁을 수록 좋다. 넓으면 usability issue 가 생긴다. 평가가 어려우면 gulf of evaluation 가 넓은 것이다.  
+Gulf 는 designer 가 control 할 수 없다.  
 print system 은 gulf of execution 은 좁아도, gulf of evaluation 은 넓다. 
 
 ### The Gulf of Execution
+* The difference between the **intentions** and the allowable **actions** in the system
+* Measure the size of gulf
+	* How well the system allows the person to do the intended actions directly, without extra effort?
+	* Do the actions match those intended by the person?
+* Related to **functionality**, **usability** 
 
 ### The Gulf of Evaluation
+* The difference between
+	* the physical **representation** provided by the system
+	* user's **interpretation** (in terms of the intentions and expectations) 
+* Reflects the amount of effort that the person must exert
+	* to interpret the physical state of the system
+	* to determine how well the expectations and intentions have been met
+* Related to **feedback** and **visibility**
+*  
 feedback 과 유저가 받아들인 것이 같으면 gulf of evaluation 이 좁은 것.
 
 ### Meaning and Form of Expression
+![mfe](Images/mfe.png)
+
 Ariculatory Distance: 기계적인 거리 e.g., 원에 대한 natural language description 과 그려진 원의 거리(차이)
 
 Semantic Distance: 의미적인 거리 
 
+### Gulfs and Distances
+![gad](Images/gad.png)
+
 ### Gulf of evaluation: statistical analysis (1)
+![sa1](Images/sa1.png)
+
+### Gulf of evaluation: statistical analysis (2)
+![sa2](Images/sa2.png)
 
 ### Gulf of execution: Drawing a rectangle (1)
+![dr1](Images/dr1.png)
+
 command 를 다 이해하고, 머릿속으로 그려봐야 함.
 
+### Gulf of execution: Drawing a rectangle (2)
+![dr2](Images/dr2.png)
+
+### Gulf of execution: Drawing a rectangle (3)
+![dr3](Images/dr3.png)
+
 ### How to bridge the gulfs
-* system side: ui 를 잘 만드는 것
-* user side: conceptual model 을 잘 만드는 것
+* From system side by the interface; system side: ui 를 잘 만드는 것
+* From user side by developing appropriate conceptual models ; user side: conceptual model 을 잘 만드는 것
+	* Cognitive/mental burden on users
+* **Minimize cognitive (mental) effort of users**
+* Gulf of Execution
+	* Make the commands and mechanisms of the system match the thoughts and goals of the users
+* Gulf of Evaluation
+	* Make the output displays present a good "Conceptual Model" of the system   
 
 ### Cognitive engineering example
-Unix shell: Gulf of execution and Gulf of evaluation 이 넓다. command 들을 다 알고 있어야 한다.
+* Move "paper.tex" from ~/conferences/CHI_10 to ~/conference/UIST_10
+	* Using a Unix shell (current directory is ~) : Gulf of execution and Gulf of evaluation 이 넓다. command 들을 다 알고 있어야 한다.
+	* Using a GUI (sharing from the desktop, no window open): Gulf of execution and Gulf of evaluation 이 좁다. 좋은 ux 를 제공한다.
+* What are the evaluation and execution gulfs?
 
-GUI: Gulf of execution and Gulf of evaluation 이 좁다. 좋은 ux 를 제공한다.
+![mvtex](Images/mvtex.png)
 
 ### Three Pinciples of Direct Manipulation
-
-incremental: action 들이 incremental 해야 한다. e.g., 커서를 움직일 때 비례적으로 움직여야 한다. 
+* **Continuous** representation of the objects and actions of interest with **meaningful visual metaphors**
+* **Physical** actions or presses of labeled buttons, instead of complex syntax
+* **Rapid**, **incremental**, **reversible** actions with **immediate** **visible feedback**
+incremental: action 들이 incremental 해야 한다. e.g., 커서를 움직일 때 비례적으로 움직여야 한다.  
 reversible: undo 할 수 있어야 한다.
 
 ### Direct manipulation (Shneiderman, 1974)
+* Central ideas
+	* Object understood by their visual characteristic
+		* Using a good affordances
+		* Using a good conceptual model and convincing metaphors
+	* Actions understood in term of their effects on the screen
+		* **Rapid** and **incremental**
+		* **Immediate** visual feedback
+		* Easily **reversible**
+* Outcome
+	* Direct **engagement**
+		* the feeling of working directly on the task
+		* No need to know the implementation details  
+	* The display become reality: the WYSIWYG (what you see is what you get) interface
+	* Fewer error messages? 라고 주장은 하는데...
+  
 Direct engagement: 주인의식을 가지고 engage를 가지고 task 하고 있다는 느낌을 받음, 구현이 어떻게 되어있는지 알 필요 없다.
 
-fewer error messages?
-
 ### Grammatical structure
-
+* Object-action (Noun verb)
+	* Modeless
+	* Action always within the context of objects
+	* Examples
+		* Drag and drop
+		* Select and delete
+* Action-Object (Verb noun)
+	* Modal
+		* **Mode** can be dangerous
+	* Often more efficient
+	* Examples
+		* Pick a tool, then use it
+     
 ### Interface metaphors
-실생활에 쓰고 있는 개념, 경험들을 소프트웨어에 그대로 구현하는게 메타포라고 볼 수 있다. 유저에게 배우는 부담을 줄일 수 있다.
-
-desktop metaphors: 책상위의 여러가지 object e.g., files, folders, trash can
-
-conversation metaphor: 언어를 사용해서 system 과 소통
+* Definition
+	* Use of one kind of object or idea in place of another to suggest a lkeness or analogy between them
+* Purpose
+	* Leverages our knowledge of familiar, concrete objects/experiences
+	* Transfer this knowledge to abstract computer and task concepts
+* Examples
+	* Desktop, files, folders, trash can
+	* Paintbrush in a painting program
+* Two Metaphors for HCI (Noramn and Draper)
+	* Conversation metaphor
+		* The interface is a language medium to express assumed implicit objects 
+	* Model world metaphor
+		* The interface is itself a world where the user can act and get response
+      
+실생활에 쓰고 있는 개념, 경험들을 소프트웨어에 그대로 구현하는게 메타포라고 볼 수 있다. 유저에게 배우는 부담을 줄일 수 있다.  
+desktop metaphors: 책상위의 여러가지 object e.g., files, folders, trash can  
+conversation metaphor: 언어를 사용해서 system 과 소통  
 model world metaphor: 세상에 실제 존재하는 것과 동일한 방식을 이용해서 system 과 소통
 
 ### Direct Engagement
 * Model world metaphor
-* 마우스와 키보드를 사용해서 indirectly 조종 하고 있지만, 내가 원하는 데로 잘 움직여서, 사용자들이 direct 하게 조종하고 있다고 느끼게 해줌, 완전 몰입을 하게 함, interface 가 사라진 것 처럼 느끼게 해줌  => Flow 에 빠진다.
+	* "Sensation in the user of acting upond the objects of the task domain themselves"
+* Direct Manipulation
+	* Qualitative feeling that we are directly "engaged" with **the control of the objects** (the semantic objects of our goals and intentions)
+	* Not with the programs!
+
+마우스와 키보드를 사용해서 indirectly 조종 하고 있지만, 내가 원하는 데로 잘 움직여서, 사용자들이 direct 하게 조종하고 있다고 느끼게 해줌, 완전 몰입을 하게 함, interface 가 사라진 것 처럼 느끼게 해줌  => Flow 에 빠진다.
 
 ### Metaphors caveats
-physical world 에서 할 수 없는 것들을 virtual world 에서는 가능하다. metaphor 에 제한 되다보면 다양한 interface possibility, 창의력을 제한하게 됨.
-
-physical world 에서 가능한 것들이 virtual world 에서는 불가능 한데, 가능하다고 믿게 만들 수 있다.
-
-* Too literal or cute: command line 을 쓰면 간단한 일을 힘들게 하게 될 수도 있다. e.g., file 이름에 숫자 붙이기.
+* Too limited
+	* The metaphor restricts interface possibility
+* Too powerful
+	* The metaphor makes believe that the system do thing it can't
+* Too literal or cute
+	* Make it difficult (or tedious) to operate
+	* command line 을 쓰면 간단한 일을 힘들게 하게 될 수도 있다. e.g., file 이름에 숫자 붙이기.
+* Mismatched 
+	* The metaphor makes it difficult to carry out the task
+     
+physical world 에서 할 수 없는 것들을 virtual world 에서는 가능하다. metaphor 에 제한 되다보면 다양한 interface possibility, 창의력을 제한하게 됨.  
+physical world 에서 가능한 것들이 virtual world 에서는 불가능 한데, 가능하다고 믿게 만들 수 있다.  
 
 ### Direct manipulation: Good or Evil?
+* Good for intermediate users
+	* Recognition versus recall trade-off
+	* What about expert? Fast?
+	* Accuracy? (type exact coordinate vs. point)
+* Explicit versus implicit command
+	* How to automate, generalize tasks?
+	* "rename each file by adding '_old' to ist name" 
+* Metaphor might be too restrictive
+	* WYSIAYG: What You See Is All You Get   
+* Applications mix
+	* Direct manipulation
+		* Tools, drag and drop interactions ...
+	* Abstractions
+		* Menus, dialog boxes, scripting, ...
+  
 중급자들한테 좋다고 하는데, 사람들은 대부분 intermediate level 에 존재하므로, 매우 좋은 것이다.  
-
 Accuracy 측면에서 안좋을 수 있다.
 
+### Problems with direct manipulation
+* Consume valuable screen space
+* Must leaen the meaning of visual representations
+* Misleading visual representation
+* For blind or vision-impaired users?
+* For experts users?
+* For small screens?
+
 ## Graphic Design
+### Grahpic design ("Designing Visual Interfaces" Mullet and Sano)
+* Helps user find their ways
+	* Correct interaction sequencing
+	* Correct mental model: oragnization of data, functions, and tasks
+	* Consistency
+	* Efficient and accurate search and understanding
+* Provide a distinctive look (and feel)
+	* Brand recognition (e.g., macOS and Window)
+
+### Components of the visual language
+* Layout
+	* How the content is structured on the display
+* Typography
+	* Typefaces & typesetting
+* Imagery
+	* Visual identity, icons ...
+* Sequencing 
+	* How interactions unfold
+
+### US National Park Service
+* Clear repetition of strong graphic elements in the header 
+* Identical modular units - column placement/dimension
+	* Unifies the program & accommodate various presentation formats
+
+![usnp](Images/usnp.png)      	 
+
+### Parsing visual input
+* Appropriate design can help the user parse your input
+	* Layout/subject matter forces viewers to parse the picture in a certain way
+
+![pvi](Images/pvi.png)
+
+### Document parsing
+* Top to bottom
+* Left to right 
+* Anoto design handbook
+	* No undo button
+	* Design of paper based electronic forms
+
+### Gestalt principles
+* Grouping 
+	* **Proximity**: tendency of elements to be associated with nearby elements
+	* **Similarity**: tendency of elements to be associated with similar elements
+	* **Continuity**: preference for continuous, unbroken contours with the simplest possible physical explanation
+
+![group](Images/group.png)
+
+* Perception of Forms
+	* **Closure**: complete, closed figures
+	* **Area**: smaller one as figure, larger one as ground
+	* **Symmetry**: symmetrical components will tend to group together
+
+![form](Images/form.png)
+
+### Proximity Example
+![proximity](Images/proximity.png)
+
+### Similarity Example
+![similarity](Images/similarity.png)
+
+### Relating structure: Grouping
+* Help users parse the display into sub-lines
+	* Rely on Gestalt principles
+	* Avoid explicit grouping
+	* Spatial logic is always more powerful than graphical embellishment in producing effective perceptual grouping
+
+![grouping](Images/grouping.png) 
+
 선으로 그룹핑 하지마라 쓰면 지저분해 보이고 없어보인다.
 
 ## 6월 1일 
 
 ### Relating structure: Hierarchy
-* Provide a (hierarchical) context for each piece of information 
-	* Example: distinctive style for labels
+* Provide a (hierarchical) context for each piece of information
+	* Example: distincitve style for labels
+
+![hier](Images/hier.png) 
 
 Directory 가 먼저고 file 이 나중인데 왼쪽의 UI 는 반대로 디자인 되어있다. 그러나 정렬을 왼쪽이 더 잘 되어 있다.
 
+### Relating structure: Relationship
+* Presentation and relationship
+	* Provide good spatial analog to the logical information
+	* Example: present folder before its content 
+
+![relationship](Images/relationship.png)
+
 ### Relating structure: Balance
+* Harmonious global arrangement
+	* Can be symmetrical or asymmertical
+	* Make the visual weight of the composition distributed across the center of balance
+	* "felt axis"
+
+![balance](Images/balance.png)
+
 사람들은 unbalance 하면 벗어나고 싶어한다. 그러나 꼭 symmetry 하지 않아도 harmonious global arrangement 를 줄 수 있다.
 
 ### Human Size Perception
+* Straight edges appear larger than curved edges 
+* Curved edges appear larger than sharp edges
+* Optical adjustment
+
+![hsp](Images/hsp.png)
+![hsp2](Images/hsp2.png)
+![hsp3](Images/hsp3.png)
+![hsp4](Images/hsp4.png)
+
 그림 모양에 따라 height 나 width 를 다르게 인식한다.
 
 ### Tool: Symmetry
+* Center information around the axis of symmetry
+	* Using Symmetry to Ensure **Balance**
+	* Vertical axis more prevalent in human perception
+		* more useful in visual displays
+
+![toolsym](Images/toolsym.png)
+
 Balance 를 잘 맞춰줘야 user 들이 그 UI 에 좀 더 머무르려고 한다.
 
+### Tool: Symmetry
+* But be careful about text
+
+![toolsym2](Images/toolsym2.png)
+
+text 를 중앙을 기준으로 symmetry 하게 만들면, 가독성이 떨어지고 별로다.
+
 ### Tool: Alignment
+* Using Alignment to Establish Visual Relationships
+* Enhance boundaries and grouping
+* Pay attention to false alignment
+	* Almost but not quite aligned
+	* Free standing objects not to be aligned with other objects
+	* Be aware of optical adjustment
+		* round-ended controls vs. rectangular elements
+
+![alignment](Images/alignment.png)
+  
 Alignment 가 안맞으면 structure 가 안보이게 된다. 오른쪽이 훨씬 깔끔하고 hierarchy 적으로 잘 정리되어 있다. Semantic 한 restruction 도 매우 잘 이루어졌다.
 
+### Tool: Alignment
+* Butterfly Ballot
+* Florida 2000
+
+![alignment2](Images/alignment2.png)
+
 ### Tool: Negative space
+* The ground on which the design appears
+* Enhance/Enforce the structure of the display
+	* Reduce the use of border
+
+![negative](Images/negative.png)
+ 
 Printer Effects 를 특이한 position 에 가져다 놓았다. Alignment 측면에서 개선될 점이 존재한다.
 
 ### Tool: Simplicity
+> **Entities should not be multiplied unnecessarily**
+
+> In anything at all, perfection is finally attained not when there is no longer anything to add, but when there is no longer anything to take away.
+> 
+> Antonie de Saint Exupery
+
 쓸데없이 entity 개수가 많아지면 안된다. Perfection 은 더 이상 뺄게 없을 때 이루어진다.
 
 ### Color
+* Much bigger topic than we can cover here
+* Technology: RGBA
+* Components specified in [0-1], [0-255], [0-0xff]
+* Requirements:
+	* Contrast (luminance difference)
+	* Avoid color-blindness problems
+	* Attractive (avoid fully saturated colors)
+* Advice: Use existing color palettes
+	* www.colorcombos.com
+	* www.colourlovers.com
+	* www.degraeve.com/color-palette/ 
+
+### Redesign example
+![redesign](Images/redesign.png)
+
 Color palettes 를 꺼내놓고 palettes 에 존재하는 color 를 쓰면 통일성을 주고 깔끔하게 보일 수 있다. 채도가 높은  색을 쓰면 눈이 매우 피곤하다.
 
 ### What not to do!
+![wntd](Images/wntd.png)
+
 우선 balance 가 잘 안 맞는다. Word document 도 아니고 dot 이 있다. Alignment 도 잘 안되어 있다.
 
 ### Consistency
+* Internal
+	* Inside an application
+* External
+	* Platform and interface guideline conventions
+* Using grids
+	* Alignment
+
+![consistency](Images/consistency.png)
+    
 Grids 를 그려 놓은 다음에 design 하면 각각도 깔끔해 지지만, 전체적으로 통일되고 깔끔해 진다.
+
+### Consistency:
+* Banner blindness
+* Consistency
+* 18,000 votes "lost"
+
+![banner](Images/banner.png)
 
 Banner blindness
 page 가 바뀐 다음에 banner 가 바뀌어 있으면 사람들은 그것을 알아차리지 못하는 경우가 많다.
@@ -2234,21 +2888,89 @@ page 가 바뀐 다음에 banner 가 바뀌어 있으면 사람들은 그것을 
 User 없이도 design 을 evaluation 하고 중요한 점을 이끌어 낼 수 있다. 그 때 쓰는 것이 design heuristics.
 
 * Goal
+	* Evaluate the evolving design when no users are present
+	* Catch problems that an evaluationw with only a few users may not reveal 
 * Cognitive Walkthroughs
-	* **Task-oriented** 
+	* **Task-oriented** technique in the context of task-centered design
+	* Path through interface pre-determined
+	* One analyzer 
 * Action Analysis
+	* Allows a designer to predict the **time** for an **expert** to perfrom a task
+	* Forces the designer to take a detailed look at the interface 
 	* e.g., GOMS model
+* Heuristic Analysis
+	* **Interface** (not task) oriented
+	* Overall examination. Path through interface NOT pre-determined
+	* Several analyzers 
 
 ### Cognitive Walkthrough
+* What is it?
+	* A formalized way of imagining people's thoughts and actions when they use an interface for the first time
+* Requirements:
+	* Description or prototype of interface (or a prototype)
+	* Task description
+	* Complete, written list of the actions to complete the task
+	* User background
+* What you look for:
+	* Will users know how to perfrom the actions? (Will they try to do it?)
+	* Will users see the control?
+	* Will users know if the control does what they want?
+	* Will users understand the feedback?
+
+### Cognitive Walkthrough
+**How to do it? - an Example**
+
+* You have a **prototype** or a detailed design description of the interface, and you know who the users will be.
+* You select one of the **tasks** that the design is intended to support.
+* Then you try to tell a **believable story about each action** a user has to take to do the task.
+* To make the story believable you have to motivate each of the user's actions, relying on the user's general knowledge and on the prompts and feedback provided by the interface.
+* If you can't tell a believable story about an action, then you've located a problem with the interface
+
 User 들이 이 UI 를 처음 쓸 때 사람들의 생각과 행동을 상상 해보는 formalized 된 방법 
 프로토타입을 가지고 태스크를 하나 고른 다음에 내가 지금 이밸류에이터인데 프라이머리 페르소나에 감정이입을 해서 스토리 텔링을 할 수 있어야 한다. 스토리 텔링하다 막히면 문제가 있는 것. 또 유저가 왜 이 액션을 하는지 설명할 수 있어야 한다.
 
 ### Action Analysis
+* decide what physical and mental steps a user will perform to complete tasks
+* analyze those steps, looking for problems
+	* too many steps to perform a simple task
+	* too long to perfrom the task
+	* too much to learn about the interface
+
+![aa](Images/aa.png)
+ 
 ### Heuristic Analysis
+* "Rules of thumb" that describe features of usable systems
+	* Can be used as design principles
+	* Can be used to evaluate a design
+* Pros and Cons
+	* Easy and inexpensive
+		* Performed by expert
+		* No users required
+		* Catches many design flaws
+	* More difficult than it seems
+		* Not a simple checklist
+		* Cannot assess how well the interface will address user goals
+    
 ### Problems found by a single inspector
+* Evaluators miss both easy and hard problems
+	* 'best' evaluators can miss easy problems
+	* 'worse' evaluators can discover hard problems
+
+![pfsi](Images/pfsi.png)
+ 
 한 명만 수행하면 아무리 전문가라 해도 문제가 있을 수 있다. Evaluator 가 많으면 서로서로 이빨 빠진 데를 메꿀 수 있다.
 
 ### Usability Engineering
+* Introduced by Nielsen (1994)
+* Can be performed on working UI or sketches
+* Requires a small set (3-5) of evaluators to examine the UI
+	* Check compilance with usability principles
+		* Each evaluator works independently
+		* Go through the interface several times with different perspectives
+	* All reviews are aggregated in one final usability report
+
+![ue](Images/ue.png)
+  
 3~5 명의 evaluator 를 사용하면 최고의 비용 대비 효과를 누릴 수 있다.
 
 ### Nielsen's evaluation phases (1 - 2)
@@ -2262,4 +2984,87 @@ User 들이 이 UI 를 처음 쓸 때 사람들의 생각과 행동을 상상 �
 		* Create a list of all problems
 		* Rate severity of problem
 
-###  Nielsen's evaluation phases (3 - 4)
+### Nielsen's evaluation phases (3 - 4)
+* Severity rating
+	* Performed by indiviuals
+	* Then aggregated by group
+	* Establishes a ranking between problems
+	* Reflects frequency, impact and persistence
+		* Cosmetic, minor, major and catastrophic
+* Debriefing
+	* Discuss outcome with design team
+	* Suggest potential solutions
+	* Assess how hard things are to fix
+
+### Nielsen's heuristics: 10 general principles for user interface design
+
+| Simple and natural dialog | Visibility of system status |
+|:-------------------------:|:---------------------------:|
+| Speak the user's language | Match the real word |
+| Minimize user memory load | User control and freedom |
+| Consistency | Consistency and standards |
+| Feedback | Error prevention |
+| Clearly marked exits | Recognition rather than recall |
+| Shortcuts | Flexibility and efficiency of use |
+| Prevent errors | Aesthetic and minimalist design |
+| Good error messages | Help users recognize, diagnose and recover from error |
+| Provide help and documentation | Help and documentation |
+
+### General UI Design Principles: Alternatives
+* Donald Norman's principles of design
+	* Adequate Visibility
+		* Affordances
+		* Visible Constraints
+		* Natural Mappings
+	* Good Conceptual Model (Mental Model)
+	* Feedback - Causality
+	* Comfort
+	* Consistency / Cultural Standard
+	* Transfer Effects
+
+### General UI Desgin Principles: Alternatives
+* Ben Shneiderman's 8 golden rules
+	* Strive for consistency
+	* Cater to **universal usability**
+	* Offer informative feedback
+	* Design dialogs to yield closure (beginning, middle, and end)
+	* Prevent errors
+	* Permit easy reversal of actions
+	* Support internal locus of control (user are in charge?)
+	* Reduce short term memory
+
+### General UI Design Principles: Alternatives
+* Bruce Tognazzini's Principles of Interaction Design
+	* Anticipation	* Autonomy	* Color Blindness	* Consistency	* Defaults	* Efficiency of the User	* Explorable Interfaces	* Fitts’ Law	* Human Interface Objects	* Latency Reduction	* Learnability	* Metaphors	* Protect Users’ W ork	* Readability	* Track State	* Visible Navigation 
+
+### Simple and natural dialog
+* Minimalist design ("less is more")
+	* UI should be simplified as much as possible (reduce learning effort & possibility of errors)
+	* UI should match the users task in a natural way
+
+![snd](Images/snd.png)
+
+### Simple and natural dialog
+* Present information in a natural order (logical flow)
+
+![sndlf](Images/sndlf.png)
+ 
+* Simple is good
+	* Remove or hide irrelevant or rarely needed information
+		* They compete with important information on screen
+			* Palm Pilot, Dynamic menus
+	* Use windows frugally
+		* Avoid complex window management
+
+![pp](Images/pp.png)
+
+### Speak the user's language
+* Match the real world
+* Use a language compatible with user's conceptual model
+	* Example: withdrawing money at an ATM
+
+![sul](Images/sul.png)
+
+* Use meaningful mnemonics, icons and abbreviations
+
+![sul2](Images/sul2.png)
