@@ -1500,7 +1500,7 @@ Closed Loop
 Open Loop
 
 * Control is planned in advance and motor executes without perception or cognitivie
-* E.g., 
+* E.g., 숙련된 사람의 피아노 치기
 
 Motor system 에는 위의 두 가지 control 이 있다. Open loop control 은 미리 계획 되어있어서, perception 이나 cognition 이 중간에 끼어들지 않고, 한번에 수행하는 것. Closed loop control 은 task 를 수행하는 중간 중간에 계속 고치는 것이다. Perception 이나 Cognition 이 계속 끼어들어서 perception, cognition, motor 세 가지가 같이 동작한다. E.g., 마우스 움직여서 타깃을 누르는 것, 중간 중간에 adjustment 가 존재한다. 
 
@@ -1519,7 +1519,7 @@ Motor system 에는 위의 두 가지 control 이 있다. Open loop control 은 
 이름이 Fitts 임 시험 나올 것 임
 ![Fitts](Images/Fitts.png)
 
-MT = a + b * ID = a + b * log\_2(2D/w)  
+MT = a + b * ID = a + b * log\_2(2D/W)  
 W: target width  
 D: distance to target
 
@@ -1532,7 +1532,8 @@ variation:
 T: movement time  
 S: target width  
 D: distance to target    
-I\_M (= ID/T): index of performance, 63 msec/bit [22 ~ 122 ms/bit], (fastman ~ slowman)  
+I\_P (= I_D/T = 1 / I\_M): index of performance
+I\_M = 63 msec/bit [22 ~ 122 ms/bit], (fastman ~ slowman)  
 I\_D (= log\_2(2D/S)): index of difficulty
 
 ![Fitts2](Images/Fitts2.png)
@@ -1664,7 +1665,7 @@ Deep learning 의 발전으로 요즘 각광을 받고 있는 모델이다.
 
 ### Why Use Predictive Models
 * Card et al. presented perhaps the first predictive model in HCI. In many respects, their work was straight-forward experimental research; but they went further:
-	* "While these empirical results are of direct use in selecting a pointing device,it would obviously be of greated benefit if a **theoretical account of the results** could be made. For one thing, *the need for some experiments might be obviated*; for another, *ways of improving pointing performance might be suggested.*"
+	* "While these empirical results are of direct use in selecting a pointing device, it would obviously be of greated benefit if a **theoretical account of the results** could be made. For one thing, *the need for some experiments might be obviated*; for another, *ways of improving pointing performance might be suggested.*"
 * This is call for the use of predictive models in HCI
 * They went on to present predictive models using Fitt's law (which we meet shortly)
 
@@ -1692,7 +1693,7 @@ Deep learning 의 발전으로 요즘 각광을 받고 있는 모델이다.
 * Want the details? Just enter "linear regression" or "least squares" into Google or Wikipedia
 
 ### Example 
-* A research project investigated text entry on osft keyboards
+* A research project investigated text entry on soft keyboards
 * The research also asked...
 	* Can stylus **tapping** entry speed be predicted from touch **typing** entry speed?
 * Touch typing speed is the predictor variable (x - measured in a pre-test)
@@ -1733,7 +1734,7 @@ These sketches were adapted from Fitts' 1954 and 1964 papaers. It is easy to ima
 * Normally the prediction equation is built using the *effective* index of difficulty (ID\_e) - includes an "adjustment for accuracy" (see HCI:ERP for discussion)
 * Fitts hypothesized that the relationship between movement time (MT) and ID is linear
 
-### Fitss' Law Models for Pointing Devices
+### Fitts' Law Models for Pointing Devices
 * A research project compared four pointing devices, including two for remote pointing 
 * Twelve participants performed a series of a serial target selection tasks using the four devices
 * For our purpose, we'll look at the data and models for two of the devices:
@@ -1950,7 +1951,7 @@ user interface 를 design 할 때도 fictitious user 를 만드는데 이 user �
 ## 5월 2일
 ### Why do study?
 * Persona: descriptive **models** of users
-	* **composite archetypes** based upon observed **behavior pattersn**
+	* **composite archetypes** based upon observed **behavior patterns**
 	* represent **broad** cross-section of users 
 
 **archetype**: 전형적인 타입 (e.g., 전형적인 정치인, 전형적인 스포츠맨), 굉장히 speicific 하지만, broad 한 user 를 대표해야 함
@@ -2129,7 +2130,8 @@ Prototyping 이란 incomplete 한 model of design 이다. 실물이 나타나면
 * Pick the tops 1-5
 	* Depends on resources and stage of the project 
  
-Idea 를 모두 HiFi 로 prototyping 할 수 없으니까 pruning 을 해야한다. Window to market: 팔아먹을 수 있는지 확인 하는 것
+Idea 를 모두 HiFi 로 prototyping 할 수 없으니까 pruning 을 해야한다.  
+Window to market: 팔아먹을 수 있는지 확인 하는 것
 
 ### Prototyping Methods
 * Depending on the phase of the project
@@ -2144,7 +2146,7 @@ Idea 를 모두 HiFi 로 prototyping 할 수 없으니까 pruning 을 해야한�
 
 ![prototype](Images/prototype.png)
  
-Rapid low-fi: 종이 가지고 sketching 하는 거
+Rapid low-fi: 종이 가지고 sketching 하는 거  
 Wizard of Oz appraoched: 사람이 컴퓨터인 것 처럼 행동 하는 것(?)
 
 ### Low fidelity prototypes
@@ -2212,7 +2214,7 @@ crude 하게 그리는게 더 의미가 있다. 아직 덜 된거라는 느낌�
 	* It is difficult for human wizards to quickly navigate from screen to screen
 
 디자인 바꾸면, 종이에 적은거 지우고 다시 다 적어야해서 너무 귀찮다. 그래서 컴퓨터로 된 것도 있지만, 마찬가지로 UI 가 바뀌면, 이미지를 다 바꿔야해서 귀찮다.  
-위자드와 사용자 모두 어떻게 동작해야하는지를 모두 숙지해놔야 제대로 실험이 가능하다. 너무 복잡한 기능은 싦험이 거의 불가능 하다.
+위자드와 사용자 모두 어떻게 동작해야하는지를 모두 숙지해놔야 제대로 실험이 가능하다. 너무 복잡한 기능은 실험이 거의 불가능 하다.
 
 ### WOZ Pro
 ![woz](Images/woz.png)
@@ -2290,7 +2292,7 @@ Evolutionary prototyping: design spec 이 uncertain 하거나 changing 할 때 �
 * GOMS are a family of methods used to model the user behavior for complex tasks
 * GOMS for quantitative analysis of interface design
 	* Predicts how long an **experienced worker** will take to perform an operation with an interface design
-	* Models **cognitive skills*, not problem-solving
+	* Models **cognitive skills**, not problem-solving
 	* Family of methods (KLM, CMN-GOMS, CPM-GOMS, NGOMSL)
  
 HIP model 은 단순하고 짧은 task 를 위한 model. GOMS model 은 좀 더 complex 한 task 에 익숙해져서 maximum performance 를 낼 때의 model. 정확한 숫자를 주지만, 그 숫자 자체는 의미가 없다. 모델 자체가 정확하지도 않을 뿐더러, 사용자들이 항상 skilled 사용자가 아니기 때문, 그러나 상대적인 값을 비교해서 객관적인 비교를 할 수 있어서 매우 유용한다. 
@@ -2343,22 +2345,22 @@ CPM-GOMS 모델은 멀티 태스킹도 포함되어 있고, 훨씬 복잡하다.
 	* 그러나 두가지 선택지가 있을 경우, 둘의 평균을 내서 selection rule 이 있다고 볼 수도 있다.
 * Describe the task using the following operators:
 	* K: pressing a key or pressing (or releasing) a button
-		* t_K = 0.2 sec
+		* t\_K = 0.2 sec
 	* P: pointing  
-		* t_P = 1.1 sec (without button pres)
+		* t\_P = 1.1 sec (without button press)
 	* H: Homing (switching device)
-		* t_H = 0.4 sec
+		* t\_H = 0.4 sec
 	* M: Mentally prepare
-		* t_M = 1.35 sec
+		* t\_M = 1.35 sec
 	* R(t): system response time
-		* t_R = t
+		* t\_R = t
   	   
 ### How to use KLM
 * Encode using all physical operators (K, P, H, R(t))
 * Apply KLM rules [0-4] to add M's
 * Transform R followed by an M (computer and user can work at the same time)
-	* If t <= t_M: R(t) => R(0)
-	* If t_M < t: R(t) => R(t - t_M)
+	* If t <= t\_M: R(t) => R(0)
+	* If t\_M < t: R(t) => R(t - t\_M)
 * Compute the total time by adding all times
 	* Will describe expert user behavior 
 
@@ -2432,8 +2434,9 @@ Learnability 면은 어떤지, accuracy 는 어떤지, 판단하고 생각하는
 	* Skilled users
 	* Does not deal with error
 	* Does not deal with skill aquisition
-	* Does not deal with high level issus (Functionality, workload, Fatigue)
-	* Better for relative than absolute timing 	 
+	* Does not deal with high level issues (Functionality, workload, Fatigue)
+	* Better for relative than absolute timing 
+
 Telephone operator: 전화 교환원  
 relative 하게 비교하는 데에 좋은거지, 실제 시간은 의미가 없다.
 
@@ -2442,7 +2445,7 @@ relative 하게 비교하는 데에 좋은거지, 실제 시간은 의미가 없
 	* Compared to marketing data
 	* Compared to very expensive field trial
 	* Individual Goal estimates very inaccruate (~50% off)
-	* Core analysis obvious in retrospect (saving not in bottleneck don't help)
+	* Core analysis obvious in retrospect (savings not in bottleneck don't help)
 
 Was GOMS necessary, or could an expert analysis have revealed this?  
  
@@ -2465,6 +2468,8 @@ GOMS model 사용해서 비교해서 유의미한 결과를 얻었지만, 실험
 	* User's model: System 을 사용하면서 생긴 system 에 대한 user 만의 모델. 
 * conceptual frameworks
 	* explain and predict user behavior based on theories of **cognition** 
+
+![conceptualmodel](Images/conceptualmodel.png) 
 
 User's model 이랑 Design model 이랑 일치하는게 ideal 하지만 보통 일치하지 않는다. 
 
@@ -2521,7 +2526,7 @@ feedback 과 유저가 받아들인 것이 같으면 gulf of evaluation 이 좁�
 ### Meaning and Form of Expression
 ![mfe](Images/mfe.png)
 
-Ariculatory Distance: 기계적인 거리 e.g., 원에 대한 natural language description 과 그려진 원의 거리(차이)
+Articulatory Distance: 기계적인 거리 e.g., 원에 대한 natural language description 과 그려진 원의 거리(차이)
 
 Semantic Distance: 의미적인 거리 
 
@@ -2563,10 +2568,11 @@ command 를 다 이해하고, 머릿속으로 그려봐야 함.
 
 ![mvtex](Images/mvtex.png)
 
-### Three Pinciples of Direct Manipulation
+### Three Principles of Direct Manipulation
 * **Continuous** representation of the objects and actions of interest with **meaningful visual metaphors**
 * **Physical** actions or presses of labeled buttons, instead of complex syntax
 * **Rapid**, **incremental**, **reversible** actions with **immediate** **visible feedback**
+
 incremental: action 들이 incremental 해야 한다. e.g., 커서를 움직일 때 비례적으로 움직여야 한다.  
 reversible: undo 할 수 있어야 한다.
 
@@ -2604,7 +2610,7 @@ Direct engagement: 주인의식을 가지고 engage를 가지고 task 하고 있
      
 ### Interface metaphors
 * Definition
-	* Use of one kind of object or idea in place of another to suggest a lkeness or analogy between them
+	* Use of one kind of object or idea in place of another to suggest a likeness or analogy between them
 * Purpose
 	* Leverages our knowledge of familiar, concrete objects/experiences
 	* Transfer this knowledge to abstract computer and task concepts
@@ -2624,7 +2630,7 @@ model world metaphor: 세상에 실제 존재하는 것과 동일한 방식을 �
 
 ### Direct Engagement
 * Model world metaphor
-	* "Sensation in the user of acting upond the objects of the task domain themselves"
+	* "Sensation in the user of acting upon the objects of the task domain themselves"
 * Direct Manipulation
 	* Qualitative feeling that we are directly "engaged" with **the control of the objects** (the semantic objects of our goals and intentions)
 	* Not with the programs!
@@ -2652,7 +2658,7 @@ physical world 에서 가능한 것들이 virtual world 에서는 불가능 한�
 	* Accuracy? (type exact coordinate vs. point)
 * Explicit versus implicit command
 	* How to automate, generalize tasks?
-	* "rename each file by adding '_old' to ist name" 
+	* "rename each file by adding '_old' to its name" 
 * Metaphor might be too restrictive
 	* WYSIAYG: What You See Is All You Get   
 * Applications mix
@@ -2666,7 +2672,7 @@ Accuracy 측면에서 안좋을 수 있다.
 
 ### Problems with direct manipulation
 * Consume valuable screen space
-* Must leaen the meaning of visual representations
+* Must learn the meaning of visual representations
 * Misleading visual representation
 * For blind or vision-impaired users?
 * For experts users?
@@ -2751,14 +2757,14 @@ Accuracy 측면에서 안좋을 수 있다.
 
 ![hier](Images/hier.png) 
 
-Directory 가 먼저고 file 이 나중인데 왼쪽의 UI 는 반대로 디자인 되어있다. 그러나 정렬을 왼쪽이 더 잘 되어 있다.
-
 ### Relating structure: Relationship
 * Presentation and relationship
 	* Provide good spatial analog to the logical information
 	* Example: present folder before its content 
 
 ![relationship](Images/relationship.png)
+
+Directory 가 먼저고 file 이 나중인데 왼쪽의 UI 는 반대로 디자인 되어있다. 그러나 정렬을 왼쪽이 더 잘 되어 있다.
 
 ### Relating structure: Balance
 * Harmonious global arrangement
@@ -2847,12 +2853,12 @@ Printer Effects 를 특이한 position 에 가져다 놓았다. Alignment 측면
 * Advice: Use existing color palettes
 	* www.colorcombos.com
 	* www.colourlovers.com
-	* www.degraeve.com/color-palette/ 
+	* www.degraeve.com/color-palette/
+
+Color palettes 를 꺼내놓고 palettes 에 존재하는 color 를 쓰면 통일성을 주고 깔끔하게 보일 수 있다. 채도가 높은  색을 쓰면 눈이 매우 피곤하다. 
 
 ### Redesign example
 ![redesign](Images/redesign.png)
-
-Color palettes 를 꺼내놓고 palettes 에 존재하는 color 를 쓰면 통일성을 주고 깔끔하게 보일 수 있다. 채도가 높은  색을 쓰면 눈이 매우 피곤하다.
 
 ### What not to do!
 ![wntd](Images/wntd.png)
@@ -2964,7 +2970,7 @@ User 들이 이 UI 를 처음 쓸 때 사람들의 생각과 행동을 상상 �
 * Introduced by Nielsen (1994)
 * Can be performed on working UI or sketches
 * Requires a small set (3-5) of evaluators to examine the UI
-	* Check compilance with usability principles
+	* Check compliance with usability principles
 		* Each evaluator works independently
 		* Go through the interface several times with different perspectives
 	* All reviews are aggregated in one final usability report
@@ -3000,15 +3006,15 @@ User 들이 이 UI 를 처음 쓸 때 사람들의 생각과 행동을 상상 �
 
 | Simple and natural dialog | Visibility of system status |
 |:-------------------------:|:---------------------------:|
-| Speak the user's language | Match the real word |
-| Minimize user memory load | User control and freedom |
-| Consistency | Consistency and standards |
-| Feedback | Error prevention |
-| Clearly marked exits | Recognition rather than recall |
-| Shortcuts | Flexibility and efficiency of use |
-| Prevent errors | Aesthetic and minimalist design |
-| Good error messages | Help users recognize, diagnose and recover from error |
-| Provide help and documentation | Help and documentation |
+| **Speak the user's language**| **Match the real word** |
+| **Minimize user memory load** | **User control and freedom** |
+| **Consistency** | **Consistency and standards** |
+| **Feedback** | **Error prevention** |
+| **Clearly marked exits** | **Recognition rather than recall** |
+| **Shortcuts** | **Flexibility and efficiency of use** |
+| **Prevent errors** | **Aesthetic and minimalist design** |
+| **Good error messages** | **Help users recognize, diagnose and recover from error** |
+| **Provide help and documentation** | **Help and documentation** |
 
 ### General UI Design Principles: Alternatives
 * Donald Norman's principles of design
@@ -3035,7 +3041,7 @@ User 들이 이 UI 를 처음 쓸 때 사람들의 생각과 행동을 상상 �
 
 ### General UI Design Principles: Alternatives
 * Bruce Tognazzini's Principles of Interaction Design
-	* Anticipation	* Autonomy	* Color Blindness	* Consistency	* Defaults	* Efficiency of the User	* Explorable Interfaces	* Fitts’ Law	* Human Interface Objects	* Latency Reduction	* Learnability	* Metaphors	* Protect Users’ W ork	* Readability	* Track State	* Visible Navigation 
+	* Anticipation	* Autonomy	* Color Blindness	* Consistency	* Defaults	* Efficiency of the User	* Explorable Interfaces	* Fitts’ Law	* Human Interface Objects	* Latency Reduction	* Learnability	* Metaphors	* Protect Users’ Work	* Readability	* Track State	* Visible Navigation 
 
 ### Simple and natural dialog
 * Minimalist design ("less is more")
